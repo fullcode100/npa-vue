@@ -1,19 +1,25 @@
 <template>
 	<div>
-		<header>
+		<Header />
+		<!-- <header>
 			<strong>
 				<g-link to="/home">{{ $static.metadata.siteName }}</g-link>
 			</strong>
 			<nav>
 				<g-link	v-for="(menu, key) in menuOptions" :key="key"	:to="menu.route">{{ menu.label }}</g-link>
 			</nav>
-		</header>
+		</header> -->
 		<slot />
 	</div>
 </template>
 
 <script>
+import Header from "@/components/Header.vue";
+
 export default {
+	components: {
+		Header
+	},
 	computed: {
 		menuOptions() {
 			return [

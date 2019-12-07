@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import config from "../../gridsome.config";
+// import config from "../../gridsome.config";
 
 const loadStoryblokBridge = function(cb) {
 	let sbConfigs = config.plugins.filter(item => {

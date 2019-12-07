@@ -11,12 +11,6 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-	chainWebpack(config) {
-		const types = ["vue-modules", "vue", "normal-modules", "normal"];
-		types.forEach(type => {
-			addStyleResource(config.module.rule("scss").oneOf(type))
-		})
-	},
 	siteName: "NPA Nantes 2020",
 	siteDescription: "Site de campagne du NPA pour les municipales 2020 de Nantes.",
 	titleTemplate: "%s - NPA Nantes 2020",
@@ -41,5 +35,11 @@ module.exports = {
 				}
 			}
     	}
-  	]
+	],
+	chainWebpack(config) {
+		const types = ["vue-modules", "vue", "normal-modules", "normal"];
+		types.forEach(type => {
+			addStyleResource(config.module.rule("scss").oneOf(type))
+		})
+	}	  
 }

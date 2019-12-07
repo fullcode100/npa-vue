@@ -9,7 +9,7 @@ import Richtext from "~/components/Richtext.vue"
 
 export default function (Vue, { router, head, isClient }) {
 	Vue.component("Layout", DefaultLayout)
-
+	
 	Vue.component("Page", Page)
 	Vue.component("Teaser", Teaser)
 	Vue.component("Feature", Feature)

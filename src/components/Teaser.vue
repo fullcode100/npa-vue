@@ -1,14 +1,11 @@
 <template>
-  <div class="teaser"
-       v-editable="blok">
-    {{ blok.headline }}
-    <richtext :text="blok.richtext">
-    </richtext>
+  <div class="teaser" v-editable="blok">
+    <richtext :text="blok.headline"></richtext>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['blok']
+	props: ["blok"]
 }
 </script>

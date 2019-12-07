@@ -51,5 +51,7 @@ html {
 	height: 100%;
 	line-height: 1;
 	scroll-behavior: smooth;
-	font-family: "Gosha Sans";
+	font-family: "Gosha Sans", sans-serif;
+	background-color: $primary;
+	color: $accent;
 }
