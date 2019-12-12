@@ -13,7 +13,7 @@ function addStyleResource(rule) {
 module.exports = {
 	siteName: "NPA Nantes 2020",
 	siteDescription: "Site de campagne du NPA pour les municipales 2020 de Nantes.",
-	titleTemplate: "%s - NPA Nantes 2020",
+	titleTemplate: "%s — NPA Nantes 2020",
 	icon: {
 		favicon: {
 			src: "./src/favicon.png",

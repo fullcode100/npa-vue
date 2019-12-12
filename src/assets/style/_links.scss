@@ -1,0 +1,35 @@
+@mixin link($color, $color-light) {
+	position: relative;
+	color: $color;
+	font-weight: 500;
+	white-space: nowrap;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background-color: $color-light;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&:hover::after {
+		transform: scaleX(0.5);
+		background-color: $color;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&:focus {
+		outline: 3px dashed $color;
+	}
+}
+
+.link--primary {
+	@include link($accent, $accent-lighter);
+}
+
+.link--bold {
+	font-weight: 700;
+}

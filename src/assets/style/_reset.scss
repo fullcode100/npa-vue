@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-a {
+a, g-link {
     text-decoration: none;
     cursor: pointer;
 }
@@ -37,6 +37,10 @@ p {
 	font-size: $sm;
 }
 
+h1, h2, h3, h4 {
+	line-height: 1.25;
+}
+
 button {
 	border: none;
 	font-family: inherit;
@@ -54,4 +58,9 @@ html {
 	font-family: "Gosha Sans", sans-serif;
 	background-color: $primary;
 	color: $accent;
+}
+
+::selection {
+	color: $primary;
+	background-color: $dark;
 }

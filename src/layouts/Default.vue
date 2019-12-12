@@ -1,14 +1,6 @@
 <template>
-	<div>
+	<div class="content">
 		<Header />
-		<!-- <header>
-			<strong>
-				<g-link to="/home">{{ $static.metadata.siteName }}</g-link>
-			</strong>
-			<nav>
-				<g-link	v-for="(menu, key) in menuOptions" :key="key"	:to="menu.route">{{ menu.label }}</g-link>
-			</nav>
-		</header> -->
 		<slot />
 	</div>
 </template>
@@ -57,6 +49,10 @@ query {
 </static-query>
 
 <style lang="scss">
+.content {
+	margin: 0 auto;
+	max-width: 75%;
+}
 
 // Gosha Sans
 
