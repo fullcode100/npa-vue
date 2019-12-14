@@ -1,5 +1,5 @@
 <template>
-	<g-link class="little-card">
+	<g-link class="little-card" :to="url">
 		<div class="little-card__date">
 			<span>{{ date }}</span>
 		</div>
@@ -12,6 +12,10 @@
 <script>
 export default {
     props: {
+		url: {
+        	type: String,
+    		default: "/",
+        },
         date: {
             type: String,
             default: "01/01",
@@ -58,8 +62,8 @@ export default {
 
 .little-card__date {
 	position: absolute;
-	top: 8%;
-	left: -8%;
+	top: $sm/3;
+	left: -$lg;
 
 	> span {
 		@include stroke($accent, $primary, 3px);

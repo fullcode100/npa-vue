@@ -1,5 +1,6 @@
 // Primary
 $primary: #F9F3EC;
+$primary-lighter: rgba($primary, 0.5);
 
 // Secondary
 $accent: #EB1C22;
@@ -7,5 +8,6 @@ $accent-light: rgba($accent, 0.7);
 $accent-lighter: rgba($accent, 0.5);
 
 // Shade
-$dark: #2d1d1d;
+$dark: #141010;
 $dark-light: rgba($dark, 0.7);
+$dark-lighter: rgba($dark, 0.5);

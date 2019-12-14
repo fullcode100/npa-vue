@@ -5,7 +5,7 @@
 </template>
 
 <script>
-// import config from "../../gridsome.config";
+import config from "../../gridsome.config";
 
 const loadStoryblokBridge = function(cb) {
 	let sbConfigs = config.plugins.filter(item => {
@@ -22,7 +22,9 @@ const loadStoryblokBridge = function(cb) {
 export default {
 	data() {
 		return {
-			story: { content: {} }
+			story: {
+				content: {}
+			}
 		};
 	},
 	mounted() {
@@ -32,15 +34,13 @@ export default {
 	},
 	methods: {
 		loadStory() {
-			window.storyblok.get(
-				{
-					slug: window.storyblok.getParam("path"),
-					version: "draft"
-				},
-				data => {
-					this.story = data.story;
-				}
-			);
+			window.storyblok.get({
+				slug: window.storyblok.getParam("path"),
+				version: "draft"
+			},
+			data => {
+				this.story = data.story;
+			});
 		},
 		initStoryblokEvents() {
 			this.loadStory();

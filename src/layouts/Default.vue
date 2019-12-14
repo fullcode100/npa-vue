@@ -1,6 +1,6 @@
 <template>
-	<div class="content">
-		<Header />
+	<div>
+		<Header class="fit-content" />
 		<slot />
 	</div>
 </template>
@@ -49,8 +49,9 @@ query {
 </static-query>
 
 <style lang="scss">
-.content {
-	margin: 0 auto;
+.fit-content {
+	margin-left: auto;
+	margin-right: auto;
 	max-width: 75%;
 }
 
