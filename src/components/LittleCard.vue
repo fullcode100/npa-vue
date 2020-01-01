@@ -1,10 +1,10 @@
 <template>
 	<g-link class="little-card" :to="url">
+		<div class="little-card__title">
+			<h3>{{ title }}</h3>
+		</div>
 		<div class="little-card__date">
 			<span>{{ date }}</span>
-		</div>
-		<div class="little-card__title">
-			<h2>{{ title }}</h2>
 		</div>
 	</g-link>
 </template>
@@ -19,7 +19,11 @@ export default {
         date: {
             type: String,
             default: "01/01",
-        },
+		},
+		src: {
+			type: String,
+			default: ""
+		},
 		title: {
             type: String,
             default: "Titre",
@@ -31,49 +35,24 @@ export default {
 <style lang="scss">
 .little-card {
 	display: flex;
-	flex-direction: column;
 	position: relative;
 	color: $accent;
-	padding-left: $xs;
-
-	&::before {
-		content: "";
-		position: absolute;
-		left: 0;
-		right: 0;
-		width: 3px;
-		height: 100%;
-		background-color: $accent;
-		transform: scaleY(0.6);
-		transform-origin: top;
-		transition: transform 0.3s ease-in-out;
+	padding-left: $md;
+	
+	&__title h3 {
+		font-size: $md;
 	}
 
-	&:hover::before {
-		transform: scaleY(1);
-		transform-origin: top;
-		transition: transform 0.3s ease-in-out;
-	}
-
-	&:focus {
-		outline: $accent 3px dashed;
-	}
-}
-
-.little-card__date {
+	&__date {
 	position: absolute;
-	top: $sm/3;
-	left: -$lg;
+	bottom: 0;
+	right: -($lg + $xxs);
 
-	> span {
-		@include stroke($accent, $primary, 3px);
-		padding: $xxs;
-		font-size: $font-md;
+		> span {
+			@include stroke($accent, $primary, 3px);
+			padding: $xxs;
+			font-size: $font-md;
+		}
 	}
-}
-
-.little-card__title h2 {
-	font-size: $font-lg;
-	padding: $md 0 $xxs 0;
 }
 </style>

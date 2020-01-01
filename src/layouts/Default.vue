@@ -109,25 +109,9 @@ query {
 
 @font-face {
     font-family: "Druk Wide";
-    src: url("../assets/fonts/Druk Wide/Druk Wide Medium Italic.woff") format("woff");
-    font-weight: 500;
-    font-style: italic;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Druk Wide";
     src: url("../assets/fonts/Druk Wide/Druk Wide Bold Regular.woff") format("woff");
     font-weight: 700;
     font-style: normal;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Druk Wide";
-    src: url("../assets/fonts/Druk Wide/Druk Wide Bold Italic.woff") format("woff");
-    font-weight: 700;
-    font-style: italic;
     font-display: auto;
 }
 
@@ -141,25 +125,9 @@ query {
 
 @font-face {
     font-family: "Druk Wide";
-    src: url("../assets/fonts/Druk Wide/Druk Wide Heavy Italic.woff") format("woff");
-    font-weight: 800;
-    font-style: italic;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Druk Wide";
     src: url("../assets/fonts/Druk Wide/Druk Wide Super Regular.woff") format("woff");
     font-weight: 900;
     font-style: normal;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Druk Wide";
-    src: url("../assets/fonts/Druk Wide/Druk Wide Super Italic.woff") format("woff");
-    font-weight: 900;
-    font-style: italic;
     font-display: auto;
 }
 </style>

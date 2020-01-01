@@ -8,8 +8,10 @@
 	},
 	"dependencies": {
 		"@gridsome/transformer-remark": "^0.4.0",
+		"fibers": "^4.0.2",
 		"gridsome": "^0.7.0",
-		"gridsome-source-storyblok": "^0.1.2"
+		"gridsome-source-storyblok": "^0.1.2",
+		"sass": "^1.23.7"
 	},
 	"devDependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.26",
