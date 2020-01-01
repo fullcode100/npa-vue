@@ -72,7 +72,6 @@ export default {
 		left: -($lg + $xxs);
 
 		> span {
-			@include stroke($accent, $primary, 3px);
 			padding: $xxs;
 			font-size: $font-md;
 		}

@@ -1,16 +1,18 @@
 <template>
 	<g-link class="big-card" :to="url">
-		<div class="big-card__date">
-			<span>{{ date }}</span>
-		</div>
-		<div class="big-card__img">
-			<g-image :src="src" />
-		</div>
 		<div class="big-card__title">
 			<h3>{{ title }}</h3>
 		</div>
-		<div class="big-card__summary">
-			<p>{{ summary }}</p>
+		<div class="big-card__content">
+			<div class="summary">
+				<p>{{ summary }}</p>
+			</div>
+			<div class="img">
+				<g-image :src="src" />
+			</div>
+		</div>
+		<div class="big-card__date">
+			<span>{{ date }}</span>
 		</div>
 	</g-link>
 </template>
@@ -28,7 +30,7 @@ export default {
 		},
 		src: {
 			type: String,
-			default: ""
+			default: "/"
 		},
 		title: {
             type: String,
@@ -36,7 +38,7 @@ export default {
 		},
 		summary: {
             type: String,
-            default: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper, ipsum in luctus ullamcorper, leo metus rutrum ante, non congue tortor elit id risus.",
+            default: "Chapo",
 		},
 	}
 }
@@ -47,71 +49,66 @@ export default {
 	display: flex;
 	position: relative;
 	color: $accent;
-	padding-left: $md;
+	transition: 0.3s ease-in-out;
 
-	&::before {
-		content: "";
-		position: absolute;
-		left: 0;
-		right: 0;
-		width: 3px;
-		height: 100%;
-		background-color: $accent;
-		transform: scaleY(1);
-		transform-origin: top;
-		transition: transform 0.3s ease-in-out;
-	}
+	&__content {
+		display: flex;
+		flex-direction: row;
 
-	&:hover::before {
-		transform: scaleY(0.6);
-		transform-origin: top;
-		transition: transform 0.3s ease-in-out;
-	}
+		.summary {
+			position: relative;
+			margin: auto;
+			padding-right: $xxs;
 
-	&:focus {
-		outline: $accent 3px dashed;
-	}
+			p {
+				font-size: $font-md;
+			}
+		}
 
-	&__date {
-	position: absolute;
-	top: $xl;
-	left: -$xl;
-	transform: rotate(-90deg);
-
-		> span {
-			@include stroke($accent, $primary, 3px);
-			padding: $xxs;
-			font-size: $font-lg;
+		.img {
+			margin-top: $lg + $xxs;
+			filter: grayscale(100);
+			transition: 0.5s ease-in-out;
 		}
 	}
 
-	&__img {
-		filter: grayscale(100);
-		overflow: hidden;
-		height: 400px;
-		width: 100%;
+	&__date {
+		position: absolute;
+		top: $sm / 3;
+		right: 0;
 
-		img {
-			width: 100%;
+		> span {
+			@include stroke($accent, $primary, 3px, transparent);
+			padding: $xxs;
+			font-size: $font-md;
 		}
 	}
 
 	&__title {
-		font-family: "Druk Wide";
 		position: absolute;
-		bottom: $lg;
-		left: $lg;
-		width: 75%;
-		font-size: $font-lg;
+		width: 50%;
+		z-index: 999;
 
-		&::after {
-			content: "";
-			position: absolute;
-			background-color: #EB1C22;
-			width: $xxl;
-			height: 0.75rem;
-			bottom: -1.5rem;
-			left: 0;
+		h3 {
+			font-family: "Druk Wide";
+			font-weight: 800;
+			font-size: $font-xxl/2;
+			background-color: $primary;
+		}
+	}
+
+	&:hover {
+	color: $dark;
+	transition: 0.3s ease-in-out;
+
+		.big-card__date span {
+			background-color: $dark;
+			transition: 0.3s ease-in-out;
+		}
+
+		.big-card__content .img {
+			filter: grayscale(0);
+			transition: 0.5s ease-in-out;
 		}
 	}
 }

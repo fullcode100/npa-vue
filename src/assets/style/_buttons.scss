@@ -6,7 +6,7 @@
 	border: 2px $color solid;
 	padding: 0 $lg;
 	z-index: 1;
-	line-height: 3.75;
+	line-height: 3;
 	outline: none;
 	white-space: nowrap;
 	font-weight: 800;
@@ -28,25 +28,24 @@
 		top: 0;
 		bottom: 0;
 		transform: scale(0);
-		transition: transform .3s;
+		transition: transform 0.3s;
 	}
 
 	&::before {
-		border-right: 1.5px solid;
-		border-bottom: 1.5px solid;
+		border-right: 1.75px solid;
+		border-bottom: 1.75px solid;
 		transform-origin: bottom right;
 	}
 
 	&::after {
-		border-left: 1.5px solid;
-		border-top: 1.5px solid;
+		border-left: 1.75px solid;
+		border-top: 1.75px solid;
 		transform-origin: top left;
-		transition-delay: .1s;
+		transition-delay: 0.1s;
 	}
 
 	&:active {
 		transform: scale(0.9);
-		border: 2px $primary dashed;
 	}
 }
 
