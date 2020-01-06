@@ -2,7 +2,14 @@
 	<Layout>
 		<div class="home fit-content">
 			<h1 class="home__title">NOS <span class="title__stroke">VIES</span>, PAS LEURS <span class="title__stroke">PROFITS</span></h1>
-			<div class="little-card__container">
+			<div class="home__articles">
+				<LittleCard v-for="n in nbPosts" :key="n"
+					:url="$page.allStoryblokEntry.edges[n - 1].node.full_slug"
+					:title="$page.allStoryblokEntry.edges[n - 1].node.name"
+					:date="$page.allStoryblokEntry.edges[n - 1].node.created_at"
+					:tag="$page.allStoryblokEntry.edges[n - 1].node.tag_list[0]"
+					:src="resize(n - 1, '100x100')"
+				/>
 			</div>
 		</div>
 		<div class="topical">
@@ -44,19 +51,35 @@
 							:date="$page.allStoryblokEntry.edges[0].node.created_at"
 							:src="resize(0, '525x500')"
 						/>
-						<div class="articles__aside">
+						<div class="articles__little">
 							<LittleCard v-for="n in nbPosts" :key="n"
 									:url="$page.allStoryblokEntry.edges[n - 1].node.full_slug"
 									:title="$page.allStoryblokEntry.edges[n - 1].node.name"
 									:date="$page.allStoryblokEntry.edges[n - 1].node.created_at"
+									:tag="$page.allStoryblokEntry.edges[n - 1].node.tag_list[0]"
 									:src="resize(n - 1, '100x100')"
 							/>
 						</div>
-					</div>
-					<div>
-						<p style="margin-top:8rem">test</p>
+						<div class="articles__medium">
+							<MediumCard v-for="n in nbPosts" :key="n"
+								:title="$page.allStoryblokEntry.edges[n - 1].node.name"
+								:src="resize(n - 1, '200x125')"
+							/>
+						</div>	
+						<div class="articles__share">
+							<p>Suivez-nous sur les <span>réseaux sociaux !</span></p>
+							<div>
+								<font-awesome :icon="['fab', 'twitter']" size="2x" />
+								<font-awesome :icon="['fab', 'facebook']" size="2x" />
+							</div>
+						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="events">
+			<div class="fit-content">
+				<h2 class="events__title">Évènements</h2>
 			</div>
 		</div>
 	</Layout>
@@ -102,6 +125,7 @@ query {
 				created_at(format:"DD/MM")
 				full_slug
 				content
+				tag_list
 			}
 		}
 	}
@@ -118,6 +142,14 @@ query {
 		font-weight: 900;
 		color: $accent;
 	}
+
+	&__articles {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: $xxl;
+		margin-top: $xxl;
+	}
 }
 
 .title__stroke {
@@ -128,7 +160,7 @@ query {
 .topical {
 	color: $primary;
 	background-color: $dark;
-	margin-top: $xxl;
+	margin-top: $xl;
 	padding-bottom: $xxl;
 
 	> div {
@@ -143,20 +175,7 @@ query {
 	}
 
 	&__title {
-		position: relative;
-		font-family: "Druk Wide";
-		font-size: $font-xl;
-		font-weight: 700;
-
-		&::after {
-			content: "";
-			position: absolute;
-			background-color: $primary;
-			width: 4*$xl;
-			height: $xs;
-			bottom: -$md;
-			left: 0;
-		}
+		@include title($primary);
 	}
 
 	&__presentation {
@@ -184,32 +203,26 @@ query {
 	}
 
 	&__title {
-	position: relative;
-	font-family: "Druk Wide";
-	font-size: $font-xl;
-	font-weight: 700; 
-
-		&::after {
-			content: "";
-			position: absolute;
-			background-color: $accent;
-			width: 4*$xl;
-			height: $xs;
-			bottom: -$md;
-			left: 0;
-		}
+		@include title($accent);
 	}
 
 	&__grid {
 		display: grid;
+		position: relative;
 		grid-template-columns: 3fr 1fr;
-		grid-template-rows: 1fr;
+		grid-template-rows: 1fr 0.25fr;
 		grid-column-gap: $xl;
-		grid-row-gap: 0;
+		grid-row-gap: $lg;
 		margin-top: $xxl;
 	}
+
+	&__medium {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 	
-	&__aside {
+	&__little {
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
@@ -224,6 +237,39 @@ query {
 			top: 0;
 			left: -$lg;
 		}
+	}
+
+	&__share {
+		background-color: $dark;
+		color: $primary;
+		padding: $lg $md;
+		
+		p {
+			text-align: center;
+			font-size: $font-md;
+		}
+
+		span {
+			font-weight: 900;
+		}
+
+		div {
+			display: flex;
+			justify-content: space-evenly;
+			margin-top: $lg;
+		}
+
+		svg:hover {
+			color: darkblue;
+		}
+	}
+}
+
+.events {
+	margin-top: $xxl;
+
+	&__title {
+		@include title($accent);
 	}
 }
 </style>

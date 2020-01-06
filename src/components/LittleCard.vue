@@ -1,10 +1,11 @@
 <template>
 	<g-link class="little-card" :to="url">
+		<div class="little-card__header">
+			<span class="date">{{ date }}</span>
+			<span class="tag">{{ tag }}</span>
+		</div>
 		<div class="little-card__title">
 			<h3>{{ title }}</h3>
-		</div>
-		<div class="little-card__date">
-			<span>{{ date }}</span>
 		</div>
 		<div class="little-card__img">
 			<g-image :src="src" />
@@ -25,12 +26,16 @@ export default {
 		},
 		src: {
 			type: String,
-			default: ""
+			default: "",
 		},
 		title: {
             type: String,
             default: "Titre",
-        }
+        },
+		tag: {
+			type: String,
+			default: "NPA",
+		}
 	}
 }
 </script>
@@ -42,28 +47,39 @@ export default {
 	color: $accent;
 	margin: $lg auto $lg auto;
 	transition: 0.3s ease-in-out;
-	
-	&__title h3 {
-		font-size: $md;
-		font-weight: 500;
+
+	&__header {
+		position: absolute;
+		font-size: $font-sm;
+		top: -$md;
+		left: 0;
+		color: $accent-light;
+		transition: 0.3s ease-in-out;
+
+		.date {
+			font-weight: 600;
+			margin-right: $xxs;
+		}
+
+		.tag {
+			text-transform: uppercase;
+		}
 	}
 
-	&__date {
-	position: absolute;
-	bottom: -$xs;
-	left: 0;
-	z-index: 999;
-
-		> span {
-			@include stroke($accent, $primary, 3px, transparent);
-			font-size: $font-sm;
-			padding: $xxs;
-			transition: 0.3s ease-in-out;
+	&__title {
+		display: flex;
+    	align-items: center;
+	
+		h3 {
+			font-family: "Druk Wide";
+			font-size: $sm + 0.1rem;
+			font-weight: 400;
 		}
 	}
 
 	&__img {
 		filter: grayscale(100);
+		margin: auto 0 auto $xs;
 		transition: 0.5s ease-in-out;
 	}
 
@@ -79,6 +95,11 @@ export default {
 		.little-card__img {
 			filter: grayscale(0);
 			transition: 0.5s ease-in-out;
+		}
+
+		.little-card__header {
+			color: $dark-light;
+			transition: 0.3s ease-in-out;
 		}
 	}
 }

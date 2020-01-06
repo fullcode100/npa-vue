@@ -7,13 +7,13 @@ import Feature from "~/components/Feature.vue"
 import Grid from "~/components/Grid.vue"
 import Richtext from "~/components/Richtext.vue"
 
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
-import { config, library } from "@fortawesome/fontawesome-svg-core"
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
-import "@fortawesome/fontawesome-svg-core/styles.css"
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { config, library } from '@fortawesome/fontawesome-svg-core'
+import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 config.autoAddCss = false;
-library.add(faArrowRight)
+library.add(faFacebook, faTwitter)
 
 export default function (Vue, { router, head, isClient }) {
 	Vue.component("Layout", DefaultLayout)

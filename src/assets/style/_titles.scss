@@ -1,0 +1,16 @@
+@mixin title($color) {
+	position: relative;
+	font-family: "Druk Wide";
+	font-size: $font-xl;
+	font-weight: 700; 
+
+	&::after {
+		content: "";
+		position: absolute;
+		background-color: $color;
+		width: 4*$xl;
+		height: $xs;
+		bottom: -$md;
+		left: 0;
+	}
+}

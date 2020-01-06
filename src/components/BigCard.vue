@@ -6,6 +6,7 @@
 		<div class="big-card__content">
 			<div class="summary">
 				<p>{{ summary }}</p>
+				<span>{{ tag }}</span>
 			</div>
 			<div class="img">
 				<g-image :src="src" />
@@ -40,6 +41,10 @@ export default {
             type: String,
             default: "Chapo",
 		},
+		tag: {
+			type: String,
+			default: "NPA",
+		}
 	}
 }
 </script>
@@ -54,6 +59,7 @@ export default {
 	&__content {
 		display: flex;
 		flex-direction: row;
+		margin-top: $lg + $xxs;
 
 		.summary {
 			position: relative;
@@ -62,11 +68,18 @@ export default {
 
 			p {
 				font-size: $font-md;
+                font-weight: 300;
+				padding-bottom: $lg;
+			}
+
+			span {
+				color: $accent-light;
+				text-transform: uppercase;
+				transition: 0.3s ease-in-out;
 			}
 		}
 
 		.img {
-			margin-top: $lg + $xxs;
 			filter: grayscale(100);
 			transition: 0.5s ease-in-out;
 		}
@@ -106,9 +119,16 @@ export default {
 			transition: 0.3s ease-in-out;
 		}
 
-		.big-card__content .img {
-			filter: grayscale(0);
-			transition: 0.5s ease-in-out;
+		.big-card__content {
+			.summary span {
+				color: $dark-light;
+				transition: 0.3s ease-in-out;
+			}
+
+			.img {
+				filter: grayscale(0);
+				transition: 0.5s ease-in-out;
+			}
 		}
 	}
 }
