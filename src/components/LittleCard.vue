@@ -1,14 +1,15 @@
 <template>
 	<g-link class="little-card" :to="url">
-		<div class="little-card__header">
-			<span class="date">{{ date }}</span>
-			<span class="tag">{{ tag }}</span>
-		</div>
-		<div class="little-card__title">
+		<div class="little-card__content">
+			<span>{{ tag }}</span>
 			<h3>{{ title }}</h3>
 		</div>
 		<div class="little-card__img">
 			<g-image :src="src" />
+		</div>
+		<div class="little-card__date">
+			<font-awesome :icon="['far', 'clock']" />
+			<span>{{ date }}</span>
 		</div>
 	</g-link>
 </template>
@@ -48,27 +49,15 @@ export default {
 	margin: $lg auto $lg auto;
 	transition: 0.3s ease-in-out;
 
-	&__header {
-		position: absolute;
-		font-size: $font-sm;
-		top: -$md;
-		left: 0;
-		color: $accent-light;
-		transition: 0.3s ease-in-out;
+	&__content {
+		display: flex;
+		flex-direction: column;
 
-		.date {
-			font-weight: 600;
-			margin-right: $xxs;
-		}
-
-		.tag {
+		span {
+			font-weight: 100;
+			padding-bottom: $xxs;
 			text-transform: uppercase;
 		}
-	}
-
-	&__title {
-		display: flex;
-    	align-items: center;
 	
 		h3 {
 			font-family: "Druk Wide";
@@ -83,23 +72,22 @@ export default {
 		transition: 0.5s ease-in-out;
 	}
 
+	&__date {
+		position: absolute;
+		font-weight: 400;
+		color: $dark-lighter;
+		bottom: -$sm;
+
+		span {
+			padding-left: $xs;
+		}
+	}
+
 	&:hover {
 		color: $dark;
-		transition: 0.3s ease-in-out;
-
-		.little-card__date span {
-			background-color: $dark;
-			transition: 0.3s ease-in-out;
-		}
 
 		.little-card__img {
 			filter: grayscale(0);
-			transition: 0.5s ease-in-out;
-		}
-
-		.little-card__header {
-			color: $dark-light;
-			transition: 0.3s ease-in-out;
 		}
 	}
 }

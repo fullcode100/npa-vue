@@ -107,6 +107,7 @@ export default {
 			font-weight: 800;
 			font-size: $font-xxl/2;
 			background-color: $primary;
+			padding-bottom: $xs;
 		}
 	}
 

@@ -1,14 +1,12 @@
 // Primary
-$primary: #F9F3EC;
-$primary-light: rgba($primary, 0.7);
-$primary-lighter: rgba($primary, 0.5);
+$primary: hsl(60, 100%, 98%); // #fffff5
 
 // Secondary
-$accent: #EB1C22;
-$accent-light: #ff5e4d;
-$accent-lighter: rgba($accent, 0.5);
+$accent: hsl(358, 84%, 52%); // #eb1e25
+$accent-light: lighten($accent, 10%);
+$accent-lighter: lighten($accent, 15%);
 
 // Shade
-$dark: #141010;
-$dark-light: #3a3636;
-$dark-lighter: rgba($dark, 0.5);
+$dark: hsl(0, 75%, 3%); // #0d0202
+$dark-light: #40453E;
+$dark-lighter: hsl(0, 10%, 50%);

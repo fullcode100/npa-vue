@@ -6,7 +6,7 @@
 				<LittleCard v-for="n in nbPosts" :key="n"
 					:url="$page.allStoryblokEntry.edges[n - 1].node.full_slug"
 					:title="$page.allStoryblokEntry.edges[n - 1].node.name"
-					:date="$page.allStoryblokEntry.edges[n - 1].node.created_at"
+					:date="fromNow($page.allStoryblokEntry.edges[n - 1].node.created_at)"
 					:tag="$page.allStoryblokEntry.edges[n - 1].node.tag_list[0]"
 					:src="resize(n - 1, '100x100')"
 				/>
@@ -48,14 +48,14 @@
 							:url="$page.allStoryblokEntry.edges[0].node.full_slug"
 							:title="$page.allStoryblokEntry.edges[0].node.name"
 							:summary="$page.allStoryblokEntry.edges[0].node.content.summary"
-							:date="$page.allStoryblokEntry.edges[0].node.created_at"
-							:src="resize(0, '525x500')"
+							:date="date($page.allStoryblokEntry.edges[0].node.created_at)"
+							:src="resize(0, '500x500')"
 						/>
 						<div class="articles__little">
 							<LittleCard v-for="n in nbPosts" :key="n"
 									:url="$page.allStoryblokEntry.edges[n - 1].node.full_slug"
 									:title="$page.allStoryblokEntry.edges[n - 1].node.name"
-									:date="$page.allStoryblokEntry.edges[n - 1].node.created_at"
+									:date="fromNow($page.allStoryblokEntry.edges[n - 1].node.created_at)"
 									:tag="$page.allStoryblokEntry.edges[n - 1].node.tag_list[0]"
 									:src="resize(n - 1, '100x100')"
 							/>
@@ -89,6 +89,7 @@
 import LittleCard from "@/components/LittleCard.vue";
 import MediumCard from "@/components/MediumCard.vue";
 import BigCard from "@/components/BigCard.vue";
+import moment from "moment";
 
 export default {
 	components: {
@@ -107,6 +108,15 @@ export default {
 			let img = this.$page.allStoryblokEntry.edges[index].node.content.thumbnail;
 			const path = img.replace("//a.storyblok.com", "");
 			return imageService + option + path;
+		},
+		fromNow(date) {
+			moment.locale("fr");
+			return moment(date, "YYYYMMDD").fromNow();
+		},
+		date(date) {
+			let month = date.slice(4, 6);
+			let day = date.slice(6, 8);
+			return `${day}/${month}`;
 		}
 	},
 	metaInfo: {
@@ -122,7 +132,7 @@ query {
 			node {
 				id
 				name
-				created_at(format:"DD/MM")
+				created_at(format:"YYYYMMDD")
 				full_slug
 				content
 				tag_list
@@ -148,7 +158,7 @@ query {
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: 1fr;
 		grid-column-gap: $xxl;
-		margin-top: $xxl;
+		margin-top: 3*$lg;
 	}
 }
 
@@ -209,7 +219,7 @@ query {
 	&__grid {
 		display: grid;
 		position: relative;
-		grid-template-columns: 3fr 1fr;
+		grid-template-columns: 2.5fr 1fr;
 		grid-template-rows: 1fr 0.25fr;
 		grid-column-gap: $xl;
 		grid-row-gap: $lg;
