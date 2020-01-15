@@ -9,16 +9,16 @@
 		<nav>
 			<ul>
 				<li>
-					<g-link to="" class="link--primary link--bold">Nantes 2020</g-link>
+					<g-link to="" class="link--header">Nantes 2020</g-link>
 				</li>
 				<li>
-					<g-link to="" class="link--primary">Actualités</g-link>
+					<g-link to="" class="link--header">Actualités</g-link>
 				</li>
 				<li>
-					<g-link to="" class="link--primary">Évènements</g-link>
+					<g-link to="" class="link--header">Évènements</g-link>
 				</li>
 				<li>
-					<g-link to="" class="link--primary">Contact</g-link>
+					<g-link to="" class="link--header">Contact</g-link>
 				</li>
 			</ul>
 		</nav>

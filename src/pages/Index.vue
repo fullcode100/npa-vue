@@ -8,14 +8,14 @@
 					:title="$page.allStoryblokEntry.edges[n - 1].node.name"
 					:date="fromNow($page.allStoryblokEntry.edges[n - 1].node.created_at)"
 					:tag="$page.allStoryblokEntry.edges[n - 1].node.tag_list[0]"
-					:src="resize(n - 1, '100x100')"
+					:src="resize(n - 1, '110x80')"
 				/>
 			</div>
 		</div>
-		<div class="topical">
+		<section class="topical">
 			<div class="fit-content">
 				<div class="topical__content">
-					<h2 class="topical__title">Nantes 2020</h2>
+					<h1 class="topical__title">Nantes 2020</h1>
 					<div class="topical__presentation">
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -38,11 +38,11 @@
 					<g-image src="@/assets/riwan_chami.jpg" alt="" width="350px" />
 				</div>
 			</div>
-		</div>
-		<div class="articles">
+		</section>
+		<section class="articles">
 			<div class="fit-content">
 				<div class="articles__content">
-					<h2 class="articles__title">Actualités</h2>
+					<h1 class="articles__title">Actualités</h1>
 					<div class="articles__grid">
 						<BigCard
 							:url="$page.allStoryblokEntry.edges[0].node.full_slug"
@@ -63,25 +63,33 @@
 						<div class="articles__medium">
 							<MediumCard v-for="n in nbPosts" :key="n"
 								:title="$page.allStoryblokEntry.edges[n - 1].node.name"
-								:src="resize(n - 1, '200x125')"
+								:src="resize(n - 1, '225x150')"
+								:date="date($page.allStoryblokEntry.edges[n - 1].node.created_at)"
 							/>
 						</div>	
 						<div class="articles__share">
-							<p>Suivez-nous sur les <span>réseaux sociaux !</span></p>
 							<div>
-								<font-awesome :icon="['fab', 'twitter']" size="2x" />
-								<font-awesome :icon="['fab', 'facebook']" size="2x" />
+								<p>Suivez-nous sur les <span>réseaux sociaux !</span></p>
+								<div>
+									<font-awesome :icon="['fab', 'twitter']" size="2x" />
+									<font-awesome :icon="['fab', 'facebook']" size="2x" />
+								</div>
 							</div>
+								<p>Consultez nos anciens articles</p>
+							<div>
+
+							</div>
+								
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="events">
+		</section>
+		<section class="events">
 			<div class="fit-content">
-				<h2 class="events__title">Évènements</h2>
+				<h1 class="events__title">Évènements</h1>
 			</div>
-		</div>
+		</section>
 	</Layout>
 </template>
 
@@ -157,7 +165,7 @@ query {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: 1fr;
-		grid-column-gap: $xxl;
+		grid-column-gap: $lg + $sm;
 		margin-top: 3*$lg;
 	}
 }
@@ -222,7 +230,7 @@ query {
 		grid-template-columns: 2.5fr 1fr;
 		grid-template-rows: 1fr 0.25fr;
 		grid-column-gap: $xl;
-		grid-row-gap: $lg;
+		grid-row-gap: $xl;
 		margin-top: $xxl;
 	}
 
@@ -239,6 +247,15 @@ query {
 		position: relative;
 
 		&::before {
+			content: "Derniers articles";
+			position: absolute;
+			font-family: "Druk Wide Text";
+			font-size: $font-md;
+			top: -$lg;
+			left: 0;
+		}
+
+		&::after {
 			content: "";
 			position: absolute;
 			background-color: $accent;
@@ -253,6 +270,7 @@ query {
 		background-color: $dark;
 		color: $primary;
 		padding: $lg $md;
+		height: 250px;
 		
 		p {
 			text-align: center;
@@ -266,7 +284,7 @@ query {
 		div {
 			display: flex;
 			justify-content: space-evenly;
-			margin-top: $lg;
+			margin-top: $md;
 		}
 
 		svg:hover {

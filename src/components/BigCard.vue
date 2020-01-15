@@ -1,7 +1,7 @@
 <template>
 	<g-link class="big-card" :to="url">
 		<div class="big-card__title">
-			<h3>{{ title }}</h3>
+			<h2>{{ title }}</h2>
 		</div>
 		<div class="big-card__content">
 			<div class="summary">
@@ -62,9 +62,9 @@ export default {
 		margin-top: $lg + $xxs;
 
 		.summary {
-			position: relative;
-			margin: auto;
+			align-self: flex-end;
 			padding-right: $xxs;
+			margin-bottom: $xl;
 
 			p {
 				font-size: $font-md;
@@ -99,21 +99,21 @@ export default {
 
 	&__title {
 		position: absolute;
-		width: 50%;
+		max-width: 60%;
 		z-index: 999;
 
-		h3 {
-			font-family: "Druk Wide";
+		h2 {
+			font-family: "Druk Wide Text";
 			font-weight: 800;
 			font-size: $font-xxl/2;
 			background-color: $primary;
 			padding-bottom: $xs;
+			padding-right: $xs;
 		}
 	}
 
 	&:hover {
-	color: $dark;
-	transition: 0.3s ease-in-out;
+		color: $dark;
 
 		.big-card__date span {
 			background-color: $dark;

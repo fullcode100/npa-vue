@@ -130,4 +130,32 @@ query {
     font-style: normal;
     font-display: auto;
 }
+
+// Druk Wide Text
+
+@font-face {
+    font-family: "Druk Wide Text";
+    src: url("../assets/fonts/DrukTextWide-Medium-Cy-Web.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: auto;
+}
+
+// Druke Text
+
+@font-face {
+    font-family: "Druk Text";
+    src: url("../assets/fonts/DrukText-Bold-Cy-Web.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Druk Text";
+    src: url("../assets/fonts/DrukText-Heavy-Cy-Web.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: auto;
+}
 </style>

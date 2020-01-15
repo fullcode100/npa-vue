@@ -55,14 +55,16 @@ export default {
 
 		span {
 			font-weight: 100;
+			color: $accent-light;
 			padding-bottom: $xxs;
 			text-transform: uppercase;
+			transition: 0.3s ease-in-out;
 		}
 	
 		h3 {
-			font-family: "Druk Wide";
-			font-size: $sm + 0.1rem;
-			font-weight: 400;
+			font-family: "Druk Text";
+			font-size: $font-sm;
+			font-weight: 700;
 		}
 	}
 
@@ -75,10 +77,12 @@ export default {
 	&__date {
 		position: absolute;
 		font-weight: 400;
+		vertical-align: top;
 		color: $dark-lighter;
-		bottom: -$sm;
+		bottom: -$sm - $xxs;
 
 		span {
+			font-size: $font-xs;
 			padding-left: $xs;
 		}
 	}
@@ -88,6 +92,11 @@ export default {
 
 		.little-card__img {
 			filter: grayscale(0);
+			transition: 0.5s ease-in-out;
+		}
+
+		.little-card__content span {
+			color: $dark-light;
 		}
 	}
 }

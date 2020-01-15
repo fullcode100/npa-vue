@@ -1,8 +1,8 @@
-@mixin stroke($background-color, $color, $stroke-width, $color-stroke) {
+@mixin stroke($background-color, $color, $stroke-width, $stroke-color) {
 	font-family: "Druk Wide";
 	letter-spacing: 4px;
 	-webkit-text-stroke-width: $stroke-width;
-	-webkit-text-stroke-color: $color-stroke;
+	-webkit-text-stroke-color: $stroke-color;
 	-webkit-font-smoothing : antialiased;
 	-webkit-background-clip: text;
 	background-color: $background-color;
