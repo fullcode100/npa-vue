@@ -15,8 +15,8 @@
 		"gridsome-source-storyblok": "^0.1.2",
 		"moment": "^2.24.0",
 		"sass": "^1.24.2",
-		"vue": "^2.6.11",
-		"vue-template-compiler": "^2.6.11"
+		"vue": "^2.6.10",
+		"vue-template-compiler": "^2.6.10"
 	},
 	"devDependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.26",
