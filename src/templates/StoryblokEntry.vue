@@ -4,7 +4,7 @@
 			<main class="article">
 				<div class="article__header">
 					<div class="header__img">
-						<img :src="story.content.thumbnail" alt="" />
+						<img :src="resize(story.content.thumbnail, '400x400')" alt="" />
 					</div>
 					<div class="header__content">
 						<h1>{{ story.name }}</h1>
@@ -36,6 +36,13 @@ export default {
     	return {
 			title: this.$page.storyblokEntry.name,
 		}
+	},
+	methods: {
+		resize(img, option) {
+			const imageService = "//img2.storyblok.com/";
+			const path = img.replace("//a.storyblok.com", "");
+			return imageService + option + path;
+		},
 	}
 };
 </script>
@@ -56,13 +63,27 @@ query StoryblokEntry ($id: ID) {
 	&__header {
 		display: flex;
 		flex-direction: row;
-		background-color: $dark;
-		color: $primary;
-		margin-top: $xl;
+		margin-top: $lg;
 		padding: $lg $md;
 
 		img {
-			width: 250px;
+			width: 400px;
+		}
+
+		.header__content {
+			margin-left: $lg;
+
+			h1 {
+				margin-top: $md;
+				font-size: $lg;
+				font-family: "Druk Wide Text";
+			}
+
+			p {
+				margin-top: $lg;
+				font-size: $font-md;
+				color: $accent-light;
+			}
 		}
 	}
 
