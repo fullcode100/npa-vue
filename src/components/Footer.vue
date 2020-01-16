@@ -1,0 +1,20 @@
+<template>
+	<footer>
+		<a id="footer"></a>
+		<div class="fit-content">
+			<p>Test</p>
+			<p>Test</p>
+		</div>
+	</footer>
+</template>
+
+<style lang="scss">
+footer {
+	background-color: $dark;
+	color: $primary;
+
+	p {
+		margin-top: 2rem;
+	}
+}
+</style>

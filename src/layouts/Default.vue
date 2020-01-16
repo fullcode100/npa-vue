@@ -2,15 +2,18 @@
 	<div>
 		<Header class="fit-content" />
 		<slot />
+		<Footer />
 	</div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
 	components: {
-		Header
+		Header,
+		Footer
 	},
 	computed: {
 		menuOptions() {
@@ -55,44 +58,12 @@ query {
 	max-width: 75%;
 }
 
-// Gosha Sans
+// RZ
 
 @font-face {
-    font-family: "Gosha Sans";
-    src: url("../assets/fonts/GoshaSans/GoshaSans-Light.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Gosha Sans";
-    src: url("../assets/fonts/GoshaSans/GoshaSans-Regular.woff") format("woff");
+    font-family: "RZ";
+    src: url("../assets/fonts/RZ/RZ Regular.woff") format("woff");
     font-weight: 400;
-    font-style: normal;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Gosha Sans";
-    src: url("../assets/fonts/GoshaSans/GoshaSans-Medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Gosha Sans";
-    src: url("../assets/fonts/GoshaSans/GoshaSans-Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Gosha Sans";
-    src: url("../assets/fonts/GoshaSans/GoshaSans-Ultrabold.woff") format("woff");
-    font-weight: 800;
     font-style: normal;
     font-display: auto;
 }
@@ -101,15 +72,7 @@ query {
 
 @font-face {
     font-family: "Druk Wide";
-    src: url("../assets/fonts/Druk Wide/Druk Wide Medium Regular.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Druk Wide";
-    src: url("../assets/fonts/Druk Wide/Druk Wide Bold Regular.woff") format("woff");
+    src: url("../assets/fonts/Druk/Druk Wide Bold Regular.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: auto;
@@ -117,15 +80,7 @@ query {
 
 @font-face {
     font-family: "Druk Wide";
-    src: url("../assets/fonts/Druk Wide/Druk Wide Heavy Regular.woff") format("woff");
-    font-weight: 800;
-    font-style: normal;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Druk Wide";
-    src: url("../assets/fonts/Druk Wide/Druk Wide Super Regular.woff") format("woff");
+    src: url("../assets/fonts/Druk/Druk Wide Super Regular.woff") format("woff");
     font-weight: 900;
     font-style: normal;
     font-display: auto;
@@ -134,18 +89,26 @@ query {
 // Druk Wide Text
 
 @font-face {
-    font-family: "Druk Wide Text";
-    src: url("../assets/fonts/DrukTextWide-Medium-Cy-Web.woff") format("woff");
+    font-family: "Druk Text Wide";
+    src: url("../assets/fonts/Druk/Druk Text Wide Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: auto;
 }
 
-// Druke Text
+@font-face {
+    font-family: "Druk Text Wide";
+    src: url("../assets/fonts/Druk/Druk Text Wide Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: auto;
+}
+
+// Druk Text
 
 @font-face {
     font-family: "Druk Text";
-    src: url("../assets/fonts/DrukText-Bold-Cy-Web.woff") format("woff");
+    src: url("../assets/fonts/Druk/Druk Text Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: auto;
@@ -153,8 +116,16 @@ query {
 
 @font-face {
     font-family: "Druk Text";
-    src: url("../assets/fonts/DrukText-Heavy-Cy-Web.woff") format("woff");
+    src: url("../assets/fonts/Druk/Druk Text Heavy.woff") format("woff");
     font-weight: 800;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Druk Text";
+    src: url("../assets/fonts/Druk/Druk Text Super.woff") format("woff");
+    font-weight: 900;
     font-style: normal;
     font-display: auto;
 }

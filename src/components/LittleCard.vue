@@ -54,7 +54,7 @@ export default {
 		flex-direction: column;
 
 		span {
-			font-weight: 100;
+			font-size: $font-xs;
 			color: $accent-light;
 			padding-bottom: $xxs;
 			text-transform: uppercase;
@@ -70,7 +70,7 @@ export default {
 
 	&__img {
 		filter: grayscale(100);
-		margin: auto 0 auto $xs;
+		margin: auto 0 auto $xxs;
 		transition: 0.5s ease-in-out;
 	}
 
@@ -83,7 +83,7 @@ export default {
 
 		span {
 			font-size: $font-xs;
-			padding-left: $xs;
+			padding-left: $xxs;
 		}
 	}
 

@@ -9,16 +9,16 @@
 		<nav>
 			<ul>
 				<li>
-					<g-link to="" class="link--header">Nantes 2020</g-link>
+					<g-link to="/#topical" class="link--header">Nantes 2020</g-link>
 				</li>
 				<li>
-					<g-link to="" class="link--header">Actualités</g-link>
+					<g-link to="/#articles" class="link--header">Actualités</g-link>
 				</li>
 				<li>
-					<g-link to="" class="link--header">Évènements</g-link>
+					<g-link to="/#events" class="link--header">Évènements</g-link>
 				</li>
 				<li>
-					<g-link to="" class="link--header">Contact</g-link>
+					<g-link to="/#footer" class="link--header">Contact</g-link>
 				</li>
 			</ul>
 		</nav>
@@ -39,6 +39,10 @@ nav ul {
 	
 	li {
 		margin: $space-inline-xl;
+
+		&:first-of-type a {
+			font-weight: 700;
+		}
 
 		&:last-child {
 			margin: 0;

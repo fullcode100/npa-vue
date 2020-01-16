@@ -13,6 +13,7 @@
 			</div>
 		</div>
 		<section class="topical">
+			<a id="topical"></a>
 			<div class="fit-content">
 				<div class="topical__content">
 					<h1 class="topical__title">Nantes 2020</h1>
@@ -40,6 +41,7 @@
 			</div>
 		</section>
 		<section class="articles">
+			<a id="articles"></a>
 			<div class="fit-content">
 				<div class="articles__content">
 					<h1 class="articles__title">Actualités</h1>
@@ -52,6 +54,7 @@
 							:src="resize(0, '500x500')"
 						/>
 						<div class="articles__little">
+							<span>Derniers articles</span>
 							<LittleCard v-for="n in nbPosts" :key="n"
 									:url="$page.allStoryblokEntry.edges[n - 1].node.full_slug"
 									:title="$page.allStoryblokEntry.edges[n - 1].node.name"
@@ -62,30 +65,30 @@
 						</div>
 						<div class="articles__medium">
 							<MediumCard v-for="n in nbPosts" :key="n"
+								:url="$page.allStoryblokEntry.edges[n - 1].node.full_slug"
 								:title="$page.allStoryblokEntry.edges[n - 1].node.name"
 								:src="resize(n - 1, '225x150')"
 								:date="date($page.allStoryblokEntry.edges[n - 1].node.created_at)"
 							/>
 						</div>	
 						<div class="articles__share">
-							<div>
+							<div class="articles__network">
 								<p>Suivez-nous sur les <span>réseaux sociaux !</span></p>
 								<div>
 									<font-awesome :icon="['fab', 'twitter']" size="2x" />
-									<font-awesome :icon="['fab', 'facebook']" size="2x" />
+									<font-awesome :icon="['fab', 'facebook-f']" size="2x" />
 								</div>
 							</div>
-								<p>Consultez nos anciens articles</p>
-							<div>
-
+							<div class="articles__past">
+								<g-link to="" class="btn--primary">Précédents articles</g-link>
 							</div>
-								
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="events">
+			<a id="events"></a>
 			<div class="fit-content">
 				<h1 class="events__title">Évènements</h1>
 			</div>
@@ -231,7 +234,7 @@ query {
 		grid-template-rows: 1fr 0.25fr;
 		grid-column-gap: $xl;
 		grid-row-gap: $xl;
-		margin-top: $xxl;
+		margin-top: $xl;
 	}
 
 	&__medium {
@@ -246,13 +249,8 @@ query {
 		flex-direction: column;
 		position: relative;
 
-		&::before {
-			content: "Derniers articles";
-			position: absolute;
-			font-family: "Druk Wide Text";
-			font-size: $font-md;
-			top: -$lg;
-			left: 0;
+		> span {
+			font-family: "Druk Text Wide";
 		}
 
 		&::after {
@@ -271,7 +269,18 @@ query {
 		color: $primary;
 		padding: $lg $md;
 		height: 250px;
-		
+	}
+
+	&__network {
+		display: flex;
+		flex-direction: column;
+
+		> div {
+			display: flex;
+			justify-content: space-evenly;
+			margin-top: $xs;
+		}
+
 		p {
 			text-align: center;
 			font-size: $font-md;
@@ -280,16 +289,12 @@ query {
 		span {
 			font-weight: 900;
 		}
+	}
 
-		div {
-			display: flex;
-			justify-content: space-evenly;
-			margin-top: $md;
-		}
-
-		svg:hover {
-			color: darkblue;
-		}
+	&__past {
+		display: flex;
+		justify-content: center;
+		margin-top: $lg;
 	}
 }
 

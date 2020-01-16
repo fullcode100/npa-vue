@@ -43,7 +43,8 @@ html {
 	height: 100%;
 	line-height: 1;
 	scroll-behavior: smooth;
-	font-family: "Gosha Sans", sans-serif;
+	font-family: "RZ", sans-serif;
+	font-size: 16px;
 	background-color: $primary;
 	color: $accent;
 }
@@ -51,4 +52,10 @@ html {
 ::selection {
 	color: $primary;
 	background-color: $dark;
+}
+
+:target {
+    display: block;
+    position: relative;
+    top: -70px;
 }

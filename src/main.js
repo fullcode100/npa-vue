@@ -9,12 +9,13 @@ import Richtext from "~/components/Richtext.vue"
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 import { config, library } from "@fortawesome/fontawesome-svg-core"
-import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faClock } from "@fortawesome/free-regular-svg-icons"
+import { faLink } from "@fortawesome/free-solid-svg-icons"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
 config.autoAddCss = false;
-library.add(faFacebook, faTwitter, faClock)
+library.add(faFacebookF, faTwitter, faClock, faLink)
 
 export default function (Vue, { router, head, isClient }) {
 	Vue.component("Layout", DefaultLayout)

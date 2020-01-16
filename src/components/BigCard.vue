@@ -1,7 +1,9 @@
 <template>
 	<g-link class="big-card" :to="url">
 		<div class="big-card__title">
-			<h2>{{ title }}</h2>
+			<h2>
+				<span>{{ title }}</span>
+			</h2>
 		</div>
 		<div class="big-card__content">
 			<div class="summary">
@@ -59,7 +61,7 @@ export default {
 	&__content {
 		display: flex;
 		flex-direction: row;
-		margin-top: $lg + $xxs;
+		margin-top: $md*2;
 
 		.summary {
 			align-self: flex-end;
@@ -87,7 +89,7 @@ export default {
 
 	&__date {
 		position: absolute;
-		top: $sm / 3;
+		top: $sm;
 		right: 0;
 
 		> span {
@@ -99,16 +101,23 @@ export default {
 
 	&__title {
 		position: absolute;
-		max-width: 60%;
+		max-width: 65%;
 		z-index: 999;
 
 		h2 {
-			font-family: "Druk Wide Text";
-			font-weight: 800;
-			font-size: $font-xxl/2;
-			background-color: $primary;
-			padding-bottom: $xs;
-			padding-right: $xs;
+			font-family: "Druk Text Wide";
+			font-weight: 700;
+			font-size: $font-lg;
+
+			span {
+				display: inline;
+				line-height: 1.4;
+				padding-right: $sm/2;
+				padding-bottom: $sm/2;
+				-webkit-box-decoration-break: clone;
+				box-decoration-break: clone;
+				background-color: $primary;
+			}
 		}
 	}
 

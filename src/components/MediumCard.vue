@@ -43,26 +43,15 @@ export default {
 	width: 225px;
 	transition: 0.3s ease-in-out;
 
-	&::after {
-		content: "";
-		position: absolute;
-		background-color: $accent;
-		width: 60%;
-		height: 1.5px;
-		top: -$xxs;
-		left: 0;
-		transition: 0.3s ease-in-out;
-	}
-
 	&__title {
 		margin-top: $sm;
 		color: $accent;
 		transition: 0.3s ease-in-out;
 
 		h2 {
-			font-family: "Druk Wide Text";
+			font-family: "Druk Text Wide";
 			font-weight: 500;
-			font-size: $sm;
+			font-size: $font-sm;
 		}
 	}
 
@@ -79,7 +68,7 @@ export default {
 		> span {
 			@include stroke($accent, $primary, 3px, transparent);
 			padding: $xxs;
-			font-size: $font-md/1.2;
+			font-size: $font-sm;
 		}
 	}
 
@@ -97,13 +86,6 @@ export default {
 		.medium-card__img {
 			filter: grayscale(0);
 			transition: 0.5s ease-in-out;
-		}
-
-		&::after {
-			transform: scale(0.8);
-			background-color: $dark;
-			transform-origin: right;
-			transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 		}
 	}
 }
