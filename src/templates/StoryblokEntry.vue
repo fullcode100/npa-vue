@@ -57,9 +57,11 @@ export default {
 	},
 	methods: {
 		resize(img, option) {
-			const imageService = "//img2.storyblok.com/";
-			const path = img.replace("//a.storyblok.com", "");
-			return imageService + option + path;
+			if (img != undefined || null) {
+				const imageService = "//img2.storyblok.com/";
+				const path = img.replace("//a.storyblok.com", "");
+				return imageService + option + path;
+			}
 		},
 	}
 };

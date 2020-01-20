@@ -2,8 +2,7 @@
 	<footer>
 		<a id="footer"></a>
 		<div class="fit-content">
-			<p>Test</p>
-			<p>Test</p>
+			
 		</div>
 	</footer>
 </template>
