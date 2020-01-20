@@ -49,8 +49,8 @@ export default {
 		transition: 0.3s ease-in-out;
 
 		h2 {
-			font-family: "Druk Text Wide";
-			font-weight: 500;
+			font-family: "Druk Text";
+			font-weight: 900;
 			font-size: $font-sm;
 		}
 	}

@@ -1,7 +1,8 @@
 <template>
 	<Layout>
-		<div class="home fit-content">
-			<h1 class="home__title">NOS <span class="title__stroke">VIES</span>, PAS LEURS <span class="title__stroke">PROFITS</span></h1>
+		<section class="home fit-content">
+			<h1 class="home__title">NPA	NANTES <span class="title__stroke">2020</span></h1>
+			<h2 class="home__subtitle">Une liste anticapitaliste et révolutionnaire</h2>
 			<div class="home__articles">
 				<LittleCard v-for="n in nbPosts" :key="n"
 					:url="$page.allStoryblokEntry.edges[n - 1].node.full_slug"
@@ -10,34 +11,6 @@
 					:tag="$page.allStoryblokEntry.edges[n - 1].node.tag_list[0]"
 					:src="resize(n - 1, '110x80')"
 				/>
-			</div>
-		</div>
-		<section class="topical">
-			<a id="topical"></a>
-			<div class="fit-content">
-				<div class="topical__content">
-					<h1 class="topical__title">Nantes 2020</h1>
-					<div class="topical__presentation">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Totam illo mollitia animi blanditiis iure asperiores
-							voluptatem modi, numquam illum omnis nesciunt placeat?
-							Nisi maxime enim deserunt similique harum rerum numquam?
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Unde sint aliquam ex dolorem sed molestias vitae, perferendis
-							tempora dolorum totam sapiente blanditiis cumque dolore, iure
-							natus provident. Quibusdam, dolores maiores?
-						</p>
-						<div class="btn-container">
-							<g-link to="" class="btn--primary">Notre programme</g-link>
-						</div>
-					</div>
-				</div>
-				<div class="topical__img">
-					<g-image src="@/assets/riwan_chami.jpg" alt="" width="350px" />
-				</div>
 			</div>
 		</section>
 		<section class="articles">
@@ -84,6 +57,37 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</section>
+		<section class="topical">
+			<a id="topical"></a>
+			<div class="fit-content">
+				<div class="topical__content">
+					<h1 class="topical__title">Nantes 2020</h1>
+					<div class="topical__presentation">
+						<p>
+							Les partis institutionnels, de droite et de gauche, gèrent la politique dans ce pays, loin des intérêts du
+							plus grand nombre. Il en est de même dans les mairies. Les militantEs et sympathisantEs du NPA ne sont pas
+							des professionnels de la politique : ils et elles sont salariéEs ou au chômage.  Tous les jours, et pas
+							seulement pendant les élections, nous luttons avec nos collègues, voisins contre la misère et cette société
+							violente et injuste. 
+						</p>
+						<p>
+							Nous sommes anticapitalistes : Nous dénonçons les injustices sociales, écologiques, les discriminations qui
+							sont portées par la loi de l’argent.... mais pas seulement! Car nous sommes révolutionnaires.
+							Nous pensons qu’il faut en finir avec ce système d’exploitation par la lutte. Les solutions que nous
+							proposons sont à construire avec les travailleurs, travailleuses, avec les habitantEs de cette ville. Ce ne
+							sont pas des promesses électorales. Venez voir notre site, écouter notre démarche. Et si on prenait enfin
+							nos affaires en main ?”
+						</p>
+						<div class="btn-container">
+							<g-link to="" class="btn--primary">Notre programme</g-link>
+						</div>
+					</div>
+				</div>
+				<div class="topical__img">
+					<g-image src="@/assets/riwan_chami.jpg" alt="" width="350px" />
 				</div>
 			</div>
 		</section>
@@ -161,7 +165,12 @@ query {
 		font-family: "Druk Wide";
 		font-size: $font-xxl;
 		font-weight: 900;
-		color: $accent;
+	}
+
+	&__subtitle {
+		font-family: "Druk Text";
+		font-size: $font-lg;
+		font-weight: 900;
 	}
 
 	&__articles {
@@ -171,57 +180,15 @@ query {
 		grid-column-gap: $lg + $sm;
 		margin-top: 3*$lg;
 	}
-}
 
-.title__stroke {
-	@include stroke($accent, $primary, 4px, transparent);
-	padding: $md $xs;
-}
-
-.topical {
-	color: $primary;
-	background-color: $dark;
-	margin-top: $xl;
-	padding-bottom: $xxl;
-
-	> div {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 1fr;
-		grid-column-gap: $md;
-	}
-
-	&__content {
-		padding-top: $xxl;
-	}
-
-	&__title {
-		@include title($primary);
-	}
-
-	&__presentation {
-		margin-top: $xl;
-
-		p {
-			font-size: $font-md;
-		}
-
-		p + p {
-			margin-top: $md;
-		}
-	}
-
-	&__img {
-		padding-top: $xxl;
-		justify-self: center;
-		align-self: center;
+	.title__stroke {
+		@include stroke($accent, $primary, 4px, transparent);
+		padding: $md $xs;
 	}
 }
 
 .articles {
-	&__content {
-		padding-top: $xxl;
-	}
+	margin-top: $xl;
 
 	&__title {
 		@include title($accent);
@@ -295,6 +262,46 @@ query {
 		display: flex;
 		justify-content: center;
 		margin-top: $lg;
+	}
+}
+
+.topical {
+	color: $primary;
+	background-color: $dark;
+	margin-top: $xl;
+	padding-bottom: $xxl;
+
+	> div {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: $md;
+	}
+
+	&__content {
+		padding-top: $xxl;
+	}
+
+	&__title {
+		@include title($primary);
+	}
+
+	&__presentation {
+		margin-top: $xl;
+
+		p {
+			font-size: $font-md;
+		}
+
+		p + p {
+			margin-top: $md;
+		}
+	}
+
+	&__img {
+		padding-top: $xxl;
+		justify-self: center;
+		align-self: center;
 	}
 }
 

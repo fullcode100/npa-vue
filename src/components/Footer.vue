@@ -12,9 +12,7 @@
 footer {
 	background-color: $dark;
 	color: $primary;
-
-	p {
-		margin-top: 2rem;
-	}
+	padding-top: $xl;
+	margin-top: $xl;
 }
 </style>

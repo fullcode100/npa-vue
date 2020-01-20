@@ -37,10 +37,12 @@
 
 <script>
 import RichText from "@/components/Richtext.vue";
+import MediumCard from "@/components/MediumCard.vue";
 
 export default {
 	components: {
 		RichText,
+		MediumCard
 	},
 	name: "StoryblokEntryTemplate",
 	computed: {
@@ -81,7 +83,6 @@ query StoryblokEntry ($id: ID) {
 		display: flex;
 		flex-direction: row;
 		margin-top: $xl;
-		margin-bottom: $lg;
 
 		img {
 			width: 400px;
@@ -91,16 +92,14 @@ query StoryblokEntry ($id: ID) {
 			margin: auto 0 auto $lg;
 
 			span {
-				font-weight: 100;
 				text-transform: uppercase;
-				font-size: $font-md;
-				color: $accent-light;
+				font-size: $font-sm;
 			}
 
 			h1 {
-				font-size: $font-xxl/2;
-				font-family: "Druk Wide Text";
-				margin-top: $sm;
+				font-size: $font-lg;
+				font-family: "Druk Text Wide";
+				margin-top: $xs;
 			}
 
 			p {
@@ -124,18 +123,32 @@ query StoryblokEntry ($id: ID) {
 				margin-top: $md;
 			}
 		}
-	
-		p {
-			font-weight: 300;
-			font-size: $font-sm;
-		}
 
-		p + p {
-			margin-top: $md;
-		}
+		> div {
+			margin-top: $xl;
 
-		a {
-			@include link($dark, $dark-lighter, $accent, $accent-lighter);
+			&::before {
+				content: "";
+				position: absolute;
+				background-color: $accent;
+				top: -$lg;
+				width: 100%;
+				height: 1.5px;
+			}
+
+			p {
+				font-weight: 300;
+				font-size: $font-sm;
+			}
+
+			p + p {
+				margin-top: $md;
+			}
+
+			a {
+				@include link($accent, $accent-lighter, $dark, $dark-lighter);
+				font-weight: 700;
+			}
 		}
 	}
 }

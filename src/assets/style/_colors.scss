@@ -1,12 +1,12 @@
 // Primary
-$primary: hsl(60, 100%, 98%); // #fffff5
+$primary: #ffffff;
 
-// Secondary
-$accent: hsl(358, 80%, 52%);
-$accent-light: lighten($accent, 10%);
-$accent-lighter: lighten($accent, 15%);
+// Accent
+$accent: #ce161c;
+$accent-light: rgba($accent, 0.7);
+$accent-lighter: rgba($accent, 0.5);
 
 // Shade
-$dark: hsl(0, 75%, 3%); // #0d0202
+$dark: #0d0202;
 $dark-light: #40453E;
 $dark-lighter: hsl(0, 10%, 50%);
