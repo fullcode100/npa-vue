@@ -62,7 +62,7 @@ export default {
 		}
 	
 		h3 {
-			font-family: "Druk Text";
+			//font-family: "Druk Text";
 			font-size: $font-sm;
 			font-weight: 700;
 		}

@@ -47,6 +47,10 @@
 	&:active {
 		transform: scale(0.9);
 	}
+
+	&:focus {
+		outline: 2px $color dashed;
+	}
 }
 
 .btn-container {

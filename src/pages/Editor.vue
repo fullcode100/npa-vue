@@ -184,7 +184,7 @@ export default {
 			}
 
 			a {
-				@include link($accent, $accent-lighter, $dark, $dark-lighter);
+				@include link($accent, $accent-lighter, $dark);
 				font-weight: 700;
 			}
 		}

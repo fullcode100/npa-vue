@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header class="fit-content" />
+		<Header />
 		<slot />
 		<Footer />
 	</div>
@@ -55,15 +55,23 @@ query {
 .fit-content {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 75%;
+	width: 75%;
 }
 
-// RZ
+// Avenir
 
 @font-face {
-    font-family: "RZ";
-    src: url("../assets/fonts/RZ/RZ Regular.woff") format("woff");
-    font-weight: 400;
+    font-family: "Avenir";
+    src: url("../assets/fonts/Avenir/Avenir-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Avenir";
+    src: url("../assets/fonts/Avenir/Avenir-Black.woff") format("woff");
+    font-weight: 800;
     font-style: normal;
     font-display: auto;
 }

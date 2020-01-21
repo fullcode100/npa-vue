@@ -1,16 +1,16 @@
 <template>
 	<Layout>
-		<section class="home fit-content">
-			<h1 class="home__title">NPA	NANTES <span class="title__stroke">2020</span></h1>
-			<h2 class="home__subtitle">Une liste anticapitaliste et révolutionnaire</h2>
-			<div class="home__articles">
-				<LittleCard v-for="n in nbPosts" :key="n"
-					:url="$page.allStoryblokEntry.edges[n - 1].node.full_slug"
-					:title="$page.allStoryblokEntry.edges[n - 1].node.name"
-					:date="fromNow($page.allStoryblokEntry.edges[n - 1].node.created_at)"
-					:tag="$page.allStoryblokEntry.edges[n - 1].node.tag_list[0]"
-					:src="resize(n - 1, '110x80')"
-				/>
+		<section class="home">
+			<g-image src="@/assets/hero.jpg" class="home__background" />
+			<div class="fit-content">
+				<h1 class="home__title"><span class="title__block">NPA NANTES</span> <span class="title__stroke">2020</span></h1>
+			</div>
+			<div class="home__banner">
+				<div class="fit-content">
+					<p>Une liste anticapitaliste et révolutionnaire pour Nantes ! ✊
+					<g-link to="/#topical" class="link--primary">Découvrir nos propositions</g-link>
+					</p>
+				</div>
 			</div>
 		</section>
 		<section class="articles">
@@ -132,6 +132,9 @@ export default {
 			let month = date.slice(4, 6);
 			let day = date.slice(6, 8);
 			return `${day}/${month}`;
+		},
+		windowSize() {
+			return `${window.innerWidth}px`
 		}
 	},
 	metaInfo: {
@@ -159,36 +162,49 @@ query {
 
 <style lang="scss">
 .home {
-	margin-top: $xl;
+	position: relative;
+
+	&__background {
+		width: 100%;
+		height: 100vh;
+		object-fit: cover;
+	}
 
 	&__title {
+		position: absolute;
+		top: $xxl*2;
 		font-family: "Druk Wide";
+		font-weight: 900;
 		font-size: $font-xxl;
-		font-weight: 900;
+		width: 25%;
 	}
 
-	&__subtitle {
-		font-family: "Druk Text";
-		font-size: $font-lg;
-		font-weight: 900;
+	&__banner {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background-color: $accent;
+		color: $primary;
+		padding: $xs 0;
+
+		> div {
+			text-align: center;
+		}
 	}
 
-	&__articles {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 1fr;
-		grid-column-gap: $lg + $sm;
-		margin-top: 3*$lg;
+	.title__block {
+		background-color: $accent;
+		color: $primary;
 	}
 
 	.title__stroke {
-		@include stroke($accent, $primary, 4px, transparent);
+		@include stroke(transparent, transparent, 4px, $accent);
 		padding: $md $xs;
 	}
 }
 
 .articles {
-	margin-top: $xl;
+	margin-top: $xxl;
 
 	&__title {
 		@include title($accent);
