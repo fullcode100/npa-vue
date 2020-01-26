@@ -1,25 +1,57 @@
-@mixin link($color, $light, $color-hover) {
+@mixin link($color, $color-light, $shade) {
+	text-decoration: underline;	
+	text-decoration-color: $color-light;
 	color: $color;
 	font-weight: 500;
-	text-decoration: underline $light;
-	transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+	transition: all 0.3s ease-in-out;
 
 	&:hover {
-		color: $color-hover;
-		text-decoration: underline $color-hover;
-		transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+		text-decoration-color: $shade;
+		color: $shade;
+		transition: color 0.3s ease-in-out, text-decoration-color 0.5s ease-in-out;
+	}
+
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 0 1.5px $color-light;
 	}
 }
 
 .link--accent {
-	@include link($accent, $accent-lighter, $dark);
+	@include link($accent-light, $accent-lighter, $dark)
 }
 
 .link--primary {
-	@include link($primary, $primary, $dark-lighter);
+	@include link($dark-lighter, $dark-light, $primary)
 }
 
-.link--header {
+.link--dark {
+	@include link(rgba($dark, 0.7), rgba($dark, 0.4), $dark);
+}
+
+.link--dropdown {
+	color: $dark-light;
+	font-weight: 500;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1.5px;
+		background-color: $dark-light;
+	}
+
+	&:hover {
+		color: $dark;
+		transition: all 0.3s ease-in-out;
+	}
+}
+
+.link--inline {
 	display: inline-flex;
 	position: relative;
 	letter-spacing: 0.5px;
@@ -45,5 +77,9 @@
 			width: 100%;
 			transition: all 0.5s ease-out;
 		}
+	}
+
+	svg {
+		margin-left: $xxs;
 	}
 }

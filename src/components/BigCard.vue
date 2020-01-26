@@ -1,18 +1,16 @@
 <template>
 	<g-link class="big-card" :to="url">
-		<div class="big-card__title">
+		<div class="big-card__content">
 			<h2>
 				<span>{{ title }}</span>
 			</h2>
-		</div>
-		<div class="big-card__content">
-			<div class="summary">
+			<div class="big-card__summary">
 				<p>{{ summary }}</p>
 				<span>{{ tag }}</span>
 			</div>
-			<div class="img">
-				<g-image :src="src" />
-			</div>
+		</div>
+		<div class="big-card__img">
+			<g-image :src="imageURL(src)" />
 		</div>
 		<div class="big-card__date">
 			<span>{{ date }}</span>
@@ -32,8 +30,8 @@ export default {
             default: "01/01",
 		},
 		src: {
-			type: String,
-			default: "/"
+			type: Number,
+			default: 0
 		},
 		title: {
             type: String,
@@ -47,6 +45,15 @@ export default {
 			type: String,
 			default: "NPA",
 		}
+	},
+	methods: {
+		imageURL(indexImage) {
+			const path = this.$page.allStoryblokEntry.edges[indexImage].node.content.thumbnail;
+			const directory = "storyblok_images";
+			let index = path.lastIndexOf("/") + 1;
+			let filename = path.substring(index);
+      		return require(`!!assets-loader?height=500&width=475&quality=100&fit=cover!~/${directory}/${filename}`);
+		}
 	}
 }
 </script>
@@ -59,32 +66,46 @@ export default {
 	transition: 0.3s ease-in-out;
 
 	&__content {
-		display: flex;
-		flex-direction: row;
-		margin-top: $md*2;
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
 
-		.summary {
-			align-self: flex-end;
-			padding-right: $xxs;
-			margin-bottom: $xl;
-
-			p {
-				font-size: $font-md;
-                font-weight: 300;
-				padding-bottom: $lg;
-			}
+		h2 {
+			max-width: 65%;
+			font-family: "Druk Text Wide";
+			font-weight: 700;
+			font-size: $font-lg;
 
 			span {
-				color: $accent-light;
-				text-transform: uppercase;
-				transition: 0.3s ease-in-out;
+				display: inline;
+				padding: 0 $xxs $xxs 0;
+				-webkit-box-decoration-break: clone;
+				box-decoration-break: clone;
+				background-color: $primary;
 			}
 		}
+	}
 
-		.img {
-			filter: grayscale(100);
-			transition: 0.5s ease-in-out;
+	&__summary {
+		max-width: 35%;
+
+		p {
+			margin: $lg 0;
+			font-size: $font-md;
 		}
+
+		span {
+			text-transform: uppercase;
+			font-weight: 800;
+		}
+	}
+
+	&__img {
+		margin-top: $md*2;
+		margin-left: auto;
+		filter: grayscale(100);
+		transition: 0.5s ease-in-out;
 	}
 
 	&__date {
@@ -96,28 +117,6 @@ export default {
 			@include stroke($accent, $primary, 3px, transparent);
 			padding: $xxs;
 			font-size: $font-md;
-		}
-	}
-
-	&__title {
-		position: absolute;
-		max-width: 65%;
-		z-index: 999;
-
-		h2 {
-			font-family: "Druk Text Wide";
-			font-weight: 700;
-			font-size: $font-lg;
-
-			span {
-				display: inline;
-				line-height: 1.4;
-				padding-right: $sm/2;
-				padding-bottom: $sm/2;
-				-webkit-box-decoration-break: clone;
-				box-decoration-break: clone;
-				background-color: $primary;
-			}
 		}
 	}
 

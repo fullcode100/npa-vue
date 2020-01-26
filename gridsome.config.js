@@ -14,7 +14,9 @@ module.exports = {
 			options: {
 				client: {
 					accessToken: "JMoer1zQzenOdr5nk7682wtt"
-				}
+				},
+				version: "draft",
+				downloadImages: true,
 			}
 		},
 		{

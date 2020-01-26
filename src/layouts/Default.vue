@@ -62,9 +62,33 @@ query {
 
 @font-face {
     font-family: "Avenir";
+    src: url("../assets/fonts/Avenir/Avenir-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Avenir";
+    src: url("../assets/fonts/Avenir/Avenir-Roman.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Avenir";
     src: url("../assets/fonts/Avenir/Avenir-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Avenir";
+    src: url("../assets/fonts/Avenir/Avenir-MediumOblique.woff") format("woff");
+    font-weight: 500;
+    font-style: oblique;
     font-display: auto;
 }
 
@@ -98,42 +122,8 @@ query {
 
 @font-face {
     font-family: "Druk Text Wide";
-    src: url("../assets/fonts/Druk/Druk Text Wide Medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Druk Text Wide";
     src: url("../assets/fonts/Druk/Druk Text Wide Bold.woff") format("woff");
     font-weight: 700;
-    font-style: normal;
-    font-display: auto;
-}
-
-// Druk Text
-
-@font-face {
-    font-family: "Druk Text";
-    src: url("../assets/fonts/Druk/Druk Text Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Druk Text";
-    src: url("../assets/fonts/Druk/Druk Text Heavy.woff") format("woff");
-    font-weight: 800;
-    font-style: normal;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Druk Text";
-    src: url("../assets/fonts/Druk/Druk Text Super.woff") format("woff");
-    font-weight: 900;
     font-style: normal;
     font-display: auto;
 }

@@ -8,134 +8,66 @@
 			<div class="home__banner">
 				<div class="fit-content">
 					<p>Une liste anticapitaliste et révolutionnaire pour Nantes ! ✊
-					<g-link to="/#topical" class="link--primary">Découvrir nos propositions</g-link>
+					<g-link to="/#topical" class="link--inline">Découvrir nos propositions</g-link>
 					</p>
 				</div>
 			</div>
 		</section>
 		<section class="articles">
 			<a id="articles"></a>
-			<div class="fit-content">
-				<div class="articles__content">
-					<h1 class="articles__title">Actualités</h1>
-					<div class="articles__grid">
-						<BigCard
-							:url="$page.allStoryblokEntry.edges[0].node.full_slug"
-							:title="$page.allStoryblokEntry.edges[0].node.name"
-							:summary="$page.allStoryblokEntry.edges[0].node.content.summary"
-							:date="date($page.allStoryblokEntry.edges[0].node.created_at)"
-							:src="resize(0, '500x500')"
-						/>
-						<div class="articles__little">
-							<span>Derniers articles</span>
-							<LittleCard v-for="n in nbPosts" :key="n"
-									:url="$page.allStoryblokEntry.edges[n - 1].node.full_slug"
-									:title="$page.allStoryblokEntry.edges[n - 1].node.name"
-									:date="fromNow($page.allStoryblokEntry.edges[n - 1].node.created_at)"
-									:tag="$page.allStoryblokEntry.edges[n - 1].node.tag_list[0]"
-									:src="resize(n - 1, '100x100')"
-							/>
-						</div>
-						<div class="articles__medium">
-							<MediumCard v-for="n in nbPosts" :key="n"
-								:url="$page.allStoryblokEntry.edges[n - 1].node.full_slug"
-								:title="$page.allStoryblokEntry.edges[n - 1].node.name"
-								:src="resize(n - 1, '225x150')"
-								:date="date($page.allStoryblokEntry.edges[n - 1].node.created_at)"
-							/>
-						</div>	
-						<div class="articles__share">
-							<div class="articles__network">
-								<p>Suivez-nous sur les <span>réseaux sociaux !</span></p>
-								<div>
-									<font-awesome :icon="['fab', 'twitter']" size="2x" />
-									<font-awesome :icon="['fab', 'facebook-f']" size="2x" />
-								</div>
-							</div>
-							<div class="articles__past">
-								<g-link to="" class="btn--primary">Précédents articles</g-link>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<ArticlesFlex />
 		</section>
 		<section class="topical">
 			<a id="topical"></a>
 			<div class="fit-content">
+				<h1 class="title--dark">Nantes 2020</h1>
 				<div class="topical__content">
-					<h1 class="topical__title">Nantes 2020</h1>
 					<div class="topical__presentation">
 						<p>
-							Les partis institutionnels, de droite et de gauche, gèrent la politique dans ce pays, loin des intérêts du
-							plus grand nombre. Il en est de même dans les mairies. Les militantEs et sympathisantEs du NPA ne sont pas
-							des professionnels de la politique : ils et elles sont salariéEs ou au chômage.  Tous les jours, et pas
-							seulement pendant les élections, nous luttons avec nos collègues, voisins contre la misère et cette société
-							violente et injuste. 
+							Les partis institutionnels, de droite et de gauche, gèrent la politique dans ce pays
+							loin des intérêts du plus grand nombre. Il en est de même dans les mairies. Les militant·es et
+							sympathisant·es du <span class="bold">NPA ne sont pas des professionnels de la politique</span> : ils
+							et elles sont salariéEs ou au chômage. Tous les jours, et pas seulement pendant les élections,
+							nous luttons avec nos collègues, voisins <span class="bold">contre la misère et cette société
+							violente et injuste</span>. 
 						</p>
 						<p>
-							Nous sommes anticapitalistes : Nous dénonçons les injustices sociales, écologiques, les discriminations qui
-							sont portées par la loi de l’argent.... mais pas seulement! Car nous sommes révolutionnaires.
-							Nous pensons qu’il faut en finir avec ce système d’exploitation par la lutte. Les solutions que nous
-							proposons sont à construire avec les travailleurs, travailleuses, avec les habitantEs de cette ville. Ce ne
-							sont pas des promesses électorales. Venez voir notre site, écouter notre démarche. Et si on prenait enfin
-							nos affaires en main ?”
+							Nous sommes <span class="bold">anticapitalistes</span> : Nous dénonçons les injustices sociales,
+							écologiques, les discriminations qui sont portées par la loi de l’argent… mais pas seulement !
+							Car nous sommes <span class="bold">révolutionnaires</span>. Nous pensons qu’il faut en finir avec
+							ce système d’exploitation par la lutte. Les solutions que nous proposons sont à construire avec les
+							travailleurs, travailleuses, avec les habitant·es de cette ville. Ce ne sont pas des promesses
+							électorales. Venez voir notre site, écouter notre démarche. 
 						</p>
-						<div class="btn-container">
-							<g-link to="" class="btn--primary">Notre programme</g-link>
+						<p>	
+							<span class="bold">Et si on prenait enfin nos affaires en main ?</span>
+						</p>
+						<div class="topical__btn">
+							<g-link to="" class="btn--dark">Nos propositions</g-link>
 						</div>
 					</div>
-				</div>
-				<div class="topical__img">
-					<g-image src="@/assets/riwan_chami.jpg" alt="" width="350px" />
+					<div class="topical__img">
+						<g-image src="@/assets/riwan_chami.jpg" alt="" width="400px" />
+						<div class="topical__quote"><p>La décision est prise de présenter une liste indépendante</p></div>
+					</div>
 				</div>
 			</div>
 		</section>
 		<section class="events">
 			<a id="events"></a>
 			<div class="fit-content">
-				<h1 class="events__title">Évènements</h1>
+				<h1 class="title--accent">Évènements</h1>
 			</div>
 		</section>
 	</Layout>
 </template>
 
 <script>
-import LittleCard from "@/components/LittleCard.vue";
-import MediumCard from "@/components/MediumCard.vue";
-import BigCard from "@/components/BigCard.vue";
-import moment from "moment";
+import ArticlesFlex from "@/components/ArticlesFlex";
 
 export default {
 	components: {
-		LittleCard,
-		MediumCard,
-		BigCard
-	},
-	computed: {
-		nbPosts() {
-			return (this.$page.allStoryblokEntry.edges.length < 3 ? this.$page.allStoryblokEntry.edges.length : 3)
-		}
-	},
-	methods: {
-		resize(index, option) {
-			const imageService = "//img2.storyblok.com/";
-			let img = this.$page.allStoryblokEntry.edges[index].node.content.thumbnail;
-			const path = img.replace("//a.storyblok.com", "");
-			return imageService + option + path;
-		},
-		fromNow(date) {
-			moment.locale("fr");
-			return moment(date, "YYYYMMDD").fromNow();
-		},
-		date(date) {
-			let month = date.slice(4, 6);
-			let day = date.slice(6, 8);
-			return `${day}/${month}`;
-		},
-		windowSize() {
-			return `${window.innerWidth}px`
-		}
+		ArticlesFlex
 	},
 	metaInfo: {
 		title: "Accueil"
@@ -203,103 +135,22 @@ query {
 	}
 }
 
-.articles {
-	margin-top: $xxl;
+.topical {
+	color: $dark;
+	background-color: $primary-dark;
+	margin-top: $xl;
+	padding: $xxl 0;
 
-	&__title {
-		@include title($accent);
-	}
-
-	&__grid {
-		display: grid;
-		position: relative;
-		grid-template-columns: 2.5fr 1fr;
-		grid-template-rows: 1fr 0.25fr;
-		grid-column-gap: $xl;
-		grid-row-gap: $xl;
-		margin-top: $xl;
-	}
-
-	&__medium {
+	&__content {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 	}
-	
-	&__little {
-		display: flex;
-		justify-content: space-between;
-		flex-direction: column;
-		position: relative;
 
-		> span {
-			font-family: "Druk Text Wide";
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			background-color: $accent;
-			width: 2px;
-			height: 100%;
-			top: 0;
-			left: -$lg;
-		}
-	}
-
-	&__share {
-		background-color: $dark;
-		color: $primary;
-		padding: $lg $md;
-		height: 250px;
-	}
-
-	&__network {
-		display: flex;
-		flex-direction: column;
-
-		> div {
-			display: flex;
-			justify-content: space-evenly;
-			margin-top: $xs;
-		}
-
-		p {
-			text-align: center;
-			font-size: $font-md;
-		}
-
-		span {
-			font-weight: 900;
-		}
-	}
-
-	&__past {
+	&__btn {
 		display: flex;
 		justify-content: center;
 		margin-top: $lg;
-	}
-}
-
-.topical {
-	color: $primary;
-	background-color: $dark;
-	margin-top: $xl;
-	padding-bottom: $xxl;
-
-	> div {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 1fr;
-		grid-column-gap: $md;
-	}
-
-	&__content {
-		padding-top: $xxl;
-	}
-
-	&__title {
-		@include title($primary);
 	}
 
 	&__presentation {
@@ -315,17 +166,81 @@ query {
 	}
 
 	&__img {
-		padding-top: $xxl;
-		justify-self: center;
-		align-self: center;
+		position: relative;
+		display: flex;
+		align-items: center;
+		margin-left: $xxl;
+	}
+
+	&__quote {
+		position: absolute;
+		left: 0;
+		bottom: $xxl;
+		color: $primary-dark;
+		transform: translate($sm, $sm);
+
+		p {
+			display: inline;
+			position: relative;
+			-webkit-box-decoration-break: clone;
+			box-decoration-break: clone;
+			padding: $xxs;
+			font-size: $font-md;
+			line-height: 2.5;
+			font-weight: 800;
+			background-color: $dark;
+
+			&::before {
+				content: "❝";
+				position: absolute;
+				top: -$md*2;
+				left: -$xxs;
+				font-size: $font-xl;
+			}
+
+			&::after {
+				content: "❞";
+				position: absolute;
+				top: 0;
+				right: -$xxs;
+				font-size: $font-xl;
+			}
+		}
 	}
 }
 
 .events {
 	margin-top: $xxl;
+}
 
-	&__title {
-		@include title($accent);
+@media screen and (max-width: $desktop){
+	.home {
+		&__title {
+			font-size: $font-xl;
+		}
+	}
+
+	.topical {
+		&__content {
+			flex-direction: column-reverse;
+		}
+
+		&__img {
+			margin-left: 0;
+			margin-top: $xl;
+
+			> img {
+				width: 100%;
+			}
+		}
+
+		&__quote {
+			bottom: 0;
+		}
+
+		&__presentation {
+			margin-top: $lg;
+		}
 	}
 }
 </style>

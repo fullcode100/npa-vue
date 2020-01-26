@@ -3,13 +3,13 @@
 		<div class="little-card__content">
 			<span>{{ tag }}</span>
 			<h3>{{ title }}</h3>
+			<div class="little-card__date">
+				<font-awesome :icon="['far', 'clock']" />
+				<span>{{ date }}</span>
+			</div>
 		</div>
 		<div class="little-card__img">
-			<g-image :src="src" />
-		</div>
-		<div class="little-card__date">
-			<font-awesome :icon="['far', 'clock']" />
-			<span>{{ date }}</span>
+			<g-image :src="imageURL(src)" />
 		</div>
 	</g-link>
 </template>
@@ -26,8 +26,8 @@ export default {
             default: "01/01",
 		},
 		src: {
-			type: String,
-			default: "",
+			type: Number,
+			default: 0,
 		},
 		title: {
             type: String,
@@ -37,6 +37,15 @@ export default {
 			type: String,
 			default: "NPA",
 		}
+	},
+	methods: {
+		imageURL(indexImage) {
+			const path = this.$page.allStoryblokEntry.edges[indexImage].node.content.thumbnail;
+			const directory = "storyblok_images";
+			let index = path.lastIndexOf("/") + 1;
+			let filename = path.substring(index);
+      		return require(`!!assets-loader?height=100&width=100&quality=100&fit=cover!~/${directory}/${filename}`);
+		}
 	}
 }
 </script>
@@ -45,15 +54,16 @@ export default {
 .little-card {
 	display: flex;
 	position: relative;
+	justify-content: space-between;
 	color: $accent;
-	margin: $lg auto $lg auto;
+	margin-top: $lg;
 	transition: 0.3s ease-in-out;
 
 	&__content {
 		display: flex;
 		flex-direction: column;
 
-		span {
+		> span {
 			font-size: $font-xs;
 			color: $accent-light;
 			padding-bottom: $xxs;
@@ -62,7 +72,6 @@ export default {
 		}
 	
 		h3 {
-			//font-family: "Druk Text";
 			font-size: $font-sm;
 			font-weight: 700;
 		}
@@ -75,15 +84,15 @@ export default {
 	}
 
 	&__date {
-		position: absolute;
 		font-weight: 400;
 		vertical-align: top;
 		color: $dark-lighter;
-		bottom: -$sm - $xxs;
+		margin-top: $xs;
 
 		span {
 			font-size: $font-xs;
 			padding-left: $xxs;
+			vertical-align: middle;
 		}
 	}
 

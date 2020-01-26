@@ -1,5 +1,5 @@
 <template>
-	<header>
+	<header class="header">
 		<div class="fit-content header__content">
 			<g-link to="/">
 				<div class="header__logo">
@@ -10,16 +10,20 @@
 			<nav>
 				<ul>
 					<li>
-						<g-link to="/#topical" class="link--header">Nantes 2020</g-link>
+						<g-link to="/#topical" class="link--inline">Nantes 2020</g-link>
+					</li>
+					<li class="has-dropdown">
+						<g-link to="/#articles" class="link--inline">
+							Actualités
+							<font-awesome :icon="['fas', 'chevron-down']" size="sm" />
+						</g-link>
+						<Dropdown />
 					</li>
 					<li>
-						<g-link to="/#articles" class="link--header">Actualités</g-link>
+						<g-link to="/#events" class="link--inline">Évènements</g-link>
 					</li>
 					<li>
-						<g-link to="/#events" class="link--header">Évènements</g-link>
-					</li>
-					<li>
-						<g-link to="/#footer" class="link--header">Contact</g-link>
+						<g-link to="/#footer" class="link--inline">Contact</g-link>
 					</li>
 				</ul>
 			</nav>
@@ -27,34 +31,42 @@
 	</header>
 </template>
 
-<style lang="scss">
-header {
-	position: fixed;
-    z-index: 999;
-	width: 100%;
-	top: 0;
-	background-color: $primary-light;
+<script>
+import Dropdown from "@/components/Dropdown.vue";
 
-	> div {
-		display: flex;
-		justify-content: space-between;
-		padding-top: $sm;
-		padding-bottom: $sm;
+export default {
+	components: {
+		Dropdown
+	},
+	mounted() {
+		this.$nextTick(() => {
+			window.addEventListener("scroll", () => {
+				let header = document.getElementsByTagName("header")[0];
+				let img = document.getElementsByClassName("header__svg")[0];
+				if (document.documentElement.scrollTop >= window.innerHeight / 1.5) {
+					img.classList.add("header__svg--mini");
+				} else {
+					img.classList.remove("header__svg--mini");
+				}
+			})
+		});
 	}
 }
+</script>
 
+<style lang="scss">
 nav {
 	display: flex;
 	align-items: center;
 
-	ul {
+	> ul {
 		display: flex;
 
 		li {
-			margin: $space-inline-xl;
+			margin-right: $xl;
 
 			&:first-of-type a {
-				font-weight: 700;
+				font-weight: 800;
 			}
 
 			&:last-child {
@@ -64,7 +76,34 @@ nav {
 	}
 }
 
+.has-dropdown {
+	position: relative;
+
+	&:hover {
+		> div {
+			pointer-events: inherit;
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
 .header {
+	position: fixed;
+    z-index: 999;
+	width: 100%;
+	top: 0;
+	background-color: $primary-light;
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		padding-top: $sm;
+		padding-bottom: $sm;
+	}
+
 	&__logo {
 		display: inline-flex;
 		flex-direction: row;
@@ -72,6 +111,12 @@ nav {
 
 	&__svg {
 		width: 48px;
+		transition: all 0.3s ease-in-out;
+	}
+
+	&__svg--mini {
+		width: 36px;
+		transition: all 0.3s ease-in-out;
 	}
 
 	&__title {
@@ -81,6 +126,19 @@ nav {
 		color: $accent;
 		padding-left: $xs;
 		margin: auto;
+	}
+}
+
+@media screen and (max-width: $desktop) {
+	.header {
+		&__content {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		nav {
+			margin-top: $sm;
+		}
 	}
 }
 </style>

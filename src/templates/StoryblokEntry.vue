@@ -4,7 +4,7 @@
 			<main class="article">
 				<div class="article__header">
 					<div class="header__img">
-						<img :src="resize(story.content.thumbnail, '400x400')" :alt="story.content.alt" />
+						<g-image :src="imageURL" />
 					</div>
 					<div class="header__content">
 						<span>{{ story.tag_list[0] }}</span>
@@ -45,24 +45,22 @@ export default {
 		MediumCard
 	},
 	name: "StoryblokEntryTemplate",
+	metaInfo() {
+		return {
+			title: this.$page.storyblokEntry.name
+		}
+	},
 	computed: {
 		story() {
 			return this.$page.storyblokEntry;
-		}
-	},
-  	metaInfo() {
-    	return {
-			title: this.$page.storyblokEntry.name,
-		}
-	},
-	methods: {
-		resize(img, option) {
-			if (img != undefined || null) {
-				const imageService = "//img2.storyblok.com/";
-				const path = img.replace("//a.storyblok.com", "");
-				return imageService + option + path;
-			}
 		},
+		imageURL() {
+			const path = this.$page.storyblokEntry.content.thumbnail;
+			const directory = "storyblok_images";
+			let index = path.lastIndexOf("/") + 1;
+			let filename = path.substring(index);
+      		return require(`!!assets-loader?width=800&quality=100&fit=inside!~/${directory}/${filename}`);
+		}
 	}
 };
 </script>
