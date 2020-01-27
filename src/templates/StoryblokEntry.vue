@@ -81,11 +81,11 @@ query StoryblokEntry ($id: ID) {
 .article {	
 	&__header {
 		display: flex;
-		flex-direction: row;
-		margin-top: $xl;
+		flex-direction: column;
+		margin-top: $xxl;
 
 		img {
-			width: 400px;
+			width: 100%;
 		}
 
 		.header__content {

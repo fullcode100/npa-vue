@@ -13,7 +13,7 @@
 						<g-link to="/#topical" class="link--inline">Nantes 2020</g-link>
 					</li>
 					<li class="has-dropdown">
-						<g-link to="/#articles" class="link--inline">
+						<g-link class="link--inline">
 							Actualités
 							<font-awesome :icon="['fas', 'chevron-down']" size="sm" />
 						</g-link>
@@ -79,7 +79,7 @@ nav {
 .has-dropdown {
 	position: relative;
 
-	&:hover {
+	&:focus-within {
 		> div {
 			pointer-events: inherit;
 			visibility: visible;
@@ -92,7 +92,7 @@ nav {
 .header {
 	position: fixed;
     z-index: 999;
-	width: 100%;
+	width: 100vw;
 	top: 0;
 	background-color: $primary-light;
 
@@ -136,8 +136,39 @@ nav {
 			align-items: center;
 		}
 
+		&__svg {
+			width: 36px;
+		}
+
+		&__svg--mini {
+			width: 24px;
+		}
+
+		&__title {
+			font-size: $font-sm;
+		}
+
 		nav {
 			margin-top: $sm;
+			width: 100%;
+			
+			ul {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			li {
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.header {
+		a {
+			font-size: $font-xs;
 		}
 	}
 }

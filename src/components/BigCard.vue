@@ -52,7 +52,7 @@ export default {
 			const directory = "storyblok_images";
 			let index = path.lastIndexOf("/") + 1;
 			let filename = path.substring(index);
-      		return require(`!!assets-loader?height=500&width=475&quality=100&fit=cover!~/${directory}/${filename}`);
+      		return require(`!!assets-loader!~/${directory}/${filename}`);
 		}
 	}
 }
@@ -88,7 +88,7 @@ export default {
 	}
 
 	&__summary {
-		max-width: 35%;
+		width: 35%;
 
 		p {
 			margin: $lg 0;
@@ -106,6 +106,12 @@ export default {
 		margin-left: auto;
 		filter: grayscale(100);
 		transition: 0.5s ease-in-out;
+
+		img {
+			width: 475px;
+			height: 500px;
+			object-fit: cover;
+		}
 	}
 
 	&__date {
@@ -129,14 +135,67 @@ export default {
 		}
 
 		.big-card__content {
-			.summary span {
+			&__summary span {
 				color: $dark-light;
 				transition: 0.3s ease-in-out;
 			}
 
-			.img {
+			&__img {
 				filter: grayscale(0);
 				transition: 0.5s ease-in-out;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $desktop-L) {
+	.big-card {
+		&__summary {
+			width: 50%;
+		}
+	}
+}
+
+@media screen and (max-width: $desktop) {
+	.big-card {
+		&__summary {
+			width: 35%;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.big-card {
+		&__content {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			h2 {
+				font-size: $font-md;
+				max-width: 75%;
+			}
+		}
+
+		&__img {
+			width: 100%;
+
+			img {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__summary {
+			margin-top: 0;
+			padding: 0 $xs;
+			background-color: $primary;
+			width: 100%;
+
+			p {
+				font-size: $font-sm;
+				margin: $xs 0;
 			}
 		}
 	}

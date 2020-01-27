@@ -58,6 +58,12 @@ query {
 	width: 75%;
 }
 
+@media screen and (max-width: $mobile) {
+	.fit-content {
+		width: 90%;
+	}
+}
+
 // Avenir
 
 @font-face {
@@ -65,7 +71,7 @@ query {
     src: url("../assets/fonts/Avenir/Avenir-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 
 @font-face {
@@ -73,7 +79,7 @@ query {
     src: url("../assets/fonts/Avenir/Avenir-Roman.woff") format("woff");
     font-weight: 400;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 
 @font-face {
@@ -81,7 +87,7 @@ query {
     src: url("../assets/fonts/Avenir/Avenir-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 
 @font-face {
@@ -89,7 +95,7 @@ query {
     src: url("../assets/fonts/Avenir/Avenir-MediumOblique.woff") format("woff");
     font-weight: 500;
     font-style: oblique;
-    font-display: auto;
+    font-display: swap;
 }
 
 @font-face {
@@ -97,7 +103,7 @@ query {
     src: url("../assets/fonts/Avenir/Avenir-Black.woff") format("woff");
     font-weight: 800;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 
 // Druk Wide
@@ -107,7 +113,7 @@ query {
     src: url("../assets/fonts/Druk/Druk Wide Bold Regular.woff") format("woff");
     font-weight: 700;
     font-style: normal;
-    font-display: auto;
+   	font-display: swap;
 }
 
 @font-face {
@@ -115,7 +121,7 @@ query {
     src: url("../assets/fonts/Druk/Druk Wide Super Regular.woff") format("woff");
     font-weight: 900;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 
 // Druk Wide Text
@@ -125,6 +131,6 @@ query {
     src: url("../assets/fonts/Druk/Druk Text Wide Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
 }
 </style>

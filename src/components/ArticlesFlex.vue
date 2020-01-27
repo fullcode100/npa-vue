@@ -158,4 +158,14 @@ export default {
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	.articles {
+		&__little {
+			.little-card {
+				width: 100%;
+			}
+		}
+	}
+}
 </style>

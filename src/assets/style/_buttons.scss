@@ -44,7 +44,7 @@
 		transition-delay: 0.1s;
 	}
 
-	&:focus {
+	&:active {
 		transform: scale(0.9);
 	}
 }

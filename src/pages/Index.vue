@@ -3,7 +3,7 @@
 		<section class="home">
 			<g-image src="@/assets/hero.jpg" class="home__background" />
 			<div class="fit-content">
-				<h1 class="home__title"><span class="title__block">NPA NANTES</span> <span class="title__stroke">2020</span></h1>
+				<h1 class="home__title"><span class="title__block"></span> <span class="title__stroke"></span></h1>
 			</div>
 			<div class="home__banner">
 				<div class="fit-content">
@@ -48,7 +48,9 @@
 					</div>
 					<div class="topical__img">
 						<g-image src="@/assets/riwan_chami.jpg" alt="" width="400px" />
-						<div class="topical__quote"><p>La décision est prise de présenter une liste indépendante</p></div>
+						<div class="topical__quote">
+							<p>« La décision est prise de présenter une liste indépendante »</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -95,6 +97,7 @@ query {
 <style lang="scss">
 .home {
 	position: relative;
+	width: 100%;
 
 	&__background {
 		width: 100%;
@@ -104,11 +107,12 @@ query {
 
 	&__title {
 		position: absolute;
-		top: $xxl*2;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		font-family: "Druk Wide";
 		font-weight: 900;
 		font-size: $font-xxl;
-		width: 25%;
 	}
 
 	&__banner {
@@ -177,7 +181,6 @@ query {
 		left: 0;
 		bottom: $xxl;
 		color: $primary-dark;
-		transform: translate($sm, $sm);
 
 		p {
 			display: inline;
@@ -189,22 +192,6 @@ query {
 			line-height: 2.5;
 			font-weight: 800;
 			background-color: $dark;
-
-			&::before {
-				content: "❝";
-				position: absolute;
-				top: -$md*2;
-				left: -$xxs;
-				font-size: $font-xl;
-			}
-
-			&::after {
-				content: "❞";
-				position: absolute;
-				top: 0;
-				right: -$xxs;
-				font-size: $font-xl;
-			}
 		}
 	}
 }
