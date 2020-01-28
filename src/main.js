@@ -1,7 +1,6 @@
 import "~/assets/style/style.scss";
 
 import DefaultLayout from "~/layouts/Default.vue"
-import Page from "~/components/Page.vue"
 import Richtext from "~/components/Richtext.vue"
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
@@ -16,7 +15,6 @@ library.add(faFacebookF, faTwitter, faClock, faLink, faChevronDown, faFacebookSq
 
 export default function (Vue, { router, head, isClient }) {
 	Vue.component("Layout", DefaultLayout)
-	Vue.component("Page", Page)
 	Vue.component("Richtext", Richtext)
 	Vue.component("font-awesome", FontAwesomeIcon)
 }

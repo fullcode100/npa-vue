@@ -69,7 +69,7 @@ query {
 
 @font-face {
     font-family: "Avenir";
-    src: url("../assets/fonts/Avenir/Avenir-Light.woff") format("woff");
+    src: url("../assets/fonts/Avenir/Avenir-Light.woff2") format("woff2");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -77,7 +77,7 @@ query {
 
 @font-face {
     font-family: "Avenir";
-    src: url("../assets/fonts/Avenir/Avenir-Roman.woff") format("woff");
+    src: url("../assets/fonts/Avenir/Avenir-Roman.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -85,7 +85,7 @@ query {
 
 @font-face {
     font-family: "Avenir";
-    src: url("../assets/fonts/Avenir/Avenir-Medium.woff") format("woff");
+    src: url("../assets/fonts/Avenir/Avenir-Medium.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -93,7 +93,7 @@ query {
 
 @font-face {
     font-family: "Avenir";
-    src: url("../assets/fonts/Avenir/Avenir-MediumOblique.woff") format("woff");
+    src: url("../assets/fonts/Avenir/Avenir-MediumOblique.woff2") format("woff2");
     font-weight: 500;
     font-style: oblique;
     font-display: swap;
@@ -101,7 +101,7 @@ query {
 
 @font-face {
     font-family: "Avenir";
-    src: url("../assets/fonts/Avenir/Avenir-Black.woff") format("woff");
+    src: url("../assets/fonts/Avenir/Avenir-Black.woff2") format("woff2");
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -111,7 +111,7 @@ query {
 
 @font-face {
     font-family: "Druk Wide";
-    src: url("../assets/fonts/Druk/Druk Wide Bold Regular.woff") format("woff");
+    src: url("../assets/fonts/Druk/Druk Wide Bold Regular.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
    	font-display: swap;
@@ -119,7 +119,7 @@ query {
 
 @font-face {
     font-family: "Druk Wide";
-    src: url("../assets/fonts/Druk/Druk Wide Super Regular.woff") format("woff");
+    src: url("../assets/fonts/Druk/Druk Wide Super Regular.woff2") format("woff2");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -129,7 +129,7 @@ query {
 
 @font-face {
     font-family: "Druk Text Wide";
-    src: url("../assets/fonts/Druk/Druk Text Wide Bold.woff") format("woff");
+    src: url("../assets/fonts/Druk/Druk Text Wide Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
