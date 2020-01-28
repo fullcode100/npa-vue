@@ -43,7 +43,7 @@
 							<span class="bold">Et si on prenait enfin nos affaires en main ?</span>
 						</p>
 						<div class="topical__btn">
-							<g-link to="" class="btn--dark">Nos propositions</g-link>
+							<g-link to="/municipales-nantes" class="btn--dark">Nos propositions</g-link>
 						</div>
 					</div>
 					<div class="topical__img">

@@ -1,6 +1,5 @@
 <template>
 	<footer>
-		<a id="footer"></a>
 		<div class="fit-content">
 			<div class="footer">
 				<div class="footer__head">

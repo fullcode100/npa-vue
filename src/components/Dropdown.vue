@@ -1,7 +1,7 @@
 <template>
 	<div class="dropdown">
 		<div class="dropdown__link">
-			<g-link class="link--dropdown" to="">Municipales 2020</g-link>
+			<g-link class="link--dropdown" to="/municipales-nantes">Municipales 2020</g-link>
 			<g-link class="link--dropdown" to="">Bulletin <span class="oblique">Révolution !</span></g-link>
 			<g-link class="link--dropdown" to="">Convergences révolutionnaires</g-link>
 		</div>
