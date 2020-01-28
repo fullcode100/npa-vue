@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<section class="home">
-			<g-image src="@/assets/hero.jpg" class="home__background" />
+			<g-image src="@/assets/hero.jpg" class="home__background" alt="Image d'accueil de NPA Nantes 2020" />
 			<div class="fit-content">
 				<h1 class="home__title"><span class="title__block"></span> <span class="title__stroke"></span></h1>
 			</div>
@@ -13,12 +13,12 @@
 				</div>
 			</div>
 		</section>
+		<a id="articles"></a>
 		<section class="articles">
-			<a id="articles"></a>
 			<ArticlesFlex />
 		</section>
+		<a id="topical"></a>
 		<section class="topical">
-			<a id="topical"></a>
 			<div class="fit-content">
 				<h1 class="title--dark">Nantes 2020</h1>
 				<div class="topical__content">
@@ -27,7 +27,7 @@
 							Les partis institutionnels, de droite et de gauche, gèrent la politique dans ce pays
 							loin des intérêts du plus grand nombre. Il en est de même dans les mairies. Les militant·es et
 							sympathisant·es du <span class="bold">NPA ne sont pas des professionnels de la politique</span> : ils
-							et elles sont salariéEs ou au chômage. Tous les jours, et pas seulement pendant les élections,
+							et elles sont salarié·es ou au chômage. Tous les jours, et pas seulement pendant les élections,
 							nous luttons avec nos collègues, voisins <span class="bold">contre la misère et cette société
 							violente et injuste</span>. 
 						</p>
@@ -47,7 +47,7 @@
 						</div>
 					</div>
 					<div class="topical__img">
-						<g-image src="@/assets/riwan_chami.jpg" alt="" width="400px" />
+						<g-image src="@/assets/riwan_chami.jpg" alt="Riwan Chami" width="400px" />
 						<div class="topical__quote">
 							<p>« La décision est prise de présenter une liste indépendante »</p>
 						</div>
@@ -55,8 +55,8 @@
 				</div>
 			</div>
 		</section>
+		<a id="events"></a>
 		<section class="events">
-			<a id="events"></a>
 			<div class="fit-content">
 				<h1 class="title--accent">Évènements</h1>
 			</div>
@@ -170,21 +170,17 @@ query {
 	}
 
 	&__img {
-		position: relative;
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		justify-content: center;
 		margin-left: $xxl;
 	}
 
 	&__quote {
-		position: absolute;
-		left: 0;
-		bottom: $xxl;
 		color: $primary-dark;
 
 		p {
 			display: inline;
-			position: relative;
 			-webkit-box-decoration-break: clone;
 			box-decoration-break: clone;
 			padding: $xxs;
@@ -217,16 +213,14 @@ query {
 			margin-top: $xl;
 
 			> img {
-				width: 100%;
+				width: 75%;
+				margin: auto;
 			}
-		}
-
-		&__quote {
-			bottom: 0;
 		}
 
 		&__presentation {
 			margin-top: $lg;
+			font-size: $font-sm;
 		}
 	}
 }

@@ -88,10 +88,10 @@ export default {
 	}
 
 	&__summary {
-		width: 35%;
+		width: calc(100% - 500px);
 
 		p {
-			margin: $lg 0;
+			margin: $lg 0 $sm 0;
 			font-size: $font-md;
 		}
 
@@ -123,6 +123,7 @@ export default {
 			@include stroke($accent, $primary, 3px, transparent);
 			padding: $xxs;
 			font-size: $font-md;
+			transition: 0.3s ease-in-out;
 		}
 	}
 
@@ -134,33 +135,24 @@ export default {
 			transition: 0.3s ease-in-out;
 		}
 
-		.big-card__content {
-			&__summary span {
-				color: $dark-light;
-				transition: 0.3s ease-in-out;
-			}
-
-			&__img {
-				filter: grayscale(0);
-				transition: 0.5s ease-in-out;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: $desktop-L) {
-	.big-card {
-		&__summary {
-			width: 50%;
+		.big-card__img {
+			filter: grayscale(0);
+			transition: 0.5s ease-in-out;
 		}
 	}
 }
 
 @media screen and (max-width: $desktop) {
-	.big-card {
-		&__summary {
-			width: 35%;
-		}
+	.big-card__img img {
+		width: 350px;
+	}
+
+	.big-card__summary {
+		width: calc(100% - 350px);
+	}
+
+	.big-card__content h2 {
+		font-size: $font-md;
 	}
 }
 
@@ -173,7 +165,6 @@ export default {
 			justify-content: space-between;
 
 			h2 {
-				font-size: $font-md;
 				max-width: 75%;
 			}
 		}
