@@ -4,11 +4,11 @@ $primary-light: #fcf8ee;
 $primary-dark: #ebe3d4;
 
 // Accent
-$accent: darken(#fd1c15, 7%);
+$accent: #ec0902; // #fd1c15
 $accent-light: rgba($accent, 0.8);
 $accent-lighter: rgba($accent, 0.5);
 
 // Shade
 $dark: #0b0100;
-$dark-light: #554D50;
-$dark-lighter: #6D666A;
+$dark-light: #6D6866;
+$dark-lighter: #8E8A88;

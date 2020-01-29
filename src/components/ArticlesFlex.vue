@@ -5,23 +5,22 @@
 			<div class="articles__flex">
 				<div class="articles__big">
 					<BigCard
-						:url="$page.allStoryblokEntry.edges[2].node.full_slug"
-						:title="$page.allStoryblokEntry.edges[2].node.name"
-						:summary="$page.allStoryblokEntry.edges[2].node.content.summary"
-						:date="date($page.allStoryblokEntry.edges[2].node.created_at)"
-						:src="2"
+						:title="lastArticle.title"
+						:url="lastArticle.url"
+						:date="lastArticle.date"
+						:img="lastArticle.img"
+						:summary="lastArticle.summary"
 					/>
 				</div>
 				<div class="articles__little">
-					<LittleCard v-for="n in nbPosts" :key="n"
-							:url="$page.allStoryblokEntry.edges[n - 1].node.full_slug"
-							:title="$page.allStoryblokEntry.edges[n - 1].node.name"
-							:date="fromNow($page.allStoryblokEntry.edges[n - 1].node.created_at)"
-							:tag="$page.allStoryblokEntry.edges[n - 1].node.tag_list[0]"
-							:src="n - 1"
+					<LittleCard v-for="(article, key) in cardMap" :key="key"
+						:title="article.title"
+						:url="article.url"
+						:date="article.date"
+						:img="article.img"
 					/>
 					<div class="articles__previous">
-						<g-link to="/" class="link--inline">Voir les anciens articles 👉</g-link>
+						<g-link to="/liste-articles" class="link--inline">Voir les anciens articles 👉</g-link>
 					</div>
 				</div>
 			</div>
@@ -40,27 +39,33 @@ export default {
 		BigCard
 	},
 	computed: {
-		nbPosts() {
-			return (this.$page.allStoryblokEntry.edges.length < 3 ? this.$page.allStoryblokEntry.edges.length : 3)
-		}
-	},
-	methods: {
-		resize(index, option) {
-			const imageService = "//img2.storyblok.com/";
-			let img = this.$page.allStoryblokEntry.edges[index].node.content.thumbnail;
-			const path = img.replace("//a.storyblok.com", "");
-			return imageService + option + path;
+		cardMap () {
+			let edges = this.edges.slice(2);
+      		return [
+        		...edges.map(edge => {
+          			return {
+						url: edge.node.full_slug,
+						date: edge.node.created_at,
+						title: edge.node.name,
+						img: edge.node.content.thumbnail
+          			}
+       			})
+      		]
 		},
-		fromNow(date) {
-			moment.locale("fr");
-			return moment(date, "YYYYMMDD").fromNow();
+		lastArticle() {
+			let edge = this.edges[0];
+			return {
+				url: edge.node.full_slug,
+				date: edge.node.created_at,
+				title: edge.node.name,
+				img: edge.node.content.thumbnail,
+				summary: edge.node.content.summary
+			}
 		},
-		date(date) {
-			let month = date.slice(4, 6);
-			let day = date.slice(6, 8);
-			return `${day}/${month}`;
+		edges() {
+			return this.$page.allStoryblokEntry.edges || [];
 		}
-	},
+	}
 }
 </script>
 

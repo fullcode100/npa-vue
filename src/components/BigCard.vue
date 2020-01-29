@@ -10,16 +10,26 @@
 			</div>
 		</div>
 		<div class="big-card__img">
-			<g-image :src="imageURL(src)" />
+			<StoryblokImage
+				:img="img"
+				:legend="legend"
+				card="bigCard"
+			/>
 		</div>
 		<div class="big-card__date">
-			<span>{{ date }}</span>
+			<span>{{ formatDate(date) }}</span>
 		</div>
 	</g-link>
 </template>
 
 <script>
+import StoryblokImage from "@/components/StoryblokImage.vue"
+import moment from "moment";
+
 export default {
+	components: {
+		StoryblokImage
+	},
     props: {
 		url: {
         	type: String,
@@ -29,9 +39,8 @@ export default {
             type: String,
             default: "01/01",
 		},
-		src: {
-			type: Number,
-			default: 0
+		img: {
+			type: String
 		},
 		title: {
             type: String,
@@ -41,18 +50,20 @@ export default {
             type: String,
             default: "Chapo",
 		},
+		legend: {
+			type: String,
+			default: "Légende de l'image",
+		},
 		tag: {
 			type: String,
 			default: "NPA",
 		}
 	},
 	methods: {
-		imageURL(indexImage) {
-			const path = this.$page.allStoryblokEntry.edges[indexImage].node.content.thumbnail;
-			const directory = "storyblok_images";
-			let index = path.lastIndexOf("/") + 1;
-			let filename = path.substring(index);
-      		return require(`!!assets-loader!~/${directory}/${filename}`);
+		formatDate(date) {
+			let month = date.slice(4, 6);
+			let day = date.slice(6, 8);
+			return `${day}/${month}`;
 		}
 	}
 }

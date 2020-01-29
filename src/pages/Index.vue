@@ -120,6 +120,7 @@ query {
 		bottom: 0;
 		width: 100%;
 		background-color: $accent;
+		font-weight: 500;
 		color: $primary;
 		padding: $xs 0;
 

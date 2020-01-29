@@ -94,7 +94,7 @@ footer {
 		align-items: center;
 
 		img {
-			filter: grayscale(100%) brightness(200%) contrast(1000%);
+			filter: grayscale(100%) brightness(1000%);
 		}
 	}
 

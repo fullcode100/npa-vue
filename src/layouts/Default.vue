@@ -53,6 +53,12 @@ query {
 </static-query>
 
 <style lang="scss">
+.fit-article {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 750px;
+}
+
 .fit-content {
 	margin-left: auto;
 	margin-right: auto;

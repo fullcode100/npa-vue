@@ -13,16 +13,16 @@ module.exports = {
 			use: "gridsome-source-storyblok",
 			options: {
 				client: {
-					accessToken: "JMoer1zQzenOdr5nk7682wtt"
+					accessToken: "OQTLjjYk6CZyEjOsIITN9gtt"
 				},
 				version: "draft",
 				downloadImages: true,
 			}
 		},
 		{
-			use: 'gridsome-plugin-sass-resources-loader',
+			use: "gridsome-plugin-sass-resources-loader",
       		options: {
-				resources: './src/assets/style/style.scss',
+				resources: "./src/assets/style/style.scss",
 			}
 		}
 	],

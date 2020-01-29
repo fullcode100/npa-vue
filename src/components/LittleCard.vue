@@ -5,17 +5,27 @@
 			<h3>{{ title }}</h3>
 			<div class="little-card__date">
 				<font-awesome :icon="['far', 'clock']" />
-				<span>{{ date }}</span>
+				<span>{{ fromNow(date) }}</span>
 			</div>
 		</div>
 		<div class="little-card__img">
-			<g-image :src="imageURL(src)" />
+			<StoryblokImage
+				:img="img"
+				:legend="legend"
+				card="littleCard"
+			/>
 		</div>
 	</g-link>
 </template>
 
 <script>
+import StoryblokImage from "@/components/StoryblokImage.vue"
+import moment from "moment";
+
 export default {
+	components: {
+		StoryblokImage
+	},
     props: {
 		url: {
         	type: String,
@@ -25,26 +35,26 @@ export default {
             type: String,
             default: "01/01",
 		},
-		src: {
-			type: Number,
-			default: 0,
+		img: {
+			type: String
 		},
 		title: {
             type: String,
             default: "Titre",
-        },
+		},
+		legend: {
+			type: String,
+			default: "Légende de l'image",
+		},
 		tag: {
 			type: String,
-			default: "NPA",
+			default: "Article",
 		}
 	},
 	methods: {
-		imageURL(indexImage) {
-			const path = this.$page.allStoryblokEntry.edges[indexImage].node.content.thumbnail;
-			const directory = "storyblok_images";
-			let index = path.lastIndexOf("/") + 1;
-			let filename = path.substring(index);
-      		return require(`!!assets-loader?height=100&width=100&quality=100&fit=cover!~/${directory}/${filename}`);
+		fromNow(date) {
+			moment.locale("fr");
+			return moment(date, "YYYYMMDD").fromNow();
 		}
 	}
 }
@@ -55,8 +65,9 @@ export default {
 	display: flex;
 	position: relative;
 	justify-content: space-between;
+	max-width: 500px;
 	color: $accent;
-	margin-top: $lg;
+	margin: $lg auto 0 auto;
 	transition: 0.3s ease-in-out;
 
 	&__content {
@@ -86,7 +97,7 @@ export default {
 	&__date {
 		font-weight: 400;
 		vertical-align: top;
-		color: $dark-lighter;
+		color: $dark-light;
 		margin-top: $xs;
 
 		span {

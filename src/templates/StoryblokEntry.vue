@@ -60,12 +60,6 @@ query StoryblokEntry ($id: ID) {
 </page-query>
 
 <style lang="scss">
-.fit-article {
-	margin: 0 auto;
-	width: 90%;
-	max-width: 750px;
-}
-
 .article {
 	color: $dark;
 
