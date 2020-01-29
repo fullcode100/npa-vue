@@ -1,6 +1,6 @@
 <template>
 	<Layout>
-		<div class="listArticle">
+		<div class="listArticle fit-content">
 			<LittleCard v-for="(article, key) in cardMap" :key="key"
 				:title="article.title"
 				:url="article.url"

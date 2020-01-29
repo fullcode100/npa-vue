@@ -59,6 +59,7 @@
 		<section class="events">
 			<div class="fit-content">
 				<h1 class="title--accent">Évènements</h1>
+				<Event />
 			</div>
 		</section>
 	</Layout>
@@ -66,10 +67,12 @@
 
 <script>
 import ArticlesFlex from "@/components/ArticlesFlex";
+import Event from "@/components/Event";
 
 export default {
 	components: {
-		ArticlesFlex
+		ArticlesFlex,
+		Event
 	},
 	metaInfo: {
 		title: "Accueil"

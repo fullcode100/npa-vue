@@ -4,7 +4,7 @@
 			<div class="footer">
 				<div class="footer__head">
 					<div class="footer__logo">
-						<g-image src="@/assets/logo.svg" width="64px" />
+						<g-image src="@/assets/logo.svg" width="64" alt="Logo du NPA" />
 						<span>NPA</span>
 					</div>
 					<div class="footer__networks">
@@ -13,7 +13,7 @@
 								<span>Suivez-nous sur Facebook !</span>
 							</li>
 							<li>
-								<a href="">
+								<a href="https://www.facebook.com/NPA-l%C3%89tincelle-Nantes-344133152708146/" rel="noreferrer noreferrer">
 									<font-awesome :icon="['fab', 'facebook-square']" size="2x" />
 								</a>
 							</li>
@@ -37,13 +37,10 @@
 							<h4>Actualités</h4>
 						</li>
 						<li>
-							<g-link class="link--primary">Municipales 2020</g-link>
+							<g-link to="/municipales-nantes" class="link--primary">Municipales 2020</g-link>
 						</li>
 						<li>
-							<g-link class="link--primary">Bulletins Révolution !</g-link>
-						</li>
-						<li>
-							<g-link class="link--primary">Convergences révolutionnaires</g-link>
+							<g-link to="/liste-articles" class="link--primary">Liste des articles</g-link>
 						</li>
 					</ul>
 					<ul>
@@ -62,10 +59,10 @@
 							<h4>Nos camarades</h4>
 						</li>
 						<li>
-							<g-link class="link--primary">Étincelle Nantes</g-link>
+							<a href="http://etincellenantes.org/" class="link--primary" rel="noreferrer noreferrer">Étincelle Nantes</a>
 						</li>
 						<li>
-							<g-link class="link--primary">NPA 44</g-link>
+							<a href="https://npa44.org/" class="link--primary" rel="noreferrer noreferrer">NPA 44</a>
 						</li>
 					</ul>			
 				</div>

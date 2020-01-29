@@ -40,7 +40,7 @@ export default {
 	},
 	computed: {
 		cardMap () {
-			let edges = this.edges.slice(2);
+			let edges = this.edges.slice(1);
       		return [
         		...edges.map(edge => {
           			return {

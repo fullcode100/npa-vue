@@ -176,8 +176,12 @@ export default {
 			justify-content: space-between;
 
 			h2 {
-				max-width: 75%;
+				max-width: 70%;
 			}
+		}
+
+		&__date span {
+			font-size: $font-sm;
 		}
 
 		&__img {
