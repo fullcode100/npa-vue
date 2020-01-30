@@ -71,7 +71,7 @@ export default {
 
 <static-query>
 query {
-	allStoryblokEntry(filter: {tag_list: {contains: "article"}}) {
+	allStoryblokEntry(filter: {tag_list: {contains: "article"}}, sortBy: "created_at", order: DESC) {
 		edges {
 			node {
 				id

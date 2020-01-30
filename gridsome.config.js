@@ -17,7 +17,7 @@ module.exports = {
 				client: {
 					accessToken: STORYBLOK_APP_TOKEN
 				},
-				version: "published",
+				version: "draft",
 				typeName: "StoryblokEntry",
 				downloadImages: true,
 			}
