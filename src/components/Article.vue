@@ -96,6 +96,7 @@ export default {
 		flex-direction: column;
 
 		img {
+			object-fit: cover;
 			max-width: fit-content;
 		}
 
@@ -118,6 +119,14 @@ export default {
 
 		p + p {
 			margin-top: $md;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.article {
+		&__title {
+			font-size: $font-md;
 		}
 	}
 }

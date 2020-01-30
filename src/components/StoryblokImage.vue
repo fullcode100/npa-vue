@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<g-image :src="imageDownload(img)" :alt="legend" />
+		<g-image :src="imageDownload(img)" :alt="caption" />
 	</div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
 			type: String,
 			default: "/"
 		},
-		legend: {
+		caption: {
 			type: String,
 			default: "Légende de l'image"
 		},

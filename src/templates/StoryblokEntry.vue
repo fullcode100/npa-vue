@@ -33,7 +33,7 @@ export default {
 			const directory = "storyblok_images";
 			let index = path.lastIndexOf("/") + 1;
 			let filename = path.substring(index);
-			return require(`!!assets-loader?quality=100&fit=cover!~/${directory}/${filename}`);
+			return require(`!!assets-loader?quality=100!~/${directory}/${filename}`);
 		}
 	}
 };
