@@ -2,8 +2,12 @@
 	<Layout>
 		<section class="home">
 			<g-image src="@/assets/hero.jpg" class="home__background" alt="Image d'accueil de NPA Nantes 2020" />
-			<div class="fit-content">
-				<h1 class="home__title"><span class="title__block"></span> <span class="title__stroke"></span></h1>
+			<div class="home__title fit-content">
+				<h1>
+					<span class="title__block">Anticapitalistes</span> et
+					<br />
+					<span class="title__block">révolutionnaires !</span>
+				</h1>
 			</div>
 			<div class="home__banner">
 				<div class="fit-content">
@@ -90,12 +94,17 @@ export default {
 
 	&__title {
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		font-family: "Druk Wide";
-		font-weight: 900;
-		font-size: $font-xxl;
+		margin: 0 auto;
+		top: 40%;
+		left: 0;
+		right: 0;
+
+		h1 {
+			font-family: "Druk Wide";
+			font-weight: 900;
+  			font-size: calc(14px + (48 - 14) * ((100vw - 300px) / (1600 - 300)));
+			text-transform: uppercase;
+		}
 	}
 
 	&__banner {
@@ -115,6 +124,8 @@ export default {
 	.title__block {
 		background-color: $accent;
 		color: $primary;
+		padding: $xxs;
+		line-height: 2;
 	}
 
 	.title__stroke {
@@ -179,7 +190,11 @@ export default {
 @media screen and (max-width: $desktop){
 	.home {
 		&__title {
-			font-size: $font-xl;
+			text-align: center;
+		}
+
+		.title__block {
+			line-height: 2.5;
 		}
 	}
 
