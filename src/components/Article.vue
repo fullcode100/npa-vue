@@ -128,6 +128,10 @@ export default {
 		&__title {
 			font-size: $font-md;
 		}
+
+		&__summary {
+			font-size: $font-sm;
+		}
 	}
 }
 </style>

@@ -7,7 +7,6 @@
 <script>
 import config from "../../gridsome.config";
 import RichText from "@/components/Richtext";
-import MediumCard from "@/components/MediumCard.vue";
 
 const loadStoryblokBridge = function(cb) {
 	let sbConfigs = config.plugins.filter(item => {
@@ -23,8 +22,7 @@ const loadStoryblokBridge = function(cb) {
 
 export default {
 	components: {
-		RichText,
-		MediumCard
+		RichText
 	},
 	data() {
 		return {

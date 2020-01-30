@@ -1,29 +1,31 @@
 <template>
-	<div class="events fit-content">
-		<h1 class="title--accent">Évènements</h1>
-		<Event v-for="(event, key) in eventMap" :key="key"
-			:title="event.title"
-			:date="event.date"
-			:location="event.location"
-			:link="event.link"
-			:description="event.description"
-		/>
-		<div class="events__btn">
-			<g-link to="/liste-evenements" class="btn--dark">Voir tous les événements</g-link>
+	<Layout>
+		<div class="list fit-content">
+			<h1 class="title--dark">Liste des événéments</h1>
+			<Event v-for="(event, key) in eventMap" :key="key"
+				:title="event.title"
+				:date="event.date"
+				:location="event.location"
+				:link="event.link"
+				:description="event.description"
+			/>
 		</div>
-	</div>
+	</Layout>
 </template>
 
 <script>
-import Event from "@/components/Event";
+import Event from "@/components/Event"
 
 export default {
+	metaInfo: {
+		title: "Liste des événements"
+	},
 	components: {
 		Event
 	},
 	computed: {
 		eventMap () {
-			let edges = this.edges.slice(0, 2);
+			let edges = this.edges;
       		return [
         		...edges.map(edge => {
           			return {
@@ -37,13 +39,13 @@ export default {
       		]
 		},
 		edges() {
-			return this.$static.allStoryblokEntry.edges || [];
+			return this.$page.allStoryblokEntry.edges || [];
 		}
 	}
 }
 </script>
 
-<static-query>
+<page-query>
 query {
 	allStoryblokEntry(filter: {tag_list: {contains: "event"}}) {
 		edges {
@@ -55,16 +57,10 @@ query {
 		}
 	}
 }
-</static-query>
+</page-query>
 
 <style lang="scss">
-.events {
+.listArticle {
 	margin-top: $xxl;
-
-	&__btn {
-		margin-top: $lg;
-		display: flex;
-		justify-content: center;
-	}
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
 	<Layout>
-		<div class="listArticle fit-content">
+		<div class="list fit-content">
+			<h1 class="title--accent">Liste des articles</h1>
 			<LittleCard v-for="(article, key) in cardMap" :key="key"
 				:title="article.title"
 				:url="article.url"
@@ -59,7 +60,7 @@ query {
 </page-query>
 
 <style lang="scss">
-.listArticle {
+.list {
 	margin-top: $xxl;
 }
 </style>

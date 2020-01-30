@@ -42,7 +42,7 @@
 							<h4>Nous rencontrer</h4>
 						</li>
 						<li>
-							<g-link to="" class="link--primary">Événements à venir</g-link>
+							<g-link to="/liste-evenements" class="link--primary">Liste des événéments</g-link>
 						</li>
 					</ul>
 					<ul>
