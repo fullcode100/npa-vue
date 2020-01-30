@@ -40,7 +40,7 @@ export default {
 	},
 	computed: {
 		cardMap () {
-			let edges = this.edges.slice(1);
+			let edges = this.edges.slice(1, 4);
       		return [
         		...edges.map(edge => {
           			return {
@@ -63,11 +63,28 @@ export default {
 			}
 		},
 		edges() {
-			return this.$page.allStoryblokEntry.edges || [];
+			return this.$static.allStoryblokEntry.edges || [];
 		}
 	}
 }
 </script>
+
+<static-query>
+query {
+	allStoryblokEntry(filter: {tag_list: {contains: "article"}}) {
+		edges {
+			node {
+				id
+				name
+				created_at(format:"YYYYMMDD")
+				full_slug
+				content
+				tag_list
+			}
+		}
+	}
+}
+</static-query>
 
 <style lang="scss">
 .articles {

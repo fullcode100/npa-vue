@@ -43,7 +43,7 @@ export default {
 
 <page-query>
 query {
-	allStoryblokEntry {
+	allStoryblokEntry(filter: {tag_list: {contains: "article"}}) {
 		edges {
 			node {
 				id

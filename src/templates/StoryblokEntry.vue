@@ -1,30 +1,22 @@
 <template>
 	<Layout>
-		<main class="article">
-			<div class="article__header">
-				<div class="fit-article">
-					<div class="article__img">
-						<g-image :src="imageURL" />
-					</div>
-					<h1 class="title--dark">{{ story.name }}</h1>
-					<div class="article__summary">
-						<p>{{ story.content.summary }}</p>
-					</div>
-				</div>
-			</div>
-			<div class="fit-article article__content">
-				<RichText :text="story.content.body" />
-			</div>
-		</main>
+		<Article 
+			:title="story.content.title"
+			:date="story.created_at"
+			:summary="story.content.summary"
+			:img="imageURL"
+			:caption="story.content.caption"
+			:content="story.content.body"
+		/>
 	</Layout>
 </template>
 
 <script>
-import RichText from "@/components/Richtext.vue";
+import Article from "@/components/Article";
 
 export default {
 	components: {
-		RichText
+		Article
 	},
 	name: "StoryblokEntryTemplate",
 	metaInfo() {
@@ -41,7 +33,7 @@ export default {
 			const directory = "storyblok_images";
 			let index = path.lastIndexOf("/") + 1;
 			let filename = path.substring(index);
-      		return require(`!!assets-loader?width=800&quality=100&fit=inside!~/${directory}/${filename}`);
+      		return require(`!!assets-loader?quality=100&fit=inside!~/${directory}/${filename}`);
 		}
 	}
 };
@@ -55,41 +47,7 @@ query StoryblokEntry ($id: ID) {
     	slug
     	content
 		tag_list
+		created_at(format:"YYYYMMDD")
   	}
 }
 </page-query>
-
-<style lang="scss">
-.article {
-	color: $dark;
-
-	&__header {
-		padding: $xxl 0 $xl 0;
-		background-color: $primary-dark;
-	}
-
-	&__summary {
-		margin-top: $xl;
-		
-		p {
-			font-size: $font-md;
-		}
-	}
-
-	&__content {
-		margin-top: $xl;
-
-		ul {
-			list-style: square inside;
-		}
-
-		li {
-			margin-top: $sm;
-		}
-
-		p + p {
-			margin-top: $md;
-		}
-	}
-}
-</style>

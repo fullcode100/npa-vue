@@ -56,7 +56,7 @@ export default {
 		},
 		tag: {
 			type: String,
-			default: "NPA",
+			default: "Article",
 		}
 	},
 	methods: {

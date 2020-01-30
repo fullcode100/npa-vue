@@ -57,45 +57,25 @@
 		</section>
 		<a id="events"></a>
 		<section class="events">
-			<div class="fit-content">
-				<h1 class="title--accent">Évènements</h1>
-				<Event />
-			</div>
+			<EventsFlex />
 		</section>
 	</Layout>
 </template>
 
 <script>
 import ArticlesFlex from "@/components/ArticlesFlex";
-import Event from "@/components/Event";
+import EventsFlex from "@/components/EventsFlex";
 
 export default {
 	components: {
 		ArticlesFlex,
-		Event
+		EventsFlex
 	},
 	metaInfo: {
 		title: "Accueil"
 	}
 };
 </script>
-
-<page-query>
-query {
-	allStoryblokEntry {
-		edges {
-			node {
-				id
-				name
-				created_at(format:"YYYYMMDD")
-				full_slug
-				content
-				tag_list
-			}
-		}
-	}
-}
-</page-query>
 
 <style lang="scss">
 .home {
@@ -194,10 +174,6 @@ query {
 			background-color: $dark;
 		}
 	}
-}
-
-.events {
-	margin-top: $xxl;
 }
 
 @media screen and (max-width: $desktop){

@@ -1,24 +1,30 @@
 <template>
 	<div class="event">
-		<div class="event__header">
-			<h3 class="event__title">{{ title }}</h3>
-			<span class="event__date">{{ date }}</span>
+		<h3 class="event__title">{{ title }}</h3>
+		<div class="event__link">
+			<a :href="link" class="link--dark" target="_blank" rel="noreferrer noreferrer">
+				Voir l'événement sur Facebook 📌
+			</a>
 		</div>
 		<div class="event__content">
-			<p class="event__location">
-				<font-awesome :icon="['fas', 'compass']" />
-				{{ location }}
-			</p>
 			<p>{{ description }}</p>
-			<a :href="link" class="link--inline" target="_blank" rel="noreferrer noreferrer">
-				Voir l'événement sur Facebook
-				<font-awesome :icon="['fas', 'external-link-square-alt']" />
-			</a>
+		</div>
+		<div class="event__info">
+			<span>
+				<font-awesome :icon="['fas', 'map-marker-alt']" />
+				{{ location }}
+			</span>
+			<span>
+				<font-awesome :icon="['fas', 'calendar-alt']" />
+				{{ endOf(date) }}
+			</span>
 		</div>
 	</div>
 </template>
 
 <script>
+import moment from "moment";
+
 export default {
 	props: {
 		title: {
@@ -41,6 +47,12 @@ export default {
 			type: String,
 			default: "Description de l'événement."
 		}
+	},
+	methods: {
+		endOf(date) {
+			moment.locale("fr");
+			return moment(date, "YYYY-MM-DD hh:mm p").format("LL à LT");   
+		}
 	}
 }
 </script>
@@ -50,8 +62,8 @@ export default {
 	display: flex;
 	position: relative;
 	flex-direction: column;
-	max-width: 500px;
-	color: $accent;
+	max-width: 600px;
+	color: $dark;
 	margin: $lg auto 0 auto;
 	padding: $md 0;
 	transition: 0.3s ease-in-out;
@@ -63,21 +75,20 @@ export default {
 		left: 0;
 		width: 100%;
 		height: 2px;
-		background-color: $accent;
+		background-color: $dark;
 	}
 
-	&__header {
+	&__info {
+		margin-top: $md;
+		color: $dark-light;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		vertical-align: center;
-	}
+		line-height: 1.4;
 
-	&__date {
-		@include stroke($accent, $primary, 3px, transparent);
-		padding: $xxs;
-		font-size: $font-sm;
-		transition: 0.3s ease-in-out;
+		span {
+			width: 50%;
+		}
 	}
 
 	&__title {
@@ -86,19 +97,14 @@ export default {
 		font-size: $font-md;
 	}
 
-	&__content {
-		margin-top: $md;
-		font-weight: 400;
-
-		a {
-			margin-top: $sm;
-		}
+	&__link {
+		margin-top: $xs;
 	}
 
-	&__location {
-		font-size: $font-xs;
+	&__content {
 		color: $dark;
-		margin-bottom: $xxs;
+		margin-top: $md;
+		font-weight: 400;
 	}
 }
 </style>

@@ -1,3 +1,5 @@
+const STORYBLOK_APP_TOKEN = "OQTLjjYk6CZyEjOsIITN9gtt";
+
 module.exports = {
 	siteName: "NPA Nantes 2020",
 	siteDescription: "Site de campagne du NPA pour les municipales 2020 de Nantes.",
@@ -13,9 +15,10 @@ module.exports = {
 			use: "gridsome-source-storyblok",
 			options: {
 				client: {
-					accessToken: "OQTLjjYk6CZyEjOsIITN9gtt"
+					accessToken: STORYBLOK_APP_TOKEN
 				},
 				version: "draft",
+				typeName: "StoryblokEntry",
 				downloadImages: true,
 			}
 		},
@@ -24,6 +27,6 @@ module.exports = {
       		options: {
 				resources: "./src/assets/style/style.scss",
 			}
-		}
+		},
 	],
 }
