@@ -31,12 +31,9 @@ export default {
 		imageURL() {
 			const path = this.$page.storyblokEntry.content.thumbnail;
 			const directory = "storyblok_images";
-
-			if (path != "") {
-				let index = path.lastIndexOf("/") + 1;
-				let filename = path.substring(index);
-				return require(`!!assets-loader?quality=100&fit=inside!~/${directory}/${filename}`);
-			}
+			let index = path.lastIndexOf("/") + 1;
+			let filename = path.substring(index);
+			return require(`!!assets-loader?quality=100&fit=cover!~/${directory}/${filename}`);
 		}
 	}
 };

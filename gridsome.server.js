@@ -3,7 +3,7 @@ module.exports = function (api) {
   
 	api.createPages(async ({ graphql, createPage }) => {
 		const { data } = await graphql(`{
-			allStoryblokEntry {
+			allStoryblokEntry(filter: {tag_list: {contains: "article"}}) {
 		  		edges {
 					node {
 			  			id

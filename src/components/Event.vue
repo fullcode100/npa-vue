@@ -89,6 +89,10 @@ export default {
 		span {
 			width: 50%;
 		}
+
+		svg {
+			margin-right: $xxs;
+		}
 	}
 
 	&__title {
@@ -105,6 +109,22 @@ export default {
 		color: $dark;
 		margin-top: $md;
 		font-weight: 400;
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.event {
+		&__info {
+			flex-direction: column;
+
+			span {
+				width: auto;
+			}
+
+			span + span {
+				margin-top: $xxs;
+			}
+		}
 	}
 }
 </style>

@@ -50,7 +50,7 @@ export default {
 			default: "Légende de l'image"
 		},
 		content: {
-			type: String,
+			type: Object,
 			default: ""
 		}
 	},
@@ -94,6 +94,10 @@ export default {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+
+		img {
+			max-width: fit-content;
+		}
 
 		p {
 			color: $dark-light;

@@ -3,15 +3,13 @@
 		<main class="article">
 			<div class="article__header">
 				<div class="fit-article">
-					<h1 class="title--dark">Nantes 2020</h1>
+					<h1 class="article__title">Municipales à Nantes : une liste anticapitaliste et révolutionnaire</h1>
 					<div class="article__summary">
-						<p>
 							Les jeunes pour le climat, les étudiants contre la précarité, les femmes
 							contre les violences, les migrants et de leurs soutiens pour leurs droits,
 							les Gilets jaunes et les travailleur·euses pour les emplois, les salaires
 							et les retraites : tous manifestent leur désir de changement et bousculent
-							la vie politique, à Nantes comme dans le reste du pays. 
-						</p>
+							la vie politique, à Nantes comme dans le reste du pays.
 					</div>
 				</div>
 			</div>

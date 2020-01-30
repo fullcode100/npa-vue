@@ -26,18 +26,12 @@
 							<h4>Le NPA</h4>
 						</li>
 						<li>
-							<g-link class="link--primary">Présentation du NPA</g-link>
-						</li>
-						<li>
-							<g-link class="link--primary">Nantes 2020</g-link>
+							<g-link to="/municipales-nantes" class="link--primary">Nantes 2020</g-link>
 						</li>
 					</ul>
 					<ul>
 						<li>
 							<h4>Actualités</h4>
-						</li>
-						<li>
-							<g-link to="/municipales-nantes" class="link--primary">Municipales 2020</g-link>
 						</li>
 						<li>
 							<g-link to="/liste-articles" class="link--primary">Liste des articles</g-link>
@@ -48,10 +42,7 @@
 							<h4>Nous rencontrer</h4>
 						</li>
 						<li>
-							<g-link class="link--primary">Événements à venir</g-link>
-						</li>
-						<li>
-							<g-link class="link--primary">Événéments passés</g-link>			
+							<g-link to="" class="link--primary">Événements à venir</g-link>
 						</li>
 					</ul>
 					<ul>
