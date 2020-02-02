@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<Header />
 		<slot />
 		<a id="footer"></a>
 		<Footer />
