@@ -38,7 +38,7 @@ export default {
 	components: {
 		Dropdown
 	},
-	mounted() {
+	/*mounted() {
 		this.$nextTick(() => {
 			window.addEventListener("scroll", () => {
 				let header = document.getElementsByTagName("header")[0];
@@ -50,7 +50,7 @@ export default {
 				}
 			})
 		});
-	}
+	}*/
 }
 </script>
 
