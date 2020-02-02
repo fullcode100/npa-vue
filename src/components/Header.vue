@@ -92,7 +92,7 @@ nav {
 .header {
 	position: fixed;
     z-index: 999;
-	height: auto;
+	height: fit-content;
 	width: 100vw;
 	top: 0;
 	background-color: $primary-light;
