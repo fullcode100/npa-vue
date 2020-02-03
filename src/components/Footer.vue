@@ -13,7 +13,7 @@
 								<span>Suivez-nous sur Facebook !</span>
 							</li>
 							<li>
-								<a href="https://www.facebook.com/NPA-l%C3%89tincelle-Nantes-344133152708146/" rel="noreferrer noreferrer">
+								<a href="https://www.facebook.com/NPA-l%C3%89tincelle-Nantes-344133152708146/" target="_blank" rel="noreferrer noreferrer">
 									<font-awesome :icon="['fab', 'facebook-square']" size="2x" />
 								</a>
 							</li>
@@ -58,6 +58,11 @@
 					</ul>			
 				</div>
 				<div class="footer__bottom">
+					<p>Crédits photo 📷 :
+						<a class="link--primary" href="https://www.facebook.com/bsaz.photographie/" target="_blank" rel="noreferrer noreferrer">
+							<span class="bold">Bsaz</span>
+						</a>
+					</p>
 					<p>Un site réalisé par <span class="bold">Ekkaia</span> avec 💖</p>
 					<p>Hébergé par <span class="bold">Netlify</span> et propulsé par <span class="bold">Gridsome</span></p>
 				</div>

@@ -120,6 +120,19 @@ export default {
 		p + p {
 			margin-top: $md;
 		}
+
+		h1,
+		h2,
+		h3,
+		h4 {
+			margin: $md 0 $sm 0;
+			font-size: $font-md;
+			font-family: "Druk Text Wide";
+		}
+
+		a {
+			@include link(rgba($dark, 0.7), rgba($dark, 0.4), $dark);
+		}
 	}
 }
 
