@@ -38,7 +38,7 @@ export default {
 	components: {
 		Dropdown
 	},
-	/*mounted() {
+	mounted() {
 		this.$nextTick(() => {
 			window.addEventListener("scroll", () => {
 				let header = document.getElementsByTagName("header")[0];
@@ -50,7 +50,7 @@ export default {
 				}
 			})
 		});
-	}*/
+	}
 }
 </script>
 
@@ -92,7 +92,6 @@ nav {
 .header {
 	position: fixed;
     z-index: 999;
-	height: 90px;
 	width: 100vw;
 	top: 0;
 	left: 0;
@@ -140,10 +139,12 @@ nav {
 
 		&__svg {
 			width: 36px;
+            height: 100%;
 		}
 
 		&__svg--mini {
 			width: 24px;
+            height: 100%;
 		}
 
 		&__title {

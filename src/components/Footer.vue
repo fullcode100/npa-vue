@@ -89,6 +89,11 @@ footer {
 	&__logo {
 		display: flex;
 
+		img {
+			width: 64px;
+			height: 100%;
+		}
+
 		> span {
 		    font-family: "Druk Wide";
 			font-weight: 900;
