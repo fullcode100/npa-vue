@@ -76,7 +76,7 @@ query {
 			node {
 				id
 				name
-				created_at(format:"YYYYMMDDhhmm")
+				created_at(format:"YYYYMMDDHHmm")
 				full_slug
 				content
 				tag_list

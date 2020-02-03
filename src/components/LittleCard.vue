@@ -54,7 +54,8 @@ export default {
 	methods: {
 		fromNow(date) {
 			moment.locale("fr");
-			console.log(date);
+			console.log(date + "   " + this.$props.title)
+			console.log(moment(date, "YYYYMMDDhhmm").fromNow())
 			return moment(date, "YYYYMMDDhhmm").fromNow();
 		}
 	}
