@@ -1,13 +1,15 @@
 <template>
 	<Layout>
 		<div class="list fit-content">
-			<h1 class="title--accent">Liste des articles</h1>
-			<LittleCard v-for="(article, key) in cardMap" :key="key"
-				:title="article.title"
-				:url="article.url"
-				:date="article.date"
-				:img="article.img"
-			/>
+			<h1 class="subtitle--accent">Liste des articles</h1>
+			<div class="list__content">
+				<LittleCard v-for="(article, key) in cardMap" :key="key"
+					:title="article.title"
+					:url="article.url"
+					:date="article.date"
+					:img="article.img"
+				/>
+			</div>
 		</div>
 	</Layout>
 </template>
@@ -62,5 +64,9 @@ query {
 <style lang="scss">
 .list {
 	margin-top: $xxl;
+
+	&__content {
+		margin-top: $xl;
+	}
 }
 </style>

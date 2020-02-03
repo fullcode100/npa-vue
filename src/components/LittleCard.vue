@@ -54,7 +54,8 @@ export default {
 	methods: {
 		fromNow(date) {
 			moment.locale("fr");
-			return moment(date, "YYYYMMDD").fromNow();
+			console.log(date);
+			return moment(date, "YYYYMMDDhhmm").fromNow();
 		}
 	}
 }

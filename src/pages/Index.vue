@@ -41,7 +41,8 @@
 							Car nous sommes <span class="bold">révolutionnaires</span>. Nous pensons qu’il faut en finir avec
 							ce système d’exploitation par la lutte. Les solutions que nous proposons sont à construire avec les
 							travailleurs, travailleuses, avec les habitant·es de cette ville. Ce ne sont pas des promesses
-							électorales. Venez voir notre site, écouter notre démarche. 
+							électorales. Découvrez nos activités, venez participer à nos événements,
+							écouter notre démarcher !
 						</p>
 						<p>	
 							<span class="bold">Et si on prenait enfin nos affaires en main ?</span>
@@ -95,6 +96,7 @@ export default {
 	&__title {
 		position: absolute;
 		margin: 0 auto;
+		text-align: center;
 		top: 40%;
 		left: 0;
 		right: 0;
@@ -188,14 +190,8 @@ export default {
 }
 
 @media screen and (max-width: $desktop){
-	.home {
-		&__title {
-			text-align: center;
-		}
-
-		.title__block {
-			line-height: 2.5;
-		}
+	.title__block {
+		line-height: 2.5;
 	}
 
 	.topical {
@@ -215,7 +211,10 @@ export default {
 
 		&__presentation {
 			margin-top: $lg;
-			font-size: $font-sm;
+
+			p {
+				font-size: $font-sm;
+			}
 		}
 	}
 }

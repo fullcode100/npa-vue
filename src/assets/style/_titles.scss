@@ -27,31 +27,25 @@
 @mixin subtitle($color) {
 	position: relative;
 	color: $color;
-	font-family: "Druk Wide";
+	font-family: "Druk Text Wide";
 	font-size: $font-lg;
-	font-weight: 700;
+	letter-spacing: -1px;
 
 	&::after {
 		content: "";
 		position: absolute;
 		background-color: $color;
-		width: 100%;
-		height: 2px;
-		bottom: -$xxs;
+		width: $xxl;
+		height: $xxs;
+		bottom: -$sm;
 		left: 0;
 	}
 }
 
-.subtitle--accent {
-	@include subtitle($accent);
+.subtitle--dark {
+	@include subtitle($dark);
 }
 
-@media screen and (max-width: $desktop) {
-	.title--accent {
-		font-size: $font-lg;
-	}
-
-	.title--dark {
-		font-size: $font-lg;
-	}
+.subtitle--accent {
+	@include subtitle($accent);
 }

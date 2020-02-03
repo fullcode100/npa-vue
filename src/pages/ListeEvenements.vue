@@ -1,14 +1,16 @@
 <template>
 	<Layout>
 		<div class="list fit-content">
-			<h1 class="title--dark">Liste des événéments</h1>
-			<Event v-for="(event, key) in eventMap" :key="key"
-				:title="event.title"
-				:date="event.date"
-				:location="event.location"
-				:link="event.link"
-				:description="event.description"
-			/>
+			<h1 class="subtitle--dark">Liste des événéments</h1>
+			<div class="list__content">
+				<Event v-for="(event, key) in eventMap" :key="key"
+					:title="event.title"
+					:date="event.date"
+					:location="event.location"
+					:link="event.link"
+					:description="event.description"
+				/>
+			</div>
 		</div>
 	</Layout>
 </template>
@@ -58,9 +60,3 @@ query {
 	}
 }
 </page-query>
-
-<style lang="scss">
-.listArticle {
-	margin-top: $xxl;
-}
-</style>

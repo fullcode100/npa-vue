@@ -76,7 +76,7 @@ query {
 			node {
 				id
 				name
-				created_at(format:"YYYYMMDD")
+				created_at(format:"YYYYMMDDhhmm")
 				full_slug
 				content
 				tag_list
@@ -104,7 +104,7 @@ query {
 
 	&__little {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 		flex-direction: column;
 		position: relative;
 		width: 30%;

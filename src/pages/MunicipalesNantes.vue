@@ -49,6 +49,7 @@
 
 <script>
 export default {
+	name: "Municipales Nantes",
 	metaInfo: {
 		title: "Municipales Nantes"
 	}
