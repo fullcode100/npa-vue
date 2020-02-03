@@ -10,6 +10,7 @@
 						:date="lastArticle.date"
 						:img="lastArticle.img"
 						:summary="lastArticle.summary"
+						:legend="lastArticle.legend"
 					/>
 				</div>
 				<div class="articles__little">
@@ -18,6 +19,7 @@
 						:url="article.url"
 						:date="article.date"
 						:img="article.img"
+						:legend="article.legend"
 					/>
 					<div class="articles__previous">
 						<g-link to="/liste-articles" class="link--inline">Voir les anciens articles 👉</g-link>
@@ -47,20 +49,35 @@ export default {
 						url: edge.node.full_slug,
 						date: edge.node.created_at,
 						title: edge.node.name,
-						img: edge.node.content.thumbnail
+						img: edge.node.content.thumbnail,
+						legend: edge.node.content.caption
           			}
        			})
       		]
 		},
 		lastArticle() {
 			let edge = this.edges[0];
-			return {
-				url: edge.node.full_slug,
-				date: edge.node.created_at,
-				title: edge.node.name,
-				img: edge.node.content.thumbnail,
-				summary: edge.node.content.summary
+			let data = {};
+			if (this.edges.length > 0) {
+				data = {
+					url: edge.node.full_slug,
+					date: edge.node.created_at,
+					title: edge.node.name,
+					img: edge.node.content.thumbnail,
+					summary: edge.node.content.summary,
+					legend: edge.node.content.caption
+				}
+			} else {
+				data = {
+					url: "/",
+					date: "20200101",
+					title: "Aucun article n'a encore été publié !",
+					img: "",
+					summary: "Des articles seront prochainement publiés sur le site...",
+				}
 			}
+
+			return data;
 		},
 		edges() {
 			return this.$static.allStoryblokEntry.edges || [];

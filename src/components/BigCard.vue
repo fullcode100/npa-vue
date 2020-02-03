@@ -73,6 +73,7 @@ export default {
 .big-card {
 	display: flex;
 	position: relative;
+	min-height: 250px;
 	color: $accent;
 	transition: 0.3s ease-in-out;
 
