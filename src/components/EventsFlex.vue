@@ -8,6 +8,9 @@
 			:link="event.link"
 			:description="event.description"
 		/>
+		<div v-if="eventMap.length === 0" class="empty">
+			<p>Aucun événement pour le moment !</p>
+		</div>
 		<div class="events__btn">
 			<g-link to="/liste-evenements" class="btn--dark">Voir tous les événements</g-link>
 		</div>
@@ -22,7 +25,7 @@ export default {
 		Event
 	},
 	computed: {
-		eventMap () {
+		eventMap() {
 			let edges = this.edges.slice(0, 2);
       		return [
         		...edges.map(edge => {

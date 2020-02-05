@@ -11,8 +11,12 @@
 		background-color: $color;
 		width: $xxl;
 		height: $xs;
-		bottom: -$md;
+		bottom: -$sm;
 		left: 0;
+	}
+
+	@media screen and (max-width: $tablet) {
+		font-size: $font-lg;
 	}
 }
 

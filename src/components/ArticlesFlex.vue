@@ -21,6 +21,9 @@
 						:img="article.img"
 						:legend="article.legend"
 					/>
+					<div v-if="cardMap.length === 0" class="empty">
+						<p>Pas d'autre articles à afficher !</p>
+					</div>
 					<div class="articles__previous">
 						<g-link to="/liste-articles" class="link--inline">Voir les anciens articles 👉</g-link>
 					</div>
@@ -48,7 +51,7 @@ export default {
           			return {
 						url: edge.node.full_slug,
 						date: edge.node.created_at,
-						title: edge.node.name,
+						title: edge.node.content.title,
 						img: edge.node.content.thumbnail,
 						legend: edge.node.content.caption
           			}
@@ -62,7 +65,7 @@ export default {
 				data = {
 					url: edge.node.full_slug,
 					date: edge.node.created_at,
-					title: edge.node.name,
+					title: edge.node.content.title,
 					img: edge.node.content.thumbnail,
 					summary: edge.node.content.summary,
 					legend: edge.node.content.caption

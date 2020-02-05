@@ -90,7 +90,7 @@ export default {
 
 		img {
 			object-fit: cover;
-			max-width: fit-content;
+			max-width: 75%;
 		}
 
 		p {

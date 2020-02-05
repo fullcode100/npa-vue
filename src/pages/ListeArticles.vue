@@ -9,6 +9,9 @@
 					:date="article.date"
 					:img="article.img"
 				/>
+				<div v-if="cardMap.length === 0" class="empty">
+					<p>Aucun article à afficher !</p>
+				</div>
 			</div>
 		</div>
 	</Layout>
@@ -31,7 +34,7 @@ export default {
           			return {
 						url: edge.node.full_slug,
 						date: edge.node.created_at,
-						title: edge.node.name,
+						title: edge.node.content.title,
 						img: edge.node.content.thumbnail
           			}
        			})

@@ -8,10 +8,8 @@
 						<span>NPA</span>
 					</div>
 					<div class="footer__networks">
+						<span>Suivez-nous sur les réseaux sociaux !</span>
 						<ul>
-							<li>
-								<span>Suivez-nous sur les réseaux sociaux !</span>
-							</li>
 							<li>
 								<a href="https://www.facebook.com/NPA-l%C3%89tincelle-Nantes-344133152708146/" target="_blank" rel="noreferrer noreferrer">
 									<font-awesome :icon="['fab', 'facebook-square']" size="2x" />
@@ -122,16 +120,17 @@ footer {
 		ul {
 			display: flex;
 			flex-direction: row;
-			align-items: center;
+			justify-content: center;
+			margin-top: $sm;
+		}
 
-			span {
-				font-weight: 500;
-				font-size: $font-md;
-			}
+		span {
+			font-weight: 500;
+			font-size: $font-md;
+		}
 
-			li + li {
-				margin-left: $md;
-			}
+		li + li {
+			margin-left: $md;
 		}
 		
 		a {
@@ -182,7 +181,7 @@ footer {
 		}
 
 		&__networks {
-			margin-top: $md;
+			margin-top: $lg;
 		}
 
 		&__content {

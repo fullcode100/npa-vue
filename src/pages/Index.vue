@@ -189,6 +189,16 @@ export default {
 	}
 }
 
+.empty {
+	margin-top: $xl;
+
+	p {
+		text-align: center;
+		color: $dark-light;
+		font-size: $font-md;
+	}
+}
+
 @media screen and (max-width: $desktop){
 	.title__block {
 		line-height: 2.5;
@@ -215,6 +225,10 @@ export default {
 			p {
 				font-size: $font-sm;
 			}
+		}
+
+		&__quote p {
+			font-size: $font-sm;
 		}
 	}
 }

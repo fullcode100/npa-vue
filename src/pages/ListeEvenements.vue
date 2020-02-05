@@ -10,6 +10,9 @@
 					:link="event.link"
 					:description="event.description"
 				/>
+				<div v-if="eventMap.length === 0" class="empty">
+					<p>Aucun événément à afficher !</p>
+				</div>
 			</div>
 		</div>
 	</Layout>
