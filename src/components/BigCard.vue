@@ -177,7 +177,7 @@ export default {
 			justify-content: space-between;
 
 			h2 {
-				max-width: 70%;
+				max-width: 65%;
 			}
 		}
 
