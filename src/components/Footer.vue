@@ -11,17 +11,17 @@
 						<span>Suivez-nous sur les réseaux sociaux !</span>
 						<ul>
 							<li>
-								<a href="https://www.facebook.com/NPA-l%C3%89tincelle-Nantes-344133152708146/" target="_blank" rel="noreferrer noreferrer">
+								<a href="https://www.facebook.com/NPA.nantes" target="_blank" rel="noreferrer">
 									<font-awesome :icon="['fab', 'facebook-square']" size="2x" />
 								</a>
 							</li>
 							<li>
-								<a href="https://www.instagram.com/npa_nantes_2020" target="_blank" rel="noreferrer noreferrer">
+								<a href="https://www.instagram.com/npa_nantes_2020" target="_blank" rel="noreferrer">
 									<font-awesome :icon="['fab', 'instagram']" size="2x" />
 								</a>
 							</li>
 							<li>
-								<a href="mailto:npanantes2018@gmail.com" target="_blank" rel="noreferrer noreferrer">
+								<a href="mailto:npanantes2018@gmail.com" target="_blank" rel="noreferrer">
 									<font-awesome :icon="['fas', 'envelope']" size="2x" />
 								</a>
 							</li>

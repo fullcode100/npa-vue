@@ -8,6 +8,11 @@
 			:caption="story.content.caption"
 			:content="story.content.body"
 		/>
+		<div class="newsletter">
+			<a class="link--inline" href="https://framalistes.org/sympa/subscribe/contact_npa.rosalux" target="_blank" rel="noreferrer">
+				Rejoignez notre newsletter ! 📧
+			</a>
+		</div>
 	</Layout>
 </template>
 
@@ -51,3 +56,10 @@ query StoryblokEntry ($id: ID) {
   	}
 }
 </page-query>
+
+<style lang="scss">
+.newsletter {
+	margin-top: $lg;
+	text-align: center;
+}
+</style>

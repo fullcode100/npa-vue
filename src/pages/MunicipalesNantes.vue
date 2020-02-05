@@ -38,7 +38,7 @@
 					</ul>
 				</p>	
 				<p>
-					C’est pourquoi le comité NPA Rosa Luxemburg envisage de présenter une liste. Nous y parviendrons
+					C’est pourquoi le comité <span class="bold">NPA Nantes</span> envisage de présenter une liste. Nous y parviendrons
 					en mobilisant autour de nous, et en nous adressant très largement à l’ensemble des milieux
 					populaires de Nantes. Toutes les contributions sont les bienvenues ! <span class="bold">Rejoignez-nous !</span>
 				</p>	
