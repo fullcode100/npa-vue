@@ -77,7 +77,11 @@ export default {
 		EventsFlex
 	},
 	metaInfo: {
-		title: "Accueil"
+		title: "Accueil",
+		meta: [{
+		name: "google-site-verification",
+		content: "SssKbETQDtgDpDuRchqc0jKT3dUMNAHprLVhgycLuBw"
+		}]
 	}
 };
 </script>
