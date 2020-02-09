@@ -26,7 +26,13 @@ export default {
 	name: "StoryblokEntryTemplate",
 	metaInfo() {
 		return {
-			title: this.$page.storyblokEntry.name
+			title: this.$page.storyblokEntry.name,
+			meta: [
+				{
+					name: "description",
+					content: this.$page.storyblokEntry.content.summary
+				}
+			]
 		}
 	},
 	computed: {

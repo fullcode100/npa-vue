@@ -11,6 +11,7 @@
 						:img="lastArticle.img"
 						:summary="lastArticle.summary"
 						:legend="lastArticle.legend"
+						:tag="lastArticle.tag"
 					/>
 				</div>
 				<div class="articles__little">
@@ -68,7 +69,8 @@ export default {
 					title: edge.node.content.title,
 					img: edge.node.content.thumbnail,
 					summary: edge.node.content.summary,
-					legend: edge.node.content.caption
+					legend: edge.node.content.caption,
+					tag: ((edge.node.tag_list).filter(e => e !== "article")).toString()
 				}
 			} else {
 				data = {
@@ -77,6 +79,7 @@ export default {
 					title: "Aucun article n'a encore été publié !",
 					img: "",
 					summary: "Des articles seront prochainement publiés sur le site...",
+					tag: "Article"
 				}
 			}
 

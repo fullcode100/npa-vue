@@ -78,10 +78,24 @@ export default {
 	},
 	metaInfo: {
 		title: "Accueil",
-		meta: [{
-		name: "google-site-verification",
-		content: "SssKbETQDtgDpDuRchqc0jKT3dUMNAHprLVhgycLuBw"
-		}]
+		meta: [
+			{
+				name: "google-site-verification",
+				content: "SssKbETQDtgDpDuRchqc0jKT3dUMNAHprLVhgycLuBw"
+			},
+			{
+				property: "og:type",
+				content: "website"
+			},
+			{
+				property: "og:description",
+				content: "Site de campagne du NPA pour les municipales 2020 de Nantes."
+			},
+			{
+				property: "og:title",
+				content: "Accueil"
+			}
+		]
 	}
 };
 </script>

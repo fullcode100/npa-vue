@@ -25,8 +25,18 @@ export default function (Vue, { router, head, isClient }) {
 		prefix: "og: http://ogp.me/ns#"
 	}
 
-	head.style.push({
+	head.meta.push({
 		name: "theme-color",
 		content: "#ec0902"
 	});
+
+	head.meta.push({
+		property: "og:site_name",
+		content: "NPA Nantes 2020"
+	})
+
+	head.meta.push({
+		property: "og:locale",
+		content: "fr_FR"
+	})
 }
