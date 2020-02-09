@@ -21,6 +21,7 @@
 						:date="article.date"
 						:img="article.img"
 						:legend="article.legend"
+						:tag="article.tag"
 					/>
 					<div v-if="cardMap.length === 0" class="empty">
 						<p>Pas d'autre articles à afficher !</p>
@@ -54,7 +55,8 @@ export default {
 						date: edge.node.created_at,
 						title: edge.node.content.title,
 						img: edge.node.content.thumbnail,
-						legend: edge.node.content.caption
+						legend: edge.node.content.caption,
+						tag: ((edge.node.tag_list).filter(e => e !== "article")).toString()
           			}
        			})
       		]
