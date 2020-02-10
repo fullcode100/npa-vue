@@ -20,13 +20,17 @@
 import Article from "@/components/Article";
 
 export default {
+	components: {
+		Article
+	},
+	name: "StoryblokEntryTemplate",
 	metaInfo() {
 		return {
 			title: this.$page.storyblokEntry.content.title,
 			meta: [
 				{
 					meta: "description",
-					content: this.$page.storyblokEntry.content.summary
+					content: "this.$page.storyblokEntry.content.summary"
 				},
 				{
 					property: "og:title",
@@ -34,7 +38,7 @@ export default {
 				},
 				{
 					name: "twitter:card",
-					content: this.$page.storyblokEntry.content.thumbnail ? "summary_large_image" : "summary",
+					content: this.$page.storyblokEntry.content.thumbnail,
 				},
 				{
 					property: "og:description",
@@ -43,21 +47,6 @@ export default {
 				{
 					property: "og:image",
 					content: this.$page.storyblokEntry.content.thumbnail || ""
-				}
-			]
-		}
-	},
-	components: {
-		Article
-	},
-	name: "StoryblokEntryTemplate",
-	metaInfo() {
-		return {
-			title: this.$page.storyblokEntry.name,
-			meta: [
-				{
-					name: "description",
-					content: this.$page.storyblokEntry.content.summary
 				}
 			]
 		}
