@@ -7,6 +7,7 @@
 			:img="imageURL"
 			:caption="story.content.caption"
 			:content="story.content.body"
+			:tag="tagList"
 		/>
 		<div class="newsletter">
 			<a class="link--inline" href="https://framalistes.org/sympa/subscribe/contact_npa.rosalux" target="_blank" rel="noreferrer">
@@ -38,7 +39,7 @@ export default {
 				},
 				{
 					name: "twitter:card",
-					content: this.$page.storyblokEntry.content.thumbnail,
+					content: this.$page.storyblokEntry.content.thumbnail ? "summary_large_image" : "summary",
 				},
 				{
 					property: "og:description",
@@ -61,6 +62,9 @@ export default {
 			let index = path.lastIndexOf("/") + 1;
 			let filename = path.substring(index);
 			return require(`!!assets-loader?quality=100!~/${directory}/${filename}`);
+		},
+		tagList() {
+			return (this.$page.storyblokEntry.tag_list.filter(e => e !== "article")).toString()
 		}
 	}
 };
