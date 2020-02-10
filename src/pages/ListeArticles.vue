@@ -8,6 +8,7 @@
 					:url="article.url"
 					:date="article.date"
 					:img="article.img"
+					:tag="article.tag"
 				/>
 				<div v-if="cardMap.length === 0" class="empty">
 					<p>Aucun article à afficher !</p>
@@ -35,7 +36,8 @@ export default {
 						url: edge.node.full_slug,
 						date: edge.node.created_at,
 						title: edge.node.content.title,
-						img: edge.node.content.thumbnail
+						img: edge.node.content.thumbnail,
+						tag: ((edge.node.tag_list).filter(e => e !== "article")).toString()
           			}
        			})
       		]

@@ -20,6 +20,33 @@
 import Article from "@/components/Article";
 
 export default {
+	metaInfo() {
+		return {
+			title: this.$page.storyblokEntry.content.title,
+			meta: [
+				{
+					meta: "description",
+					content: this.$page.storyblokEntry.content.summary
+				},
+				{
+					property: "og:title",
+					content: this.$page.storyblokEntry.content.title
+				},
+				{
+					name: "twitter:card",
+					content: this.$page.storyblokEntry.content.thumbnail ? "summary_large_image" : "summary",
+				},
+				{
+					property: "og:description",
+					content: this.$page.storyblokEntry.content.summary,
+				},
+				{
+					property: "og:image",
+					content: this.$page.storyblokEntry.content.thumbnail || ""
+				}
+			]
+		}
+	},
 	components: {
 		Article
 	},
