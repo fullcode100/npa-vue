@@ -28,14 +28,14 @@
 						</g-link>
 						<Dropdown
 							:links="{
-								'Nos propositions': '/',
-								'Échos des luttes': '/',
-								'Parole de travailleurs et travailleuses': '/'
+								'Nos propositions': '',
+								'Échos des luttes': '',
+								'Parole de travailleurs et travailleuses': ''
 							}"
 						/>
 					</li>
 					<li>
-						<g-link to="/#events" class="link--inline">Évènements</g-link>
+						<g-link to="/liste-evenements" class="link--inline">Évènements</g-link>
 					</li>
 					<li>
 						<g-link to="/#footer" class="link--inline">Contact</g-link>
@@ -58,7 +58,7 @@ export default {
 			window.addEventListener("scroll", () => {
 				let header = document.getElementsByTagName("header")[0];
 				let img = document.getElementsByClassName("header__svg")[0];
-				if (document.documentElement.scrollTop >= window.innerHeight / 1.5) {
+				if (document.documentElement.scrollTop >= window.innerHeight / 2) {
 					img.classList.add("header__svg--mini");
 				} else {
 					img.classList.remove("header__svg--mini");

@@ -1,7 +1,7 @@
 <template>
 	<div class="dropdown">
 		<div class="dropdown__link">
-			<g-link v-for="(value, name) in links" :key="value" class="link--dropdown" :to="value">{{ name }}</g-link>
+			<g-link v-for="(value, name) in links" :key="name" class="link--dropdown" :to="value">{{ name }}</g-link>
 		</div>
 	</div>
 </template>

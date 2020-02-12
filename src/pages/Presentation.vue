@@ -14,7 +14,7 @@
 				</div>
 			</div>
 			<div class="fit-article article__content">
-				<a id="municipales-nantes"></a>
+				<a class="anchor" id="municipales-nantes"></a>
 				<h2>Municipales à Nantes</h2>
 				<p>
 					Comme toute campagne électorale, les Municipales sont un moment important
@@ -44,7 +44,7 @@
 					en mobilisant autour de nous, et en nous adressant très largement à l’ensemble des milieux
 					populaires de Nantes. Toutes les contributions sont les bienvenues ! <span class="bold">Rejoignez-nous !</span>
 				</p>
-				<a id="qui-sommes-nous"></a>
+				<a class="anchor" id="qui-sommes-nous"></a>
 				<h2>Qui sommes-nous ?</h2>
 				<p>
 					Les partis institutionnels, de droite et de gauche, gèrent la politique dans ce pays loin des intérêts du
