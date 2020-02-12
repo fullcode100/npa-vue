@@ -34,12 +34,7 @@
 </template>
 
 <script>
-import Dropdown from "@/components/Dropdown.vue";
-
 export default {
-	components: {
-		Dropdown
-	},
 	mounted() {
 		this.$nextTick(() => {
 			window.addEventListener("scroll", () => {
