@@ -58,10 +58,13 @@
 							<h4>Nos camarades</h4>
 						</li>
 						<li>
-							<a href="http://etincellenantes.org/" class="link--primary" rel="noreferrer noreferrer">Étincelle Nantes</a>
+							<a href="http://npa2009.org/" class="link--primary" rel="noreferrer">NPA Site national</a>
 						</li>
 						<li>
-							<a href="https://npa44.org/" class="link--primary" rel="noreferrer noreferrer">NPA 44</a>
+							<a href="https://npa44.org/" class="link--primary" rel="noreferrer">NPA 44</a>
+						</li>
+						<li>
+							<a href="https://convergencesrevolutionnaires.org/" class="link--primary" rel="noreferrer">Convergences révolutionnaires</a>
 						</li>
 					</ul>			
 				</div>

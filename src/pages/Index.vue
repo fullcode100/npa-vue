@@ -5,50 +5,49 @@
 			<div class="home__title fit-content">
 				<h1>
 					<span class="title__block">Anticapitalistes</span> et
-					<br />
 					<span class="title__block">révolutionnaires !</span>
 				</h1>
+				<h2>
+					<span class="title__block">Pour le pouvoir des travailleurs et des travailleuses !</span>
+				</h2>
 			</div>
-			<div class="home__banner">
-				<div class="fit-content">
-					<p>Une liste anticapitaliste et révolutionnaire pour Nantes ! ✊
-					<g-link to="/#topical" class="link--inline">Découvrir nos propositions</g-link>
-					</p>
-				</div>
-			</div>
-		</section>
-		<a id="articles"></a>
-		<section class="articles">
-			<ArticlesFlex />
 		</section>
 		<a id="topical"></a>
 		<section class="topical">
 			<div class="fit-content">
-				<h1 class="title--dark">Nantes 2020</h1>
+				<h1 class="title--dark">Municipales à Nantes</h1>
 				<div class="topical__content">
 					<div class="topical__presentation">
 						<p>
-							Les partis institutionnels, de droite et de gauche, gèrent la politique dans ce pays
-							loin des intérêts du plus grand nombre. Il en est de même dans les mairies. Les militant·es et
-							sympathisant·es du <span class="bold">NPA ne sont pas des professionnels de la politique</span> : ils
-							et elles sont salarié·es ou au chômage. Tous les jours, et pas seulement pendant les élections,
-							nous luttons avec nos collègues, voisins <span class="bold">contre la misère et cette société
-							violente et injuste</span>. 
+							Comme toute campagne électorale, les Municipales sont un moment important de débats et de
+							discussions politiques et les élections de mars 2020 seront particulièrement marquées par
+							les luttes en cours. <span class="bold">Les anticapitalistes ont une voix singulière
+							à y faire entendre.</span> 
+						</p>
+						<p class="article__content">
+							<ul>
+								<li>
+									<span class="bold">Une voix qui tranche</span> avec celle des partis qui aspirent à gérer les affaires
+									municipales à la place des travailleurs·ses, et habitant·es de la ville. 
+								</li>
+								<li>
+									<span class="bold">Une voix qui se fasse l’écho des luttes sociales</span> locales et nationales, et qui exprime
+									les besoins réels des habitant·es de Nantes (sur les questions écologiques, d’emploi, de
+									logement, de transports, de santé, d’égalité des droits…). 
+								</li>
+								<li>
+									<span class="bold">Une voix qui ne transige pas face aux discriminations</span>, à l’intolérance, au racisme, et à
+									toutes les politiques qui visent à mettre de côté certaines parties de la population.
+								</li>
+							</ul>
 						</p>
 						<p>
-							Nous sommes <span class="bold">anticapitalistes</span> : Nous dénonçons les injustices sociales,
-							écologiques, les discriminations qui sont portées par la loi de l’argent… mais pas seulement !
-							Car nous sommes <span class="bold">révolutionnaires</span>. Nous pensons qu’il faut en finir avec
-							ce système d’exploitation par la lutte. Les solutions que nous proposons sont à construire avec les
-							travailleurs, travailleuses, avec les habitant·es de cette ville. Ce ne sont pas des promesses
-							électorales. Découvrez nos activités, venez participer à nos événements,
-							écouter notre démarcher !
-						</p>
-						<p>	
-							<span class="bold">Et si on prenait enfin nos affaires en main ?</span>
+							C’est pourquoi le NPA Nantes envisage de présenter une liste. Nous y parviendrons en mobilisant
+							autour de nous, et en nous adressant très largement à l’ensemble des milieux populaires de Nantes.
+							Toutes les contributions sont les bienvenues ! <span class="bold">Rejoignez-nous !</span>
 						</p>
 						<div class="topical__btn">
-							<g-link to="/municipales-nantes" class="btn--dark">Nos propositions</g-link>
+							<g-link to="/presentation" class="btn--dark">Présentation</g-link>
 						</div>
 					</div>
 					<div class="topical__img">
@@ -59,6 +58,10 @@
 					</div>
 				</div>
 			</div>
+		</section>
+		<a id="articles"></a>
+		<section class="articles">
+			<ArticlesFlex />
 		</section>
 		<a id="events"></a>
 		<section class="events">
@@ -122,22 +125,14 @@ export default {
 		h1 {
 			font-family: "Druk Wide";
 			font-weight: 900;
-  			font-size: calc(14px + (48 - 14) * ((100vw - 300px) / (1600 - 300)));
+			font-size: calc(16px + (48 - 16) * ((100vw - 300px) / (1600 - 300)));
 			text-transform: uppercase;
 		}
-	}
 
-	&__banner {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		background-color: $accent;
-		font-weight: 500;
-		color: $primary;
-		padding: $xs 0;
-
-		> div {
-			text-align: center;
+		h2 {
+			font-weight: 800;
+			margin-top: $md;
+			font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
 		}
 	}
 
@@ -145,6 +140,9 @@ export default {
 		background-color: $accent;
 		color: $primary;
 		padding: $xxs;
+	}
+
+	.title__block + .title__block {
 		line-height: 2;
 	}
 
@@ -157,7 +155,6 @@ export default {
 .topical {
 	color: $dark;
 	background-color: $primary-dark;
-	margin-top: $xl;
 	padding: $xxl 0;
 
 	&__content {

@@ -1,0 +1,100 @@
+.article {
+	color: $dark;
+
+	&__title {
+		font-family: "Druk Text Wide";
+		font-weight: 700;
+		letter-spacing: -0.5px;
+		font-size: $font-lg;
+		margin-bottom: $md;
+	}
+
+	&__header {
+		padding: $xxl 0 $xl 0;
+		background-color: $primary-dark;
+	}
+	
+	&__info {
+		color: $dark-light;
+		margin-bottom: $md;
+
+		span:last-child {
+			margin-left: $sm;
+		}
+
+		svg {
+			margin-right: $xxs;
+		}
+	}
+
+	&__summary {
+		margin-top: $sm;
+		font-size: $font-md;
+	}
+
+	&__img {
+		margin-top: $xl;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		img {
+			object-fit: cover;
+			max-width: 75%;
+		}
+
+		p {
+			color: $dark-light;
+			margin-top: $xs;
+		}
+	}
+
+	&__content {
+		margin-top: $lg;
+
+		ul {
+			list-style: square inside;
+		}
+
+		li {
+			margin-top: $sm;
+		}
+
+		p + p {
+			margin-top: $md;
+		}
+
+		h1,
+		h2,
+		h3 {
+			margin: $lg 0 $md 0;
+			font-size: $font-md;
+			font-family: "Druk Text Wide";
+
+			&::before {
+				content: "";
+				display: block;
+				float: left;
+				width: 50px;
+				margin: 8px 15px 0 0;
+				border-top: $dark $xs solid;
+			}
+		}
+
+		a {
+			@include link(rgba($dark, 0.7), rgba($dark, 0.4), $dark);
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.article {
+		&__title {
+			font-size: $font-md;
+		}
+
+		&__summary {
+			font-size: $font-sm;
+		}
+	}
+}

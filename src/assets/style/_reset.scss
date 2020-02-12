@@ -54,3 +54,10 @@ html {
 	color: $primary;
 	background-color: $dark;
 }
+
+:target {
+	display: block;
+	position: relative;
+	top: -100px;
+	visibility: hidden;
+}

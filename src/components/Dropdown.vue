@@ -1,18 +1,32 @@
 <template>
 	<div class="dropdown">
 		<div class="dropdown__link">
-			<g-link class="link--dropdown" to="/municipales-nantes">Municipales 2020</g-link>
-			<g-link class="link--dropdown" to="/liste-articles">Liste des articles</g-link>
+			<g-link v-for="(value, name) in links" :key="value" class="link--dropdown" :to="value">{{ name }}</g-link>
 		</div>
 	</div>
 </template>
+
+<script>
+export default {
+	props: {
+		links: {
+			type: Object
+		}
+	},
+	computed: {
+		link() {
+
+		}
+	}
+}
+</script>
 
 <style lang="scss">
 .dropdown {
 	position: absolute;
 	top: $lg;
-	right: -50%;
-	left: -50%;
+	right: -$xl;
+	left: -$xl;
 	padding: 0 $xxs;
 	visibility: hidden;
 	pointer-events: none;
@@ -33,6 +47,13 @@
 		a + a {
 			border-top: 1.5px solid $dark-light;
 		}
+	}
+}
+
+@media screen and (max-width: $desktop) {
+	.dropdown {
+		left: 0;
+		right: -$xxl;
 	}
 }
 </style>

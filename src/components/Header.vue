@@ -9,15 +9,30 @@
 			</g-link>
 			<nav>
 				<ul>
-					<li>
-						<g-link to="/#topical" class="link--inline">Nantes 2020</g-link>
+					<li class="has-dropdown">
+						<g-link class="link--inline">
+							<span class="bold">Présentation</span>
+							<font-awesome :icon="['fas', 'chevron-down']" size="sm" />
+						</g-link>
+						<Dropdown
+							:links="{
+								'Une liste anticapitaliste et révolutionnaire': '/presentation#municipales-nantes',
+								'Qui sommes-nous ?': '/presentation#qui-sommes-nous'
+							}"
+						/>
 					</li>
 					<li class="has-dropdown">
 						<g-link class="link--inline">
-							Actualités
+							Articles
 							<font-awesome :icon="['fas', 'chevron-down']" size="sm" />
 						</g-link>
-						<Dropdown />
+						<Dropdown
+							:links="{
+								'Nos propositions': '/',
+								'Échos des luttes': '/',
+								'Parole de travailleurs et travailleuses': '/'
+							}"
+						/>
 					</li>
 					<li>
 						<g-link to="/#events" class="link--inline">Évènements</g-link>
@@ -64,10 +79,6 @@ nav {
 
 		li {
 			margin-right: $xl;
-
-			&:first-of-type a {
-				font-weight: 800;
-			}
 
 			&:last-child {
 				margin: 0;
