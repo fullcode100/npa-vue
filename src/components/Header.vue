@@ -26,13 +26,6 @@
 							Articles
 							<font-awesome :icon="['fas', 'chevron-down']" size="sm" />
 						</g-link>
-						<Dropdown
-							:links="{
-								'Nos propositions': '/nos-propositions',
-								'Échos des luttes': '/echos-des-luttes',
-								'Parole de travailleurs et travailleuses': '/paroles-de-travailleurs-et-travailleuses'
-							}"
-						/>
 					</li>
 					<li>
 						<g-link to="/liste-evenements" class="link--inline">Évènements</g-link>
