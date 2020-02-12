@@ -71,7 +71,7 @@
 
 <script>
 export default {
-	name: "Une liste anticapitaliste et révolutionnaire",
+	name: "Presentation",
 	metaInfo: {
 		title: "Une liste anticapitaliste et révolutionnaire"
 	}

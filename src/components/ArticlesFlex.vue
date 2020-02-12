@@ -1,7 +1,7 @@
 <template>
 	<div class="fit-content">
 		<div class="articles__content">
-			<h1 class="title--accent">Actualités</h1>
+			<h1 class="title--accent">Articles</h1>
 			<div class="articles__flex">
 				<div class="articles__big">
 					<BigCard
