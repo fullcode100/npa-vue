@@ -24,7 +24,7 @@
 							les luttes en cours. <span class="bold">Les anticapitalistes ont une voix singulière
 							à y faire entendre.</span> 
 						</p>
-						<p class="article__content">
+						<div class="article__content">
 							<ul>
 								<li>
 									<span class="bold">Une voix qui tranche</span> avec celle des partis qui aspirent à gérer les affaires
@@ -40,7 +40,7 @@
 									toutes les politiques qui visent à mettre de côté certaines parties de la population.
 								</li>
 							</ul>
-						</p>
+						</div>
 						<p>
 							C’est pourquoi le NPA Nantes envisage de présenter une liste. Nous y parviendrons en mobilisant
 							autour de nous, et en nous adressant très largement à l’ensemble des milieux populaires de Nantes.
