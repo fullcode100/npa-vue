@@ -28,9 +28,9 @@
 						</g-link>
 						<Dropdown
 							:links="{
-								'Nos propositions': '',
-								'Échos des luttes': '',
-								'Parole de travailleurs et travailleuses': ''
+								'Nos propositions': '/nos-propositions',
+								'Échos des luttes': '/echos-des-luttes',
+								'Parole de travailleurs et travailleuses': '/paroles-de-travailleurs-et-travailleuses'
 							}"
 						/>
 					</li>
