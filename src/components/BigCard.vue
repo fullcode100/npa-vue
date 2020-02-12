@@ -12,7 +12,7 @@
 		<div class="big-card__img">
 			<StoryblokImage
 				:img="img"
-				:legend="legend"
+				:caption="legend"
 				card="bigCard"
 			/>
 		</div>

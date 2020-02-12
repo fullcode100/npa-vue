@@ -11,7 +11,7 @@
 		<div class="little-card__img">
 			<StoryblokImage
 				:img="img"
-				:legend="legend"
+				:caption="legend"
 				card="littleCard"
 			/>
 		</div>

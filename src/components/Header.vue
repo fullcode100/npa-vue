@@ -10,13 +10,13 @@
 			<nav>
 				<ul>
 					<li class="has-dropdown">
-						<g-link class="link--inline">
+						<g-link class="link--inline" to="/presentation">
 							<span class="bold">Présentation</span>
 							<font-awesome :icon="['fas', 'chevron-down']" size="sm" />
 						</g-link>
 					</li>
 					<li class="has-dropdown">
-						<g-link class="link--inline">
+						<g-link class="link--inline" to="/liste-articles">
 							Articles
 							<font-awesome :icon="['fas', 'chevron-down']" size="sm" />
 						</g-link>
