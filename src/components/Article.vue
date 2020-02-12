@@ -3,16 +3,10 @@
 		<div class="article__header">
 			<div class="fit-article">
 				<h1 class="article__title">{{ title }}</h1>
-				<div class="article__info">
-					<span>
-						<font-awesome :icon="['far', 'clock']" />
-						Publié le {{ formatDate(date) }}
-					</span>
-					<span>
-						<font-awesome :icon="['fas', 'tags']" />
-						<g-link class="link--dark" to="">{{ tag }}</g-link>
-					</span>
-				</div>
+				<p class="article__date">
+					<font-awesome :icon="['far', 'clock']" />
+					Publié le {{ formatDate(date) }}
+				</p>
 				<p class="article__summary">{{ summary }}</p>
 			</div>
 		</div>
@@ -57,10 +51,6 @@ export default {
 		},
 		content: {
 			type: Object,
-			default: ""
-		},
-		tag: {
-			type: String,
 			default: ""
 		}
 	},
