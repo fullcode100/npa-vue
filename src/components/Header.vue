@@ -14,12 +14,6 @@
 							<span class="bold">Présentation</span>
 							<font-awesome :icon="['fas', 'chevron-down']" size="sm" />
 						</g-link>
-						<Dropdown
-							:links="{
-								'Une liste anticapitaliste et révolutionnaire': '/presentation#municipales-nantes',
-								'Qui sommes-nous ?': '/presentation#qui-sommes-nous'
-							}"
-						/>
 					</li>
 					<li class="has-dropdown">
 						<g-link class="link--inline">
