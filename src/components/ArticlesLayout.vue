@@ -51,7 +51,7 @@ export default {
 						title: edge.node.content.title,
 						img: edge.node.content.thumbnail,
 						legend: edge.node.content.caption,
-						tag: ((edge.node.tag_list).filter(e => e !== "article")).toString()
+						tag: edge.node.tag_list.toString()
           			}
        			})
       		]
@@ -67,7 +67,7 @@ export default {
 					img: edge.node.content.thumbnail,
 					summary: edge.node.content.summary,
 					legend: edge.node.content.caption,
-					tag: ((edge.node.tag_list).filter(e => e !== "article")).toString()
+					tag: edge.node.tag_list.toString()
 				}
 			}
 

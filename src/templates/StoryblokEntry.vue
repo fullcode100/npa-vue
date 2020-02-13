@@ -4,6 +4,7 @@
 			:title="story.content.title"
 			:date="story.created_at"
 			:summary="story.content.summary"
+			:tags="story.tag_list"
 			:img="imageURL"
 			:caption="story.content.caption"
 			:content="story.content.body"

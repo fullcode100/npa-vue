@@ -15,11 +15,17 @@
 	}
 	
 	&__info {
+		display: flex;
+		flex-direction: row;
 		color: $dark-light;
 		margin-bottom: $md;
 
-		span:last-child {
-			margin-left: $sm;
+		p:first-child {
+			margin-right: $sm;
+		}
+
+		span {
+			text-transform: capitalize;
 		}
 
 		svg {

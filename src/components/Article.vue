@@ -3,10 +3,16 @@
 		<div class="article__header">
 			<div class="fit-article">
 				<h1 class="article__title">{{ title }}</h1>
-				<p class="article__date">
-					<font-awesome :icon="['far', 'clock']" />
-					Publié le {{ formatDate(date) }}
-				</p>
+				<div class="article__info">
+					<p>
+						<font-awesome :icon="['far', 'clock']" />
+						Publié le {{ formatDate(date) }}
+					</p>
+					<p>
+						<font-awesome :icon="['fas', 'tags']" />
+						<span v-for="tag in tags" :key="tag">{{ tag }}</span>
+					</p>
+				</div>
 				<p class="article__summary">{{ summary }}</p>
 			</div>
 		</div>
@@ -40,6 +46,10 @@ export default {
 		summary: {
 			type: String,
 			default: "Résumé des grandes lignes de l'article"
+		},
+		tags: {
+			type: Array,
+			default: []
 		},
 		img: {
 			type: Object,
