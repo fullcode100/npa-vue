@@ -60,8 +60,8 @@ export default {
 <style lang="scss">
 .event {
 	display: flex;
-	position: relative;
 	flex-direction: column;
+	position: relative;
 	max-width: 600px;
 	color: $dark;
 	margin: $lg auto 0 auto;

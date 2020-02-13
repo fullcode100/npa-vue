@@ -18,7 +18,6 @@ ul {
 
 p {
 	line-height: 1.4;
-	font-size: $font-sm;
 }
 
 h1, h2, h3, h4 {
@@ -60,4 +59,23 @@ html {
 	position: relative;
 	top: -100px;
 	visibility: hidden;
+}
+
+.btn--center {
+	display: flex;
+	justify-content: center;
+	margin-top: $lg;
+}
+
+.section {
+	margin-top: $xxl;
+}
+
+.list {
+	list-style: square inside;
+	line-height: 1.4;
+
+	li {
+		margin-top: $sm;
+	}
 }

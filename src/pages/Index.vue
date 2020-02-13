@@ -4,15 +4,14 @@
 			<g-image src="@/assets/hero.jpg" class="home__background" alt="Image d'accueil de NPA Nantes 2020" />
 			<div class="home__title fit-content">
 				<h1>
-					<span class="title__block">Anticapitalistes</span> et
-					<span class="title__block">révolutionnaires !</span>
+					<span class="home__block">Anticapitalistes</span> et
+					<span class="home__block">révolutionnaires !</span>
 				</h1>
 				<h2>
-					<span class="title__block">Pour le pouvoir des travailleurs et des travailleuses !</span>
+					<span class="home__block">Pour le pouvoir des travailleurs et des travailleuses !</span>
 				</h2>
 			</div>
 		</section>
-		<a id="topical"></a>
 		<section class="topical">
 			<div class="fit-content">
 				<h1 class="title--dark">Municipales à Nantes</h1>
@@ -24,15 +23,15 @@
 							les luttes en cours. <span class="bold">Les anticapitalistes ont une voix singulière
 							à y faire entendre.</span> 
 						</p>
-						<ul>
+						<ul class="list">
 							<li>
 								<span class="bold">Une voix qui tranche</span> avec celle des partis qui aspirent à gérer les affaires
-								municipales à la place des travailleurs·ses, et habitant·es de la ville. 
+								municipales à la place des travailleurs·ses, et habitant·es de la ville.
 							</li>
 							<li>
 								<span class="bold">Une voix qui se fasse l’écho des luttes sociales</span> locales et nationales, et qui exprime
 								les besoins réels des habitant·es de Nantes (sur les questions écologiques, d’emploi, de
-								logement, de transports, de santé, d’égalité des droits…). 
+								logement, de transports, de santé, d’égalité des droits…).
 							</li>
 							<li>
 								<span class="bold">Une voix qui ne transige pas face aux discriminations</span>, à l’intolérance, au racisme, et à
@@ -44,7 +43,7 @@
 							autour de nous, et en nous adressant très largement à l’ensemble des milieux populaires de Nantes.
 							Toutes les contributions sont les bienvenues ! <span class="bold">Rejoignez-nous !</span>
 						</p>
-						<div class="topical__btn">
+						<div class="btn--center">
 							<g-link to="/presentation" class="btn--dark">Présentation</g-link>
 						</div>
 					</div>
@@ -57,25 +56,60 @@
 				</div>
 			</div>
 		</section>
-		<a id="articles"></a>
-		<section class="articles">
-			<ArticlesFlex />
+		<section class="section">
+			<div class="fit-content">
+				<h1 class="title--accent">Articles</h1>
+				<ArticlesLayout />
+			</div>
 		</section>
-		<a id="events"></a>
-		<section class="events">
-			<EventsFlex />
+		<section class="section">
+			<div class="fit-content">
+				<h1 class="title--accent">Évènements</h1>
+				<Event v-for="(event, key) in eventMap" :key="key"
+					:title="event.title"
+					:date="event.date"
+					:location="event.location"
+					:link="event.link"
+					:description="event.description"
+				/>
+				<div v-if="eventMap.length === 0" class="empty">
+					<p>Aucun événement pour le moment !</p>
+				</div>
+				<div class="btn--center">
+					<g-link to="/liste-evenements" class="btn--dark">Voir tous les événements</g-link>
+				</div>
+			</div>
 		</section>
 	</Layout>
 </template>
 
 <script>
-import ArticlesFlex from "@/components/ArticlesFlex";
-import EventsFlex from "@/components/EventsFlex";
+import ArticlesLayout from "@/components/ArticlesLayout";
+import Event from "@/components/Event";
 
 export default {
 	components: {
-		ArticlesFlex,
-		EventsFlex
+		ArticlesLayout,
+		Event
+	},
+	computed: {
+		eventMap() {
+			let edges = this.edges.slice(0, 2);
+      		return [
+        		...edges.map(edge => {
+          			return {
+						title: edge.node.content.title,
+						date: edge.node.content.date,
+						location: edge.node.content.location,
+						link: edge.node.content.link.url,
+						description: edge.node.content.description
+          			}
+       			})
+      		]
+		},
+		edges() {
+			return this.$page.allStoryblokEntry.edges || [];
+		}
 	},
 	metaInfo: {
 		title: "Accueil",
@@ -100,6 +134,21 @@ export default {
 	}
 };
 </script>
+
+
+<page-query>
+query {
+	allStoryblokEntry(filter: {tag_list: {contains: "event"}}) {
+		edges {
+			node {
+				id
+				content
+				tag_list
+			}
+		}
+	}
+}
+</page-query>
 
 <style lang="scss">
 .home {
@@ -134,26 +183,21 @@ export default {
 		}
 	}
 
-	.title__block {
+	&__block {
 		background-color: $accent;
 		color: $primary;
 		padding: $xxs;
 	}
 
-	.title__block + .title__block {
+	&__block + &__block {
 		line-height: 2;
-	}
-
-	.title__stroke {
-		@include stroke(transparent, transparent, 4px, $accent);
-		padding: $md $xs;
 	}
 }
 
 .topical {
+	padding: $xxl 0 $xl 0;
 	color: $dark;
 	background-color: $primary-dark;
-	padding: $xxl 0;
 
 	&__content {
 		display: flex;
@@ -161,21 +205,16 @@ export default {
 		justify-content: space-between;
 	}
 
-	&__btn {
-		display: flex;
-		justify-content: center;
-		margin-top: $lg;
-	}
-
 	&__presentation {
 		margin-top: $xl;
+		font-size: $font-md;
 
-		p {
-			font-size: $font-md;
+		p, .list {
+			margin-top: $md;
 		}
 
-		p + p {
-			margin-top: $md;
+		p:first-child {
+			margin-top: 0;
 		}
 	}
 

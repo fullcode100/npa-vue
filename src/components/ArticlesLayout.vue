@@ -1,35 +1,30 @@
 <template>
-	<div class="fit-content">
-		<div class="articles__content">
-			<h1 class="title--accent">Articles</h1>
-			<div class="articles__flex">
-				<div class="articles__big">
-					<BigCard
-						:title="lastArticle.title"
-						:url="lastArticle.url"
-						:date="lastArticle.date"
-						:img="lastArticle.img"
-						:summary="lastArticle.summary"
-						:legend="lastArticle.legend"
-						:tag="lastArticle.tag"
-					/>
-				</div>
-				<div class="articles__little">
-					<LittleCard v-for="(article, key) in cardMap" :key="key"
-						:title="article.title"
-						:url="article.url"
-						:date="article.date"
-						:img="article.img"
-						:legend="article.legend"
-						:tag="article.tag"
-					/>
-					<div v-if="cardMap.length === 0" class="empty">
-						<p>Pas d'autre articles à afficher !</p>
-					</div>
-					<div class="articles__previous">
-						<g-link to="/liste-articles" class="link--inline">Voir les anciens articles 👉</g-link>
-					</div>
-				</div>
+	<div class="articles">
+		<div class="articles__big">
+			<BigCard
+				:title="lastArticle.title"
+				:url="lastArticle.url"
+				:date="lastArticle.date"
+				:img="lastArticle.img"
+				:summary="lastArticle.summary"
+				:legend="lastArticle.legend"
+				:tag="lastArticle.tag"
+			/>
+		</div>
+		<div class="articles__little">
+			<LittleCard v-for="(article, key) in cardMap" :key="key"
+				:title="article.title"
+				:url="article.url"
+				:date="article.date"
+				:img="article.img"
+				:legend="article.legend"
+				:tag="article.tag"
+			/>
+			<div v-if="cardMap.length === 0" class="empty">
+				<p>Pas d'autre articles à afficher !</p>
+			</div>
+			<div class="btn--center">
+				<g-link to="/liste-articles" class="link--inline">Voir les anciens articles 👉</g-link>
 			</div>
 		</div>
 	</div>
@@ -74,15 +69,6 @@ export default {
 					legend: edge.node.content.caption,
 					tag: ((edge.node.tag_list).filter(e => e !== "article")).toString()
 				}
-			} else {
-				data = {
-					url: "/",
-					date: "20200101",
-					title: "Aucun article n'a encore été publié !",
-					img: "",
-					summary: "Des articles seront prochainement publiés sur le site...",
-					tag: "Article"
-				}
 			}
 
 			return data;
@@ -113,15 +99,11 @@ query {
 
 <style lang="scss">
 .articles {
-	margin-top: $xxl;
-
-	&__flex {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin-top: $xl;
-	}
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: $xl;
 
 	&__big {
 		width: 70%;

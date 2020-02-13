@@ -1,8 +1,8 @@
 <template>
 	<Layout>
-		<div class="list fit-content">
-			<h1 class="subtitle--dark">Liste des événéments</h1>
-			<div class="list__content">
+		<section class="section">
+			<div class="fit-content">
+				<h1 class="subtitle--dark">Liste des événéments</h1>
 				<Event v-for="(event, key) in eventMap" :key="key"
 					:title="event.title"
 					:date="event.date"
@@ -14,7 +14,7 @@
 					<p>Aucun événément à afficher !</p>
 				</div>
 			</div>
-		</div>
+		</section>
 	</Layout>
 </template>
 

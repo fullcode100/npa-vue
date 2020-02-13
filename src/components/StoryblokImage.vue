@@ -33,7 +33,7 @@ export default {
 						assetsLoader = require(`!!assets-loader?width=100&height=100&fit=cover!~/${directory}/${filename}`);
 						break;
 					case "bigCard":
-						assetsLoader = require(`!!assets-loader?width=475&height=500&fit=cover!~/${directory}/${filename}`);
+						assetsLoader = require(`!!assets-loader?width=475&height=550&fit=cover!~/${directory}/${filename}`);
 						break;
 				}
 

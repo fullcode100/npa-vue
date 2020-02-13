@@ -5,11 +5,11 @@
 				<div class="fit-article">
 					<h1 class="article__title">Une liste anticapitaliste et révolutionnaire !</h1>
 					<p class="article__summary">
-							Les jeunes pour le climat, les étudiants contre la précarité, les femmes
-							contre les violences, les migrants et de leurs soutiens pour leurs droits,
-							les Gilets jaunes et les travailleur·euses pour les emplois, les salaires
-							et les retraites : tous manifestent leur désir de changement et bousculent
-							la vie politique, à Nantes comme dans le reste du pays.
+						Les jeunes pour le climat, les étudiants contre la précarité, les femmes
+						contre les violences, les migrants et de leurs soutiens pour leurs droits,
+						les Gilets jaunes et les travailleur·euses pour les emplois, les salaires
+						et les retraites : tous manifestent leur désir de changement et bousculent
+						la vie politique, à Nantes comme dans le reste du pays.
 					</p>
 				</div>
 			</div>
@@ -76,89 +76,3 @@ export default {
 	}
 }
 </script>
-
-<style lang="scss">
-.article {
-	color: $dark;
-
-	&__title {
-		font-family: "Druk Text Wide";
-		font-weight: 700;
-		letter-spacing: -0.5px;
-		font-size: $font-lg;
-	}
-
-	&__header {
-		padding: $xxl 0 $xl 0;
-		background-color: $primary-dark;
-	}
-
-	&__date {
-		margin-top: $md;
-		color: $dark-light;
-	}
-
-	&__summary {
-		margin-top: $sm;
-		font-size: $font-md;
-	}
-
-	&__img {
-		margin-top: $xl;
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-
-		img {
-			object-fit: cover;
-			max-width: 75%;
-		}
-
-		p {
-			color: $dark-light;
-			margin-top: $xs;
-		}
-	}
-
-	&__content {
-		margin-top: $lg;
-
-		ul {
-			list-style: square inside;
-		}
-
-		li {
-			margin-top: $sm;
-		}
-
-		p + p {
-			margin-top: $md;
-		}
-
-		h1,
-		h2,
-		h3,
-		h4 {
-			margin: $md 0 $sm 0;
-			font-size: $font-md;
-			font-family: "Druk Text Wide";
-		}
-
-		a {
-			@include link(rgba($dark, 0.7), rgba($dark, 0.4), $dark);
-		}
-	}
-}
-
-@media screen and (max-width: $tablet) {
-	.article {
-		&__title {
-			font-size: $font-md;
-		}
-
-		&__summary {
-			font-size: $font-sm;
-		}
-	}
-}
-</style>
