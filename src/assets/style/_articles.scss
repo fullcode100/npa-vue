@@ -40,12 +40,13 @@
 
 		img {
 			object-fit: cover;
-			max-width: 75%;
+			max-width: 80%;
 		}
 
 		p {
 			color: $dark-light;
 			margin-top: $xs;
+			text-align: center;
 		}
 	}
 
@@ -95,6 +96,10 @@
 
 		&__summary {
 			font-size: $font-sm;
+		}
+
+		&__img img {
+			max-width: 100%;
 		}
 	}
 }

@@ -52,7 +52,7 @@ export default {
 
 <page-query>
 query {
-	allStoryblokEntry(filter: {tag_list: {contains: "event"}}) {
+	allStoryblokEntry(filter: { full_slug: {regex: "(^events\/)"} }, sortBy: "created_at", order: DESC) {
 		edges {
 			node {
 				id

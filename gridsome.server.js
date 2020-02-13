@@ -3,7 +3,7 @@ module.exports = function (api) {
   
 	api.createPages(async ({ graphql, createPage }) => {
 		const { data } = await graphql(`{
-			allStoryblokEntry(filter: {tag_list: {contains: "article"}}) {
+			allStoryblokEntry(filter: { full_slug: {regex: "(^articles\/)"} }) {
 		  		edges {
 					node {
 			  			id
@@ -16,11 +16,11 @@ module.exports = function (api) {
 	  	data.allStoryblokEntry.edges.forEach(({ node }) => {
 			createPage({
 				path: `/${node.full_slug}`,
-		  		component: './src/templates/StoryblokEntry.vue',
+		  		component: "./src/templates/StoryblokEntry.vue",
 		  		context: {
 					id: node.id
 		  		}
 			})
 	  	})
-	})
+	});
 }

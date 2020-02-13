@@ -51,12 +51,12 @@ export default {
 
 <page-query>
 query {
-	allStoryblokEntry(filter: {tag_list: {contains: "article"}}, sortBy: "created_at", order: DESC) {
+	allStoryblokEntry(filter: { full_slug: {regex: "(^articles\/)"}}, sortBy: "created_at", order: DESC) {
 		edges {
 			node {
 				id
 				name
-				created_at(format:"YYYYMMDD")
+				created_at(format:"YYYYMMDDHHmm")
 				full_slug
 				content
 				tag_list
