@@ -12,11 +12,6 @@ export default {
 		links: {
 			type: Object
 		}
-	},
-	computed: {
-		link() {
-
-		}
 	}
 }
 </script>

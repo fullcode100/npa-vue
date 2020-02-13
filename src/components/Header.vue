@@ -10,16 +10,29 @@
 			<nav>
 				<ul>
 					<li class="has-dropdown">
-						<g-link class="link--inline" to="/presentation">
+						<g-link class="link--inline">
 							<span class="bold">Présentation</span>
 							<font-awesome :icon="['fas', 'chevron-down']" size="sm" />
 						</g-link>
+						<Dropdown
+							:links="{
+								'Une liste anticapitaliste et révolutionnaire': '/presentation#municipales-nantes',
+								'Qui sommes-nous ?': '/presentation#qui-sommes-nous'
+							}"
+						/>
 					</li>
 					<li class="has-dropdown">
-						<g-link class="link--inline" to="/liste-articles">
+						<g-link class="link--inline">
 							Articles
 							<font-awesome :icon="['fas', 'chevron-down']" size="sm" />
 						</g-link>
+						<Dropdown
+							:links="{
+								'Nos propositions': '/',
+								'Échos des luttes': '/',
+								'Parole de travailleurs et travailleuses': '/'
+							}"
+						/>
 					</li>
 					<li>
 						<g-link to="/liste-evenements" class="link--inline">Évènements</g-link>
@@ -34,7 +47,12 @@
 </template>
 
 <script>
+import Dropdown from "@/components/Dropdown.vue";
+
 export default {
+	components: {
+		Dropdown
+	},
 	mounted() {
 		this.$nextTick(() => {
 			window.addEventListener("scroll", () => {

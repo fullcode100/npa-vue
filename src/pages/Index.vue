@@ -24,23 +24,21 @@
 							les luttes en cours. <span class="bold">Les anticapitalistes ont une voix singulière
 							à y faire entendre.</span> 
 						</p>
-						<div class="article__content">
-							<ul>
-								<li>
-									<span class="bold">Une voix qui tranche</span> avec celle des partis qui aspirent à gérer les affaires
-									municipales à la place des travailleurs·ses, et habitant·es de la ville. 
-								</li>
-								<li>
-									<span class="bold">Une voix qui se fasse l’écho des luttes sociales</span> locales et nationales, et qui exprime
-									les besoins réels des habitant·es de Nantes (sur les questions écologiques, d’emploi, de
-									logement, de transports, de santé, d’égalité des droits…). 
-								</li>
-								<li>
-									<span class="bold">Une voix qui ne transige pas face aux discriminations</span>, à l’intolérance, au racisme, et à
-									toutes les politiques qui visent à mettre de côté certaines parties de la population.
-								</li>
-							</ul>
-						</div>
+						<ul>
+							<li>
+								<span class="bold">Une voix qui tranche</span> avec celle des partis qui aspirent à gérer les affaires
+								municipales à la place des travailleurs·ses, et habitant·es de la ville. 
+							</li>
+							<li>
+								<span class="bold">Une voix qui se fasse l’écho des luttes sociales</span> locales et nationales, et qui exprime
+								les besoins réels des habitant·es de Nantes (sur les questions écologiques, d’emploi, de
+								logement, de transports, de santé, d’égalité des droits…). 
+							</li>
+							<li>
+								<span class="bold">Une voix qui ne transige pas face aux discriminations</span>, à l’intolérance, au racisme, et à
+								toutes les politiques qui visent à mettre de côté certaines parties de la population.
+							</li>
+						</ul>
 						<p>
 							C’est pourquoi le NPA Nantes envisage de présenter une liste. Nous y parviendrons en mobilisant
 							autour de nous, et en nous adressant très largement à l’ensemble des milieux populaires de Nantes.
