@@ -15,7 +15,7 @@
 			</div>
 			<div class="fit-article article__content">
 				<a class="anchor" id="municipales-nantes"></a>
-				<h2>Municipales à Nantes</h2>
+				<h3>Municipales à Nantes</h3>
 				<p>
 					Comme toute campagne électorale, les Municipales sont un moment important
 					de débats et de discussions politiques et les élections de mars 2020 seront
@@ -45,7 +45,7 @@
 					populaires de Nantes. Toutes les contributions sont les bienvenues ! <span class="bold">Rejoignez-nous !</span>
 				</p>
 				<a class="anchor" id="qui-sommes-nous"></a>
-				<h2>Qui sommes-nous ?</h2>
+				<h3>Qui sommes-nous ?</h3>
 				<p>
 					Les partis institutionnels, de droite et de gauche, gèrent la politique dans ce pays loin des intérêts du
 					plus grand nombre. Il en est de même dans les mairies. Les militant·es et sympathisant·es du NPA ne sont

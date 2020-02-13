@@ -145,9 +145,7 @@ query {
 
 @media screen and (max-width: $desktop-L) {
 	.articles {
-		&__flex {
-			flex-direction: column;
-		}
+		flex-direction: column;
 
 		&__big {
 			width: 100%;
