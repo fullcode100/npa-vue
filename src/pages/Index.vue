@@ -8,7 +8,7 @@
 					<span class="home__block">révolutionnaires !</span>
 				</h1>
 				<h2>
-					<span class="home__block">Pour le pouvoir des travailleurs et des travailleuses !</span>
+					<span class="home__block">Nantes aux travailleuses et travailleurs !</span>
 				</h2>
 			</div>
 		</section>
@@ -64,7 +64,7 @@
 		</section>
 		<section class="section">
 			<div class="fit-content">
-				<h1 class="title--accent">Évènements</h1>
+				<h1 class="title--accent">Événements</h1>
 				<Event v-for="(event, key) in eventMap" :key="key"
 					:title="event.title"
 					:date="event.date"

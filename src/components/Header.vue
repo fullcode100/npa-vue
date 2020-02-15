@@ -28,14 +28,14 @@
 						</g-link>
 						<Dropdown
 							:links="{
-								'Nos propositions': '/',
-								'Échos des luttes': '/',
-								'Parole de travailleurs et travailleuses': '/'
+								'Nos positions': '/nos-positions',
+								'Échos des luttes': '/echos-des-luttes',
+								'Paroles de travailleurs et travailleuses': '/paroles-de-travailleurs-et-travailleuses'
 							}"
 						/>
 					</li>
 					<li>
-						<g-link to="/liste-evenements" class="link--inline">Évènements</g-link>
+						<g-link to="/liste-evenements" class="link--inline">Événements</g-link>
 					</li>
 					<li>
 						<g-link to="/#footer" class="link--inline">Contact</g-link>

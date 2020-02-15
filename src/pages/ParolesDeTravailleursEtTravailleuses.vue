@@ -2,7 +2,7 @@
 	<Layout>
 		<section class="section">
 			<div class="fit-content">
-				<h1 class="subtitle--accent">Liste des articles</h1>
+				<h1 class="subtitle--accent">Paroles de travailleuses et travailleurs</h1>
 				<div class="list__content">
 					<LittleCard v-for="(article, key) in cardMap" :key="key"
 						:title="article.title"
@@ -25,7 +25,7 @@ import LittleCard from "@/components/LittleCard.vue"
 
 export default {
 	metaInfo: {
-		title: "Liste des articles"
+		title: "Paroles de travailleurs et travailleuses"
 	},
 	components: {
 		LittleCard
@@ -53,7 +53,7 @@ export default {
 
 <page-query>
 query {
-	allStoryblokEntry(filter: { full_slug: {regex: "(^articles\/)"}}, sortBy: "created_at", order: DESC) {
+	allStoryblokEntry(filter: { full_slug: {regex: "(^articles/paroles-de-travailleurs-et-travailleuses\/)"}}, sortBy: "created_at", order: DESC) {
 		edges {
 			node {
 				id
