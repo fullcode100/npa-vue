@@ -1,7 +1,11 @@
 <template>
 	<div>
 		<Header />
-		<slot />
+			<transition name="fade" appear>
+				<div>
+					<slot />
+				</div>	
+			</transition>
 		<a id="footer"></a>
 		<Footer />
 	</div>
@@ -53,6 +57,14 @@ query {
 </static-query>
 
 <style lang="scss">
+.fade-enter-active {
+	transition: opacity 0.5s ease-in-out;
+}
+
+.fade-enter {
+	opacity: 0;
+}
+
 .fit-article {
 	margin: 0 auto;
 	width: 90%;

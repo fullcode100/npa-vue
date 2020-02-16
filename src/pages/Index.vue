@@ -4,8 +4,8 @@
 			<g-image src="@/assets/hero.jpg" class="home__background" alt="Image d'accueil de NPA Nantes 2020" />
 			<div class="home__title fit-content">
 				<h1>
-					<span class="home__block">Anticapitalistes</span> et
-					<span class="home__block">révolutionnaires !</span>
+					<span class="home__block">Anticapitalistes</span>
+					<span class="home__block">et révolutionnaires !</span>
 				</h1>
 				<h2>
 					<span class="home__block">Nantes aux travailleuses et travailleurs !</span>
@@ -172,7 +172,7 @@ query {
 		h1 {
 			font-family: "Druk Wide";
 			font-weight: 900;
-			font-size: calc(16px + (48 - 16) * ((100vw - 300px) / (1600 - 300)));
+			font-size: calc(18px + (48 - 18) * ((100vw - 300px) / (1600 - 300)));
 			text-transform: uppercase;
 		}
 
