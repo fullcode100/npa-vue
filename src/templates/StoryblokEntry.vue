@@ -38,10 +38,6 @@ export default {
 					content: this.$page.storyblokEntry.content.title
 				},
 				{
-					property: "og:url",
-					content: `https://npa-nantes-2020.org/${this.$page.storyblokEntry.full_slug}`
-				},
-				{
 					name: "twitter:card",
 					content: this.$page.storyblokEntry.content.thumbnail ? "summary_large_image" : "summary",
 				},
@@ -53,6 +49,12 @@ export default {
 					property: "og:image",
 					content: "//img2.storyblok.com/1200x630/filters:quality(30)" + this.$page.storyblokEntry.content.thumbnail.replace("//a.storyblok.com", "") || ""
 				}
+			],
+			link: [
+				{
+					property: "og:url",
+					content: `https://npa-nantes-2020.org/${this.$page.storyblokEntry.full_slug}/`
+				},
 			]
 		}
 	},

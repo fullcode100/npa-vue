@@ -183,7 +183,7 @@ query {
 		h1 {
 			font-family: "Druk Wide";
 			font-weight: 900;
-			font-size: clamp(16px, 4vw, 52px);
+			font-size: $font-xl;
 			text-transform: uppercase;
 			line-height: 2;
 			display: inline;
@@ -195,7 +195,7 @@ query {
 		h2 {
 			font-weight: 800;
     		margin-top: 1.5rem;
-			font-size: clamp(16px, 4vw, 32px);
+			font-size: $font-md;
 
 			span {
 				padding: $xxs;
@@ -268,6 +268,18 @@ query {
 }
 
 @media screen and (max-width: $desktop){
+	.home {
+		&__title {
+			h1 {
+				font-size: $font-md;
+			}
+
+			h2 {
+				font-size: $font-sm;
+			}
+		}
+	}
+
 	.topical {
 		&__content {
 			flex-direction: column-reverse;
