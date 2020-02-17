@@ -196,7 +196,6 @@ export default {
 
 		&__summary {
 			margin-top: 0;
-			padding: 0 $xs;
 			background-color: $primary;
 			width: 100%;
 

@@ -4,11 +4,10 @@
 			<g-image src="@/assets/hero.jpg" class="home__background" alt="Image d'accueil de NPA Nantes 2020" />
 			<div class="home__title fit-content">
 				<h1>
-					<span class="home__block">Anticapitalistes</span>
-					<span class="home__block">et révolutionnaires !</span>
+					<span>Anticapitalistes et révolutionnaires !</span>
 				</h1>
 				<h2>
-					<span class="home__block">Nantes aux travailleuses et travailleurs !</span>
+					<span>Nantes aux travailleuses et travailleurs !</span>
 				</h2>
 			</div>
 		</section>
@@ -165,32 +164,37 @@ query {
 		position: absolute;
 		margin: 0 auto;
 		text-align: center;
-		top: 40%;
+		top: 40vh;
 		left: 0;
 		right: 0;
 
 		h1 {
 			font-family: "Druk Wide";
 			font-weight: 900;
-			font-size: calc(18px + (48 - 18) * ((100vw - 300px) / (1600 - 300)));
+			font-size: clamp(16px, 4vw, 42px);
 			text-transform: uppercase;
+			line-height: 2;
+			display: inline;
+			-webkit-box-decoration-break: clone;
+			box-decoration-break: clone;
+			padding: $xxs;
 		}
 
 		h2 {
 			font-weight: 800;
-			margin-top: $md;
-			font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
+    		margin-top: 1.5rem;
+			font-size: clamp(16px, 4vw, 20px);
+
+			span {
+				padding: $xxs;
+			}
 		}
-	}
 
-	&__block {
-		background-color: $accent;
-		color: $primary;
-		padding: $xxs;
-	}
-
-	&__block + &__block {
-		line-height: 2;
+		h1,
+		h2 span {
+			background-color: $accent;
+			color: $primary;
+		}
 	}
 }
 
@@ -252,10 +256,6 @@ query {
 }
 
 @media screen and (max-width: $desktop){
-	.title__block {
-		line-height: 2.5;
-	}
-
 	.topical {
 		&__content {
 			flex-direction: column-reverse;
@@ -277,6 +277,16 @@ query {
 
 		&__quote p {
 			font-size: $font-sm;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.home {
+		&__title {
+			h1 {
+				line-height: 2.5;
+			}
 		}
 	}
 }

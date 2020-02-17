@@ -31,7 +31,7 @@ export default {
 			meta: [
 				{
 					meta: "description",
-					content: "this.$page.storyblokEntry.content.summary"
+					content: this.$page.storyblokEntry.content.summary
 				},
 				{
 					property: "og:title",
@@ -39,7 +39,7 @@ export default {
 				},
 				{
 					name: "twitter:card",
-					content: this.$page.storyblokEntry.content.thumbnail,
+					content: this.$page.storyblokEntry.content.thumbnail ? "summary_large_image" : "summarys",
 				},
 				{
 					property: "og:description",
@@ -47,7 +47,7 @@ export default {
 				},
 				{
 					property: "og:image",
-					content: this.$page.storyblokEntry.content.thumbnail || ""
+					content: "//img2.storyblok.com/1200x630/filters:quality(50)" + this.$page.storyblokEntry.content.thumbnail.replace("//a.storyblok.com", "") || ""
 				}
 			]
 		}
