@@ -38,8 +38,12 @@ export default {
 					content: this.$page.storyblokEntry.content.title
 				},
 				{
+					property: "og:url",
+					content: window.location.href
+				},
+				{
 					name: "twitter:card",
-					content: this.$page.storyblokEntry.content.thumbnail ? "summary_large_image" : "summarys",
+					content: this.$page.storyblokEntry.content.thumbnail ? "summary_large_image" : "summary",
 				},
 				{
 					property: "og:description",
@@ -47,7 +51,7 @@ export default {
 				},
 				{
 					property: "og:image",
-					content: "//img2.storyblok.com/1200x630/filters:quality(50)" + this.$page.storyblokEntry.content.thumbnail.replace("//a.storyblok.com", "") || ""
+					content: "//img2.storyblok.com/1200x630/filters:quality(30)" + this.$page.storyblokEntry.content.thumbnail.replace("//a.storyblok.com", "") || ""
 				}
 			]
 		}

@@ -122,6 +122,18 @@ export default {
 				content: "website"
 			},
 			{
+				meta: "description",
+				content: "Site de campagne du NPA pour les municipales 2020 de Nantes."
+			},
+			{
+				name: "twitter:card",
+				content: "summary",
+			},
+			{
+				property: "og:url",
+				content: "https://npa-nantes-2020.org"
+			},
+			{
 				property: "og:description",
 				content: "Site de campagne du NPA pour les municipales 2020 de Nantes."
 			},
@@ -171,7 +183,7 @@ query {
 		h1 {
 			font-family: "Druk Wide";
 			font-weight: 900;
-			font-size: clamp(16px, 4vw, 42px);
+			font-size: clamp(16px, 4vw, 52px);
 			text-transform: uppercase;
 			line-height: 2;
 			display: inline;
@@ -183,7 +195,7 @@ query {
 		h2 {
 			font-weight: 800;
     		margin-top: 1.5rem;
-			font-size: clamp(16px, 4vw, 20px);
+			font-size: clamp(16px, 4vw, 32px);
 
 			span {
 				padding: $xxs;

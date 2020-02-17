@@ -33,6 +33,7 @@ module.exports = {
 			use: "@gridsome/plugin-sitemap",
 			options: {
 				cacheTime: 600000,
+				exclude: ["/editor"],
 				config: {
 					"/articles/*": {
 						changefreq: "weekly",
