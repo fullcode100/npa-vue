@@ -39,7 +39,7 @@ export default {
 				},
 				{
 					property: "og:url",
-					content: window.location.href
+					content: `https://npa-nantes-2020.org/${this.$page.storyblokEntry.full_slug}`
 				},
 				{
 					name: "twitter:card",
@@ -77,6 +77,7 @@ query StoryblokEntry ($id: ID) {
 		name
     	id
     	slug
+		full_slug
     	content
 		tag_list
 		created_at(format:"YYYYMMDD")

@@ -149,7 +149,7 @@ export default {
 
 <page-query>
 query {
-	allStoryblokEntry(filter: { full_slug: {regex: "(^events\/)"} }, sortBy: "created_at", order: DESC) {
+	allStoryblokEntry(filter: { full_slug: {regex: "(^events\/)"} }, sortBy: "created_at", order: ASC) {
 		edges {
 			node {
 				id
