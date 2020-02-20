@@ -3,7 +3,7 @@
 		<section class="section">
 			<div class="fit-content">
 				<h1 class="subtitle--accent">Nos positions</h1>
-				<div class="list__content">
+				<div class="section__list">
 					<LittleCard v-for="(article, key) in cardMap" :key="key"
 						:title="article.title"
 						:url="article.url"

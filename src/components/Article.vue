@@ -2,18 +2,15 @@
 	<main class="article">
 		<div class="article__header">
 			<div class="fit-article">
-				<h1 class="article__title">{{ title }}</h1>
-				<div class="article__info">
-					<p>
-						<font-awesome :icon="['far', 'clock']" />
-						Publié le {{ formatDate(date) }}
-					</p>
-					<p>
-						<font-awesome :icon="['fas', 'tags']" />
-						<span v-for="tag in tags" :key="tag">{{ tag }}</span>
-					</p>
+				<div class="article__tag">
+					• <span v-for="tag in tags" :key="tag">{{ tag }}</span>
 				</div>
+				<h1 class="article__title">{{ title }}</h1>
 				<p class="article__summary">{{ summary }}</p>
+				<div class="article__date">
+					<font-awesome :icon="['far', 'clock']" />
+					<span>Publié le {{ formatDate(date) }}</span>
+				</div>
 			</div>
 		</div>
 		<div class="fit-content article__img">
@@ -22,6 +19,7 @@
 		</div>
 		<div class="fit-article article__content">
 			<RichText :text="content" />
+			<RichText :text="sources" />
 		</div>
 	</main>
 </template>
@@ -60,6 +58,10 @@ export default {
 			default: "Légende de l'image"
 		},
 		content: {
+			type: Object,
+			default: ""
+		},
+		sources: {
 			type: Object,
 			default: ""
 		}

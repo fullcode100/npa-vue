@@ -1,12 +1,24 @@
 .article {
 	color: $dark;
 
+	&__tag {
+		color: $dark;
+		font-size: $font-md;
+		margin-bottom: $sm;
+		text-transform: uppercase;
+
+		span {
+			padding: 0.5rem;
+			@include stroke($dark, $primary,3px, transparent);
+		}
+	}
+
 	&__title {
-		font-family: "Druk Text Wide";
-		font-weight: 700;
-		letter-spacing: -0.5px;
+		position: relative;
+		font-family: "Avenir";
+		font-weight: 800;
 		font-size: $font-lg;
-		margin-bottom: $md;
+		margin-bottom: $lg;
 	}
 
 	&__header {
@@ -14,28 +26,19 @@
 		background-color: $primary-dark;
 	}
 	
-	&__info {
-		display: flex;
-		flex-direction: row;
-		color: $dark-light;
-		margin-bottom: $md;
-
-		p:first-child {
-			margin-right: $sm;
-		}
-
-		span {
-			text-transform: capitalize;
-		}
-
-		svg {
-			margin-right: $xxs;
-		}
+	&__summary {
+		font-size: $font-md;
+		font-weight: 500;
+		margin-bottom: $sm;
 	}
 
-	&__summary {
-		margin-top: $sm;
-		font-size: $font-md;
+	&__date {
+		font-size: $font-sm;
+		color: $dark-light;
+
+		span {
+			margin-left: $xxs;
+		}
 	}
 
 	&__img {
@@ -59,6 +62,12 @@
 	&__content {
 		margin-top: $lg;
 
+		> div:first-of-type {
+			margin-bottom: $xl;
+			padding-bottom: $lg;
+			border-bottom: 1.5px solid $dark;
+		}
+
 		ul {
 			list-style: square inside;
 		}
@@ -71,8 +80,6 @@
 			margin-top: $md;
 		}
 
-		h1,
-		h2,
 		h3 {
 			margin: $lg 0 $md 0;
 			font-size: $font-md;
@@ -89,17 +96,13 @@
 		}
 
 		a {
-			@include link(rgba($dark, 0.7), rgba($dark, 0.4), $dark);
+			@include link($dark-light, $dark-lighter, $dark);
 		}
 	}
 }
 
 @media screen and (max-width: $tablet) {
 	.article {
-		&__title {
-			font-size: $font-md;
-		}
-
 		&__summary {
 			font-size: $font-sm;
 		}

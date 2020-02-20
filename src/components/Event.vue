@@ -64,8 +64,9 @@ export default {
 	position: relative;
 	max-width: 600px;
 	color: $dark;
-	margin: $lg auto 0 auto;
-	padding: $md 0;
+	margin: auto;
+	margin-top: $lg;
+	padding-bottom: $md;
 	transition: 0.3s ease-in-out;
 
 	&::after {

@@ -63,16 +63,18 @@
 		</section>
 		<section class="section">
 			<div class="fit-content">
-				<h1 class="title--accent">Événements</h1>
-				<Event v-for="(event, key) in eventMap" :key="key"
-					:title="event.title"
-					:date="event.date"
-					:location="event.location"
-					:link="event.link"
-					:description="event.description"
-				/>
-				<div v-if="eventMap.length === 0" class="empty">
-					<p>Aucun événement pour le moment !</p>
+				<h1 class="title--dark">Événements</h1>
+				<div class="section__list">
+					<Event v-for="(event, key) in eventMap" :key="key"
+						:title="event.title"
+						:date="event.date"
+						:location="event.location"
+						:link="event.link"
+						:description="event.description"
+					/>
+					<div v-if="eventMap.length === 0" class="empty">
+						<p>Aucun événement pour le moment !</p>
+					</div>
 				</div>
 				<div class="btn--center">
 					<g-link to="/liste-evenements" class="btn--dark">Voir tous les événements</g-link>
@@ -118,16 +120,16 @@ export default {
 				content: "SssKbETQDtgDpDuRchqc0jKT3dUMNAHprLVhgycLuBw"
 			},
 			{
-				property: "og:type",
-				content: "website"
-			},
-			{
 				meta: "description",
 				content: "Site de campagne du NPA pour les municipales 2020 de Nantes."
 			},
 			{
-				name: "twitter:card",
-				content: "summary",
+				property: "og:type",
+				content: "website"
+			},
+			{
+				property: "og:title",
+				content: "Accueil"
 			},
 			{
 				property: "og:url",
@@ -136,10 +138,6 @@ export default {
 			{
 				property: "og:description",
 				content: "Site de campagne du NPA pour les municipales 2020 de Nantes."
-			},
-			{
-				property: "og:title",
-				content: "Accueil"
 			}
 		]
 	}
@@ -310,6 +308,7 @@ query {
 		&__title {
 			h1 {
 				line-height: 2.5;
+				font-size: $font-sm;
 			}
 		}
 	}

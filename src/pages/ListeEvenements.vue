@@ -3,15 +3,17 @@
 		<section class="section">
 			<div class="fit-content">
 				<h1 class="subtitle--dark">Liste des événéments</h1>
-				<Event v-for="(event, key) in eventMap" :key="key"
-					:title="event.title"
-					:date="event.date"
-					:location="event.location"
-					:link="event.link"
-					:description="event.description"
-				/>
-				<div v-if="eventMap.length === 0" class="empty">
-					<p>Aucun événément à afficher !</p>
+				<div class="section__list">
+					<Event v-for="(event, key) in eventMap" :key="key"
+						:title="event.title"
+						:date="event.date"
+						:location="event.location"
+						:link="event.link"
+						:description="event.description"
+					/>
+					<div v-if="eventMap.length === 0" class="empty">
+						<p>Aucun événément à afficher !</p>
+					</div>
 				</div>
 			</div>
 		</section>
