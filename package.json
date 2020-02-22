@@ -10,7 +10,6 @@
 		"@fortawesome/free-regular-svg-icons": "^5.12.0",
 		"@gridsome/plugin-sitemap": "^0.2.3",
 		"@gridsome/transformer-remark": "^0.4.0",
-		"@vue/babel-preset-app": "^4.2.2",
 		"fibers": "^4.0.2",
 		"gridsome": "^0.7.12",
 		"gridsome-plugin-sass-resources-loader": "0.0.3",
