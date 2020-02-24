@@ -40,7 +40,7 @@ export default {
 		}
 
 		a + a {
-			border-top: 1.5px solid $dark-light;
+			border-top: 1.5px solid $dark-lighter;
 		}
 	}
 }

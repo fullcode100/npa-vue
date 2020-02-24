@@ -11,17 +11,17 @@
 						<span>Suivez-nous sur les réseaux sociaux !</span>
 						<ul>
 							<li>
-								<a href="https://www.facebook.com/NPA.nantes" target="_blank" rel="noreferrer">
+								<a href="https://www.facebook.com/NPA-l%C3%89tincelle-Nantes-344133152708146/" target="_blank" rel="noopener noreferrer">
 									<font-awesome :icon="['fab', 'facebook-square']" size="2x" />
 								</a>
 							</li>
 							<li>
-								<a href="https://www.instagram.com/npa_nantes_2020" target="_blank" rel="noreferrer">
+								<a href="https://www.instagram.com/nantes.revolutionnaire" target="_blank" rel="noopener noreferrer">
 									<font-awesome :icon="['fab', 'instagram']" size="2x" />
 								</a>
 							</li>
 							<li>
-								<a href="mailto:npanantes2018@gmail.com" target="_blank" rel="noreferrer">
+								<a href="mailto:npanantes2018@gmail.com" target="_blank" rel="noopener noreferrer">
 									<font-awesome :icon="['fas', 'envelope']" size="2x" />
 								</a>
 							</li>
@@ -31,10 +31,13 @@
 				<div class="footer__content">
 					<ul>
 						<li>
-							<h4>Le NPA</h4>
+							<h4>Nantes 2020</h4>
 						</li>
 						<li>
-							<g-link to="/municipales-nantes" class="link--primary">Nantes 2020</g-link>
+							<g-link to="/presentation" class="link--primary">Une liste anticapitaliste et révolutionnaire</g-link>
+						</li>
+						<li>
+							<g-link to="/presentation#qui-sommes-nous" class="link--primary">Qui sommes-nous ?</g-link>
 						</li>
 					</ul>
 					<ul>
@@ -86,7 +89,7 @@
 footer {
 	background-color: $dark;
 	color: $primary;
-	padding: $xxl 0 $lg 0;
+	padding: $xxl 0 $xl 0;
 	margin-top: $xl;
 }
 
@@ -111,9 +114,9 @@ footer {
 		}
 
 		> span {
-		    font-family: "Druk Wide";
-			font-weight: 900;
-			font-size: $font-md;
+		    font-family: "Aller";
+			font-weight: 700;
+			font-size: $font-lg;
 			margin: auto;
 			padding-left: $sm;
 		}

@@ -78,14 +78,6 @@ export default {
 
 @font-face {
     font-family: "Avenir";
-    src: url("../assets/fonts/Avenir/Avenir-MediumOblique.woff2") format("woff2");
-    font-weight: 500;
-    font-style: oblique;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Avenir";
     src: url("../assets/fonts/Avenir/Avenir-Black.woff2") format("woff2");
     font-weight: 800;
     font-style: normal;
@@ -119,4 +111,15 @@ export default {
     font-style: normal;
     font-display: swap;
 }
+
+// Aller 
+
+@font-face {
+    font-family: "Aller";
+    src: url("../assets/fonts/Aller/Aller Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 </style>

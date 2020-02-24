@@ -13,7 +13,7 @@
 		</section>
 		<section class="topical">
 			<div class="fit-content">
-				<h1 class="title--dark">Municipales à Nantes</h1>
+				<h2 class="title--dark">Municipales à Nantes</h2>
 				<div class="topical__content">
 					<div class="topical__presentation">
 						<p>
@@ -47,23 +47,20 @@
 						</div>
 					</div>
 					<div class="topical__img">
-						<g-image src="@/assets/riwan_chami.jpg" alt="Riwan Chami" width="400px" />
-						<div class="topical__quote">
-							<p>« La décision est prise de présenter une liste indépendante »</p>
-						</div>
+						<g-image src="@/assets/affiche_campagne.jpg" alt="Affiche de campagne du NPA pour les municipales à Nantes" width="400px" />
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="section">
 			<div class="fit-content">
-				<h1 class="title--accent">Articles</h1>
+				<h2 class="title--accent">Articles</h2>
 				<ArticlesLayout />
 			</div>
 		</section>
 		<section class="section">
 			<div class="fit-content">
-				<h1 class="title--dark">Événements</h1>
+				<h2 class="title--dark">Événements</h2>
 				<div class="section__list">
 					<Event v-for="(event, key) in eventMap" :key="key"
 						:title="event.title"
@@ -237,21 +234,6 @@ query {
 		flex-direction: column;
 		justify-content: center;
 		margin-left: $xxl;
-	}
-
-	&__quote {
-		color: $primary-dark;
-
-		p {
-			display: inline;
-			-webkit-box-decoration-break: clone;
-			box-decoration-break: clone;
-			padding: $xxs;
-			font-size: $font-md;
-			line-height: 2.5;
-			font-weight: 800;
-			background-color: $dark;
-		}
 	}
 }
 

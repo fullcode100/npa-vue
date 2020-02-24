@@ -9,6 +9,7 @@
 			:caption="story.content.caption"
 			:content="story.content.body"
 			:sources="story.content.sources"
+			:slug="story.full_slug"
 		/>
 		<div class="newsletter">
 			<a class="link--inline" href="https://framalistes.org/sympa/subscribe/contact_npa.rosalux" target="_blank" rel="noreferrer">
@@ -82,7 +83,7 @@ export default {
 			const directory = "storyblok_images";
 			let index = path.lastIndexOf("/") + 1;
 			let filename = path.substring(index);
-			return require(`!!assets-loader?quality=100!~/${directory}/${filename}`);
+			return require(`!!assets-loader?width=900&height=600&fit=cover!~/${directory}/${filename}`);
 		}
 	}
 };

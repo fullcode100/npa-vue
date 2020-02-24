@@ -11,14 +11,14 @@
 		"@gridsome/plugin-sitemap": "^0.2.3",
 		"@gridsome/transformer-remark": "^0.4.0",
 		"fibers": "^4.0.2",
-		"gridsome": "^0.7.12",
+		"gridsome": "0.7.12",
 		"gridsome-plugin-sass-resources-loader": "0.0.3",
 		"gridsome-source-storyblok": "^0.2.2",
 		"moment": "^2.24.0",
 		"sass": "^1.24.2",
 		"vue": "^2.6.10",
 		"vue-server-renderer": "2.6.10",
-		"vue-template-compiler": "^2.6.10"
+		"vue-template-compiler": "2.6.10"
 	},
 	"devDependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.26",

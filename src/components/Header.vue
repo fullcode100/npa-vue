@@ -16,7 +16,7 @@
 						</g-link>
 						<Dropdown
 							:links="{
-								'Une liste anticapitaliste et révolutionnaire': '/presentation#municipales-nantes',
+								'Une liste anticapitaliste et révolutionnaire': '/presentation',
 								'Qui sommes-nous ?': '/presentation#qui-sommes-nous'
 							}"
 						/>
@@ -132,9 +132,9 @@ nav {
 	}
 
 	&__title {
-		font-family: "Druk Wide";
-		font-weight: 900;
-		font-size: $font-md;
+		font-family: "Aller";
+		font-weight: 700;
+		font-size: $font-lg;
 		color: $accent;
 		padding-left: $xs;
 		margin: auto;
@@ -159,7 +159,7 @@ nav {
 		}
 
 		&__title {
-			font-size: $font-sm;
+			font-size: $font-md;
 		}
 
 		nav {

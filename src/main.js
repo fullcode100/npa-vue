@@ -6,13 +6,13 @@ import Event from "~/components/Event.vue"
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 import { config, library } from "@fortawesome/fontawesome-svg-core"
-import { faFacebookSquare, faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { faFacebookSquare, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faClock } from "@fortawesome/free-regular-svg-icons"
 import { faChevronDown, faExternalLinkSquareAlt, faCalendarAlt, faMapMarkerAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
 config.autoAddCss = false;
-library.add(faClock, faChevronDown, faFacebookSquare, faExternalLinkSquareAlt, faMapMarkerAlt, faCalendarAlt, faInstagram, faEnvelope)
+library.add(faClock, faChevronDown, faFacebookSquare, faTwitter, faExternalLinkSquareAlt, faMapMarkerAlt, faCalendarAlt, faInstagram, faEnvelope)
 
 export default function (Vue, { router, head, isClient }) {
 	Vue.component("Layout", DefaultLayout)

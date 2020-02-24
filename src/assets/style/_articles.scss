@@ -21,9 +21,45 @@
 		margin-bottom: $lg;
 	}
 
+	&__body {
+		position: relative;
+	}
+
+	&__share {
+		position: absolute;
+		background-color: $dark;
+		top: 0;
+		left: -$xl - $xxs;
+		padding: $sm $xs;
+
+		a {
+			color: $primary;
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				color: $dark-lighter;
+				transition: all 0.3s ease-in-out;
+			}
+		}
+
+		li + li {
+			margin-top: $md;
+		}
+	}
+
 	&__header {
-		padding: $xxl 0 $xl 0;
-		background-color: $primary-dark;
+		padding-top: $xxl;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -$md;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: $dark;
+		}
 	}
 	
 	&__summary {
@@ -46,11 +82,6 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-
-		img {
-			object-fit: cover;
-			max-width: 80%;
-		}
 
 		p {
 			color: $dark-light;
@@ -101,10 +132,34 @@
 	}
 }
 
+@media screen and (max-width: $desktop) {
+	.article {
+		&__share {
+			position: fixed;
+			z-index: 999;
+			top: unset;
+			left: unset;
+			bottom: 0;
+			right: 0;
+			padding: $sm $lg;
+
+			ul {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			li + li {
+				margin: 0 0 0 $lg;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: $tablet) {
 	.article {
-		&__summary {
-			font-size: $font-sm;
+		&__title {
+			font-size: $font-xl / 2;
 		}
 
 		&__img img {
