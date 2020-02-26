@@ -1,7 +1,7 @@
 <template>
 	<main class="article">
 		<div class="article__header fit-article">
-			<div class="article__tag">
+			<div v-if="tags.length !== 0" class="article__tag">
 				• <span v-for="tag in tags" :key="tag">{{ tag }}</span>
 			</div>
 			<h1 class="article__title">{{ title }}</h1>
@@ -12,25 +12,28 @@
 			</div>
 		</div>
 		<div class="fit-content article__img">
-			<g-image :src="img" :alt="caption" />
-			<p>{{ caption }}</p>
+			<div v-if="Object.entries(video).length === 0">
+				<g-image :src="img" :alt="caption" />
+				<p>{{ caption }}</p>
+			</div>
+			<div class="article__video" v-else v-html="video.vimeo_oembed.response.html"></div>
 		</div>
 		<div class="article__body fit-article">
 			<div class="article__share">
 				<ul>
 					<li>
 						<a :href="shareFacebook()" target="_blank" rel="noopener noreferrer">
-							<font-awesome :icon="['fab', 'facebook-square']" size="2x" />
+							<font-awesome :icon="['fab', 'facebook-square']" size="lg" />
 						</a>
 					</li>
 					<li>
 						<a :href="shareTwitter()" target="_blank" rel="noopener noreferrer">
-							<font-awesome :icon="['fab', 'twitter']" size="2x" />
+							<font-awesome :icon="['fab', 'twitter']" size="lg" />
 						</a>	
 					</li>
 					<li>
 						<a :href="shareMail()" target="_blank" rel="noopener noreferrer">
-							<font-awesome :icon="['fas', 'envelope']" size="2x" />
+							<font-awesome :icon="['fas', 'envelope']" size="lg" />
 						</a>
 					</li>
 				</ul>
@@ -72,6 +75,10 @@ export default {
 			type: Object,
 			default: ""
 		},
+		video: {
+			type: Object,
+			default: ""
+		},
 		caption: {
 			type: String,
 			default: "Légende de l'image"
@@ -90,6 +97,7 @@ export default {
 	},
 	methods: {
 		formatDate(date) {
+			console.log(this.$props.video)
 			moment.locale("fr");
 			return moment(date, "YYYY-MM-DD").format("LL");   
 		},
@@ -101,7 +109,7 @@ export default {
 		},
 		shareMail() {
 			return `mailto:?subject=${this.$props.title}&body=https://npa-nantes-2020.org/${this.$props.slug}`;
-		}
+		},
 	}
 }
 </script>

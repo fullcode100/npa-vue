@@ -6,9 +6,10 @@
 			:summary="story.content.summary"
 			:tags="story.tag_list"
 			:img="imageURL"
+			:video="story.content.video"
 			:caption="story.content.caption"
 			:content="story.content.body"
-			:sources="story.content.sources"
+			:sources="story.sources"
 			:slug="story.full_slug"
 		/>
 		<div class="newsletter">
@@ -84,7 +85,7 @@ export default {
 			let index = path.lastIndexOf("/") + 1;
 			let filename = path.substring(index);
 			return require(`!!assets-loader?width=900&height=600&fit=cover!~/${directory}/${filename}`);
-		}
+		},
 	}
 };
 </script>
