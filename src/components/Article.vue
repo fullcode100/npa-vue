@@ -12,7 +12,7 @@
 			</div>
 		</div>
 		<div class="fit-content article__img">
-			<div v-if="Object.entries(video).length === 0">
+			<div v-if="video.vimeo_raw === ''">
 				<g-image :src="img" :alt="caption" />
 				<p>{{ caption }}</p>
 			</div>
