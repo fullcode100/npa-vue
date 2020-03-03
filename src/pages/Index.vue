@@ -17,33 +17,48 @@
 				<div class="topical__content">
 					<div class="topical__presentation">
 						<p>
-							Comme toute campagne électorale, les Municipales sont un moment important de débats et de
-							discussions politiques et les élections de mars 2020 seront particulièrement marquées par
-							les luttes en cours. <span class="bold">Les anticapitalistes ont une voix singulière
-							à y faire entendre.</span> 
+							Liste du Nouveau Parti Anticapitaliste conduite par <span class="bold">Riwan Chami</span>, assistant d'éducation, et <span class="bold">Sarah Ferron</span>, travailleuse de la culture en recherche d'emploi. </br>
+
+							Liste soutenue par <span class="bold">Olivier Besancenot</span> et <span class="bold">Philippe Poutou</span>. </br>
+
+							Voter, surtout aux <span class="bold">élections municipales</span>, ne mettra pas fin aux salaires en berne, au manque de logements, à la misère des hôpitaux et des écoles, à l'oppression des femmes, au racisme...  </br>
+
+							Voter à ces élections <span class="bold">ne résoudra aucun des problèmes</span> dénoncés par les Gilets jaunes et par les millions de travailleuses et travailleurs qui se mobilisent contre la réforme des retraites. </br>
+
+							<span class="bold">La véritable opposition à Macron ce sont les travailleuses et les travailleurs en lutte</span>, et démocratiquement organisés pour la défense de revendications urgentes et vitales. On n'aura que ce qu'on prendra ! </br>
+
+							Mais voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux travailleurs » c'est <span class="bold">dire bien fort notre rejet de leur système</span>, de Macron et de son monde ! </br>
+
+							Voter pour cette liste, c'est aussi <span class="bold">envoyer au conseil municipal des élues et des élus qui ne sont pas des professionnels de la politiques</span>, qui <span class="bold">défendront les intérêts des travailleuses et des travailleurs de Nantes</span>, <span class="bold">se feront l'écho des luttes sociales</span> et utiliseront tous les moyens possibles pour <span class="bold">aider à ce que ces luttes gagnent</span>.
 						</p>
 						<ul class="list">
 							<li>
-								<span class="bold">Une voix qui tranche</span> avec celle des partis qui aspirent à gérer les affaires
-								municipales à la place des travailleurs·ses, et habitant·es de la ville.
+							Interdiction des licenciements et des suppressions de postes
 							</li>
 							<li>
-								<span class="bold">Une voix qui se fasse l’écho des luttes sociales</span> locales et nationales, et qui exprime
-								les besoins réels des habitant·es de Nantes (sur les questions écologiques, d’emploi, de
-								logement, de transports, de santé, d’égalité des droits…).
+							Plafonnement des loyers et réquisition des logements vides
 							</li>
 							<li>
-								<span class="bold">Une voix qui ne transige pas face aux discriminations</span>, à l’intolérance, au racisme, et à
-								toutes les politiques qui visent à mettre de côté certaines parties de la population.
+							Contre les violences policières
+							</li>
+							<li>
+							Pas un salaire, pas une pension et pas un minimum social en dessous de 1800 euros nets
+							</li>
+							<li>
+							Augmentation des salaires de 300 euros pour toutes et tous
+							</li>
+							<li>
+							Liberté de circulation et d’installation pour toutes et tous
+							</li>
+							<li>
+							Contre les discriminations et les violences sexistes
+							</li>
+							<li>
+							Prendre sur les profits pour défendre l'écologie
 							</li>
 						</ul>
-						<p>
-							C’est pourquoi le NPA Nantes envisage de présenter une liste. Nous y parviendrons en mobilisant
-							autour de nous, et en nous adressant très largement à l’ensemble des milieux populaires de Nantes.
-							Toutes les contributions sont les bienvenues ! <span class="bold">Rejoignez-nous !</span>
-						</p>
 						<div class="btn--center">
-							<g-link to="/presentation" class="btn--dark">Présentation</g-link>
+							<g-link to="/presentation" class="btn--dark">Notre programme</g-link>
 						</div>
 					</div>
 					<div class="topical__img">
