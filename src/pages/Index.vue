@@ -16,22 +16,29 @@
 				<h2 class="title--dark">Faire entendre la voix de celles et ceux qui luttent !</h2>
 				<div class="topical__content">
 					<div class="topical__presentation">
-						<h3 class="title--dark">Le 15 mars votez et faites voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux travailleurs »</h3>
-			
+						
 						<p>
-							Liste du Nouveau Parti Anticapitaliste conduite par <span class="bold">Riwan Chami</span>, assistant d'éducation, et <span class="bold">Sarah Ferron</span>, travailleuse de la culture en recherche d'emploi. </br>
+						Le 15 mars votez et faites voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux travailleurs »
 						</p>
 						<p>
-							Liste soutenue par <span class="bold">Olivier Besancenot</span> et <span class="bold">Philippe Poutou</span>. </br>
-
-							Voter, surtout aux <span class="bold">élections municipales</span>, ne mettra pas fin aux salaires en berne, au manque de logements, à la misère des hôpitaux et des écoles, à l'oppression des femmes, au racisme...  </br>
-
-							Voter à ces élections <span class="bold">ne résoudra aucun des problèmes</span> dénoncés par les Gilets jaunes et par les millions de travailleuses et travailleurs qui se mobilisent contre la réforme des retraites. </br>
-
-							<span class="bold">La véritable opposition à Macron ce sont les travailleuses et les travailleurs en lutte</span>, et démocratiquement organisés pour la défense de revendications urgentes et vitales. On n'aura que ce qu'on prendra ! </br>
-
-							Mais voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux travailleurs » c'est <span class="bold">dire bien fort notre rejet de leur système</span>, de Macron et de son monde ! </br>
-
+							Liste du Nouveau Parti Anticapitaliste conduite par <span class="bold">Riwan Chami</span>, assistant d'éducation, et <span class="bold">Sarah Ferron</span>, travailleuse de la culture en recherche d'emploi.
+						</p>
+						<p>
+							Liste soutenue par <span class="bold">Olivier Besancenot</span> et <span class="bold">Philippe Poutou</span>.
+						</p>
+						<p>
+							Voter, surtout aux <span class="bold">élections municipales</span>, ne mettra pas fin aux salaires en berne, au manque de logements, à la misère des hôpitaux et des écoles, à l'oppression des femmes, au racisme...
+						</p>
+						<p>
+							Voter à ces élections <span class="bold">ne résoudra aucun des problèmes</span> dénoncés par les Gilets jaunes et par les millions de travailleuses et travailleurs qui se mobilisent contre la réforme des retraites.
+						</p>
+						<p>
+							<span class="bold">La véritable opposition à Macron ce sont les travailleuses et les travailleurs en lutte</span>, et démocratiquement organisés pour la défense de revendications urgentes et vitales. On n'aura que ce qu'on prendra !
+						</p>
+						<p>
+							Mais voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux travailleurs » c'est <span class="bold">dire bien fort notre rejet de leur système</span>, de Macron et de son monde !
+						</p>
+						<p>
 							Voter pour cette liste, c'est aussi <span class="bold">envoyer au conseil municipal des élues et des élus qui ne sont pas des professionnels de la politiques</span>, qui <span class="bold">défendront les intérêts des travailleuses et des travailleurs de Nantes</span>, <span class="bold">se feront l'écho des luttes sociales</span> et utiliseront tous les moyens possibles pour <span class="bold">aider à ce que ces luttes gagnent</span>.
 						</p>
 						<ul class="list">
