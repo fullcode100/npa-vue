@@ -47,11 +47,65 @@
 				</p> 
 				<p>
 					Voter, surtout aux élections municipales, ne réglera pas les problème du chômage, des salaires en berne, du manque de logements, de la misère des hôpitaux et des écoles, de l'oppression des femmes, du racisme... Loin des promesses électorales, la véritable opposition à Macron ce sont les travailleuses et les travailleurs en lutte, et démocratiquement organisés pour la défense de revendications urgentes et vitales. Mais nous pouvons profiter de ces élections pour dire bien fort notre rejet de leur système !
-				
+				</p> 
+
 				<h4>Interdiction des licenciements et des suppressions de postes</h4>
-				Michelin, Auchan, Carrefour, Renault... Les grands groupes multiplient les annonces de suppressions d'emplois, à Nantes comme ailleurs. À la destruction des emplois, à l'explosion de la précarité, il faut opposer une politique générale de création d'emplois socialement utiles, notamment dans les services publics. Travaillons tous, moins et mieux.
+				<p> 
+					Michelin, Auchan, Carrefour, Renault... Les grands groupes multiplient les annonces de suppressions d'emplois, à Nantes comme ailleurs. À la destruction des emplois, à l'explosion de la précarité, il faut opposer une politique générale de création d'emplois socialement utiles, notamment dans les services publics. Travaillons tous, moins et mieux.
+				</p> 
 
+				<h4>Plafonnement des loyers et réquisition des logements vides</h4>
+				<p> 
+					Les loyers à Nantes sont devenus hors de portée, et pas seulement dans le centre-ville. L'accès à la propriété est presque impossible. Que va-t-il se passer ? Nous ne pourrons plus payer les loyers, et nous devrons refuser de les payer.
+				</p> 
+				<p> 
+					Faire cesser la spéculation immobilière et l'exode des plus modestes hors de la ville, nécessitera l'organisation des locataires pour imposer des loyers décents par une lutte massive. Il faut utiliser les terrains vacants pour construire des logements sociaux et les services qui vont avec, privilégier la réhabilitation de ce qui peut l'être et arrêter les démolitions.
+				</p> 
 
+				<h4>Pas un salaire, pas une pension, pas un minimum social en dessous de 1 800 euros nets. Augmentation des salaires de 300 euros par mois pour toutes et tous </h4>
+				<p> 
+					Tout augmente sauf les salaires. À Nantes le chômage est élevé. Comme partout de plus en plus de gens sont obligés de combiner plusieurs emplois à temps partiel ou d'empiler les contrats en intérim. Cette explosion du travail précaire touche tous les secteurs, de l'aéronautique à la logistique en passant par les services ou le bâtiment. 
+				</p>
+
+				<h4>Prendre sur les profits pour défendre l'environnement</h4>
+				<p> 
+					Dans cette campagne, c'est à qui se repeindra le plus en vert. Mais le capitalisme ne sera jamais vert : l'écologie sert uniquement de prétexte pour justifier, d'un côté de nouvelles subventions aux entreprises, et de l'autre de nouvelles taxes et des licenciements pour les classes populaires.
+				</p> 
+				<p> 
+					Seuls les travailleurs peuvent assurer la transparence qui garantit la sécurité des sites industriels classés à risques (comme celui de Saint-Herblain), pour eux-mêmes et pour les habitants. L'incendie de Lubrizol à Rouen est un avertissement pour touTEs : notre santé est le cadet de leurs soucis. 
+				</p>
+
+				<h4>Contre les violences policières</h4>
+				<p> 
+					À Nantes on peut mourir lors de la fête de la musique après une charge de police. On peut y perdre un œil, être frappé brutalement, arrêté pour avoir manifesté. Que l'on soit un ancien ou un jeune, les violences policières sont la seule réponse du gouvernement à l'urgence sociale. Alors que la plupart des candidatEs à la mairie de Nantes se sont lancéEs dans une escalade sécuritaire, il faut le dire : la répression ne résoudra pas la misère sociale.
+				</p> 
+
+				<h4>Contre les discriminations et les violences sexistes</h4>
+				<p> 
+					En 2019, au moins 150 femmes ont été assassinées en France. À Nantes, des étudiantes, des travailleuses, des Gilets Jaunes, des retraitées, ont témoigné massivement leur indignation le 3 octobre puis le 25 novembre dernier. Elles ont dit non aux meurtres de femmes parce qu'elles sont des femmes et aux violences sexuelles et sexistes, qui sont les manifestations extrêmes de l'oppression des femmes dans tous les domaines de la société : emploi, vie de famille, représentation démocratique... 
+				</p> 
+				<p>
+					Il faut défendre non seulement l'égalité des droits et des salaires, mais aussi la dignité que nie quotidiennement le système patriarcal.
+				</p> 
+
+				<h4>De l'air, ouvrez les frontières : liberté de circulation et d'installation pour toutes et tous</h4>
+				<p> 
+					Le gouvernement – et ses relais locaux – orchestre une campagne raciste à l'encontre des migrants et des musulmans, directement inspirée de l'extrême-droite. Cette politique détourne l'attention des questions sociales, mais vise aussi à faire monter la haine, à enrôler les pauvres contre les très pauvres, les déclassés contre les plus vulnérables. Pourtant, ce ne sont ni les Roms, ni les migrants, ni les musulmans qui suppriment nos emplois et saccagent nos services publics. 
+				</p> 
+				<p>
+					La préfecture et la mairie se renvoient la balle pour justifier leurs politiques d'expulsion. Mais à Nantes comme ailleurs, les moyens existent d'accueillir dignement touTEs les migrantEs.
+				</p> 
+
+				<h3>Votez et faites voter pour la liste Anticapitalistes et Révolutionnaires ! Nantes aux travailleuses et aux travailleurs</h3>
+				<p>
+					Dans ces élections municipales, la liste présentée par le NPA veut porter toutes les exigences issues des luttes, locales et nationales : celles des cheminotEs et de l'ensemble du monde du travail contre la réforme des retraites, celles des personnels des universités contre la précarité, des enseignants et des élèves des lycées contre le bac Blanquer et le tri social à l'école, celles des hospitaliers pour les salaires et des embauches.
+				</p> 
+				<p>
+					Notre liste est à l'image de la majorité des habitantes et des habitants de cette ville. Elle compte des salariés, des travailleurs en galère et en situation précaire, des étudiantEs, des retraitéEs. Elle compte des hommes et des femmes de tous âges qui ont participé à l'organisation des grèves et des mobilisations dans leurs secteurs, et qui ont à cœur les intérêts de leur classe sociale.
+				</p> 
+				<p>
+					Nos élus au conseil municipal s'engagent à y défendre les intérêts des travailleuses et des travailleurs de la ville et de ses quartiers populaires. ils se serviront de tous les moyens à leur disposition pour être les relais des luttes et aider à leur organisation et à leur victoire.
+				</p> 
 
 				<a class="anchor" id="qui-sommes-nous"></a>
 				<h3>Qui sommes-nous ?</h3>
@@ -64,11 +118,11 @@
 				</p>
 				<p>
 					Nous sommes anticapitalistes : Nous dénonçons les injustices sociales, écologiques, les discriminations
-					qui sont portées par la loi de l'argent… mais pas seulement ! <span class="bold">Car nous sommes
-					révolutionnaires.</span> Nous pensons qu'il faut en finir avec ce système d'exploitation par la lutte. 
+					qui sont portées par la loi de l'argent... mais pas seulement ! <span class="bold">Car nous sommes des
+					révolutionnaires.</span> Nous pensons qu'il faut en finir avec ce système d'exploitation capitaliste par la lutte. 
 					Les solutions que nous proposons sont à construire avec les travailleurs, travailleuses, avec les
-					habitant·es de cette ville. Ce ne sont pas des promesses électorales. Découvrez nos activités, venez
-					participer à nos événements, écouter notre démarcher ! 
+					habitantEs de cette ville. Ce ne sont pas des promesses électorales. Découvrez nos activités, venez
+					participer à nos événements, écouter notre démarche ! 
 				</p>
 				<p>
 					<span class="bold">Et si on prenait enfin nos affaires en main ?</span>
