@@ -13,7 +13,7 @@
 		</section>
 		<section class="topical">
 			<div class="fit-content">
-				<h2 class="title--dark">Municipales à Nantes</h2>
+				<h2 class="title--dark">Le 15 mars votez et faites voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux travailleurs »</h2>
 				<div class="topical__content">
 					<div class="topical__presentation">
 						<p>
