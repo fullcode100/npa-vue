@@ -13,12 +13,15 @@
 		</section>
 		<section class="topical">
 			<div class="fit-content">
-				<h2 class="title--dark">Le 15 mars votez et faites voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux travailleurs »</h2>
+				<h2 class="title--dark">Faire entendre la voix de celles et ceux qui luttent !</h2>
 				<div class="topical__content">
 					<div class="topical__presentation">
+						<h3 class="title--dark">Le 15 mars votez et faites voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux travailleurs »</h3>
+			
 						<p>
 							Liste du Nouveau Parti Anticapitaliste conduite par <span class="bold">Riwan Chami</span>, assistant d'éducation, et <span class="bold">Sarah Ferron</span>, travailleuse de la culture en recherche d'emploi. </br>
-
+						</p>
+						<p>
 							Liste soutenue par <span class="bold">Olivier Besancenot</span> et <span class="bold">Philippe Poutou</span>. </br>
 
 							Voter, surtout aux <span class="bold">élections municipales</span>, ne mettra pas fin aux salaires en berne, au manque de logements, à la misère des hôpitaux et des écoles, à l'oppression des femmes, au racisme...  </br>
