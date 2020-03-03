@@ -41,6 +41,9 @@
 						<p>
 							Voter pour cette liste, c'est aussi <span class="bold">envoyer au conseil municipal des élues et des élus qui ne sont pas des professionnels de la politiques</span>, qui <span class="bold">défendront les intérêts des travailleuses et des travailleurs de Nantes</span>, <span class="bold">se feront l'écho des luttes sociales</span> et utiliseront tous les moyens possibles pour <span class="bold">aider à ce que ces luttes gagnent</span>.
 						</p>
+						<p>
+							Voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux travailleurs » c'est <span class="bold">défendre un programme pour les luttes sociales :</span>
+						</p>
 						<ul class="list">
 							<li>
 							Interdiction des licenciements et des suppressions de postes
