@@ -71,8 +71,16 @@
 							</li>
 						</ul>
 						<div class="btn--center">
-							<g-link to="/presentation" class="btn--dark">Notre programme</g-link>
+							<g-link to="/presentation" class="btn--dark">Notre programme détaillé</g-link>
 						</div>
+						<div>
+							<a href="@/assets/npa-nantes-2020-profession-foi.pdf" download="Pacman_Kiwi">Télécharger la profession de foi</a>
+							<a href="@/assets/npa-nantes-2020-bulletin-vote.pdf" download="Pacman_Kiwi">Télécharger le bulletin de vote</a>
+						</div>
+
+
+
+						
 					</div>
 					<div class="topical__img">
 						<g-image src="@/assets/npa-nantes2020-affiche-electorale-generale.jpg" alt="Affiche de campagne du NPA pour les municipales à Nantes" width="400px" />
