@@ -75,7 +75,9 @@
 						</div>
 					</div>
 					<div class="topical__img">
-						<g-image src="@/assets/affiche_campagne.jpg" alt="Affiche de campagne du NPA pour les municipales à Nantes" width="400px" />
+						<g-image src="@/assets/npa-nantes2020-affiche-electorale-generale.jpg" alt="Affiche de campagne du NPA pour les municipales à Nantes" width="400px" />
+						<g-image src="@/assets/npa-nantes2020-affiche-electorale-migrants.jpg" alt="Affiche de campagne du NPA pour les municipales à Nantes" width="400px" />
+						<g-image src="@/assets/npa-nantes2020-affiche-electorale-migrants.jpg" alt="Affiche de campagne du NPA pour les municipales à Nantes" width="400px" />
 					</div>
 				</div>
 			</div>
