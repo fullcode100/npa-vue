@@ -18,7 +18,7 @@
 			</div>
 			<div class="fit-article article__content">
 				<a class="anchor" id="municipales-nantes"></a>
-				<h2>Face au gouvernement des riches, organisons nos luttes</h2>
+				<h3>Face au gouvernement des riches, organisons nos luttes</h3>
 				<p>
 					Ces élections municipales se déroulent dans un climat de tempête sociale et politique. Emmanuel Macron, dans la continuité des gouvernements précédents, de gauche comme de droite, poursuit ses attaques contre le monde du travail et les pauvres. Mais il a du fil à retordre.
 				</p> 
@@ -54,53 +54,30 @@
 				<p>
 					Mais nous pouvons profiter de ces élections pour <span class="bold">dire bien fort notre rejet de leur système</span>  !
 				</p> 
-
-				<h4>Interdiction des licenciements et des suppressions de postes</h4>
-				<p> 
-					Michelin, Auchan, Carrefour, Renault... Les grands groupes multiplient les annonces de suppressions d'emplois, à Nantes comme ailleurs. À la destruction des emplois, à l'explosion de la précarité, il faut opposer une politique générale de création d'emplois socialement utiles, notamment dans les services publics. <span class="bold">Travaillons tous, moins et mieux.</span>
-				</p> 
-
-				<h4>Plafonnement des loyers et réquisition des logements vides</h4>
-				<p> 
-					Les loyers à Nantes sont devenus hors de portée, et pas seulement dans le centre-ville. L'accès à la propriété est presque impossible. Que va-t-il se passer ? <span class="bold">Nous ne pourrons plus payer les loyers, et nous devrons refuser de les payer.</span>
-				</p> 
-				<p> 
-					Faire cesser la spéculation immobilière et l'exode des plus modestes hors de la ville, nécessitera l'organisation des locataires pour imposer des loyers décents par une lutte massive. Il faut <span class="bold">utiliser les terrains vacants pour construire des logements sociaux et les services qui vont avec</span>, privilégier la réhabilitation de ce qui peut l'être et arrêter les démolitions.
-				</p> 
-
-				<h4>Pas un salaire, pas une pension, pas un minimum social en dessous de 1 800 euros nets. Augmentation des salaires de 300 euros par mois pour toutes et tous </h4>
-				<p> 
-					<span class="bold">Tout augmente sauf les salaires. À Nantes le chômage est élevé.</span> Comme partout de plus en plus de gens sont obligés de combiner plusieurs emplois à temps partiel ou d'empiler les contrats en intérim. Cette explosion du travail précaire touche tous les secteurs, de l'aéronautique à la logistique en passant par les services ou le bâtiment. 
-				</p>
-
-				<h4>Prendre sur les profits pour défendre l'environnement</h4>
-				<p> 
-					Dans cette campagne, c'est à qui se repeindra le plus en vert. Mais <span class="bold"><span class="bold">le capitalisme ne sera jamais vert</span> : l'écologie sert uniquement de prétexte pour justifier, d'un côté de nouvelles subventions aux entreprises, et de l'autre de nouvelles taxes et des licenciements pour les classes populaires.
-				</p> 
-				<p> 
-					<span class="bold"><span class="bold">Seuls les travailleurs peuvent assurer la transparence qui garantit la sécurité des sites industriels classés à risques</span> (comme celui de Saint-Herblain), pour eux-mêmes et pour les habitants. L'incendie de Lubrizol à Rouen est un avertissement pour touTEs : notre santé est le cadet de leurs soucis. 
-				</p>
-
-				<h4>Contre les violences policières</h4>
-				<p> 
-					À Nantes on peut mourir lors de la fête de la musique après une charge de police. On peut y perdre un œil, être frappé brutalement, arrêté pour avoir manifesté. <span class="bold">Que l'on soit un ancien ou un jeune, les violences policières sont la seule réponse du gouvernement à l'urgence sociale</span>. Alors que la plupart des candidatEs à la mairie de Nantes se sont lancéEs dans une escalade sécuritaire, il faut le dire : <span class="bold">la répression ne résoudra pas la misère sociale</span>.
-				</p> 
-
-				<h4>Contre les discriminations et les violences sexistes</h4>
-				<p> 
-					En 2019, au moins 150 femmes ont été assassinées en France. À Nantes, des étudiantes, des travailleuses, des Gilets Jaunes, des retraitées, ont témoigné massivement leur indignation le 3 octobre puis le 25 novembre dernier. Elles ont dit <span class="bold">non aux meurtres de femmes parce qu'elles sont des femmes et aux violences sexuelles et sexistes, qui sont les manifestations extrêmes de l'oppression des femmes dans tous les domaines de la société</span> : emploi, vie de famille, représentation démocratique... 
-				</p> 
-				<p>
-					Il faut défendre non seulement l'égalité des droits et des salaires, mais aussi la dignité que nie quotidiennement le système patriarcal.
-				</p> 
-
-				<h4>De l'air, ouvrez les frontières : liberté de circulation et d'installation pour toutes et tous</h4>
-				<p> 
-					Le gouvernement – et ses relais locaux – orchestre une campagne raciste à l'encontre des migrants et des musulmans, directement inspirée de l'extrême-droite. Cette politique détourne l'attention des questions sociales, mais vise aussi à faire monter la haine, à enrôler les pauvres contre les très pauvres, les déclassés contre les plus vulnérables. Pourtant, <span class="bold">ce ne sont ni les Roms, ni les migrants, ni les musulmans qui suppriment nos emplois et saccagent nos services publics</span>. 
-				</p> 
-				<p>
-					La préfecture et la mairie se renvoient la balle pour justifier leurs politiques d'expulsion. Mais <span class="bold">à Nantes comme ailleurs, les moyens existent d'accueillir dignement touTEs les migrantEs</span>.
-				</p> 
+				
+				<ul class="list">
+					<li>
+						<span class="bold">Interdiction des licenciements et des suppressions de postes.</span> Michelin, Auchan, Carrefour, Renault... Les grands groupes multiplient les annonces de suppressions d'emplois, à Nantes comme ailleurs. À la destruction des emplois, à l'explosion de la précarité, il faut opposer une politique générale de création d'emplois socialement utiles, notamment dans les services publics. <span class="bold"><span class="bold">Travaillons tous, moins et mieux.</span>
+					</li>
+					<li>
+						<span class="bold">Plafonnement des loyers et réquisition des logements vides.</span> Les loyers à Nantes sont devenus hors de portée, et pas seulement dans le centre-ville. L'accès à la propriété est presque impossible. Que va-t-il se passer ? <span class="bold">Nous ne pourrons plus payer les loyers, et nous devrons refuser de les payer.</span> Faire cesser la spéculation immobilière et l'exode des plus modestes hors de la ville, nécessitera l'organisation des locataires pour imposer des loyers décents par une lutte massive. Il faut <span class="bold">utiliser les terrains vacants pour construire des logements sociaux et les services qui vont avec</span>, privilégier la réhabilitation de ce qui peut l'être et arrêter les démolitions.
+					</li>
+					<li>
+						<span class="bold">Pas un salaire, pas une pension, pas un minimum social en dessous de 1 800 euros nets. Augmentation des salaires de 300 euros par mois pour toutes et tous.</span> Tout augmente sauf les salaires. À Nantes le chômage est élevé. Comme partout de plus en plus de gens sont obligés de combiner plusieurs emplois à temps partiel ou d'empiler les contrats en intérim. Cette <span class="bold">explosion du travail précaire touche tous les secteurs</span>, de l'aéronautique à la logistique en passant par les services ou le bâtiment. 
+					</li>
+					<li>
+						<span class="bold">Prendre sur les profits pour défendre l'environnement.</span> Dans cette campagne, c'est à qui se repeindra le plus en vert. Mais <span class="bold"><span class="bold">le capitalisme ne sera jamais vert</span> : l'écologie sert uniquement de prétexte pour justifier, d'un côté de nouvelles subventions aux entreprises, et de l'autre de nouvelles taxes et des licenciements pour les classes populaires. <span class="bold"><span class="bold">Seuls les travailleurs peuvent assurer la transparence qui garantit la sécurité des sites industriels classés à risques</span> (comme celui de Saint-Herblain), pour eux-mêmes et pour les habitants. L'incendie de Lubrizol à Rouen est un avertissement pour touTEs : notre santé est le cadet de leurs soucis. 
+					</li>
+					<li>
+						<span class="bold">Contre les violences policières.</span> À Nantes on peut mourir lors de la fête de la musique après une charge de police. On peut y perdre un œil, être frappé brutalement, arrêté pour avoir manifesté. <span class="bold">Que l'on soit un ancien ou un jeune, les violences policières sont la seule réponse du gouvernement à l'urgence sociale</span>. Alors que la plupart des candidatEs à la mairie de Nantes se sont lancéEs dans une escalade sécuritaire, il faut le dire : <span class="bold">la répression ne résoudra pas la misère sociale</span>.
+					</li>
+					<li>
+						<span class="bold">Contre les discriminations et les violences sexistes.</span> En 2019, au moins 150 femmes ont été assassinées en France. À Nantes, des étudiantes, des travailleuses, des Gilets Jaunes, des retraitées, ont témoigné massivement leur indignation le 3 octobre puis le 25 novembre dernier. Elles ont dit <span class="bold">non aux meurtres de femmes parce qu'elles sont des femmes et aux violences sexuelles et sexistes, qui sont les manifestations extrêmes de l'oppression des femmes dans tous les domaines de la société</span> : emploi, vie de famille, représentation démocratique... Il faut défendre non seulement l'égalité des droits et des salaires, mais aussi la dignité que nie quotidiennement le système patriarcal.
+					</li>
+					<li>
+						<span class="bold">De l'air, ouvrez les frontières : liberté de circulation et d'installation pour toutes et tous.</span> Le gouvernement – et ses relais locaux – orchestre une campagne raciste à l'encontre des migrants et des musulmans, directement inspirée de l'extrême-droite. Cette politique détourne l'attention des questions sociales, mais vise aussi à faire monter la haine, à enrôler les pauvres contre les très pauvres, les déclassés contre les plus vulnérables. Pourtant, <span class="bold">ce ne sont ni les Roms, ni les migrants, ni les musulmans qui suppriment nos emplois et saccagent nos services publics</span>. La préfecture et la mairie se renvoient la balle pour justifier leurs politiques d'expulsion. Mais <span class="bold">à Nantes comme ailleurs, les moyens existent d'accueillir dignement touTEs les migrantEs</span>.
+					</li>
+				</ul>
 
 				<h3>Votez et faites voter pour la liste Anticapitalistes et Révolutionnaires ! Nantes aux travailleuses et aux travailleurs</h3>
 				<p>
