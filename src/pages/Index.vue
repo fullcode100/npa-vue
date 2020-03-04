@@ -74,8 +74,8 @@
 							<g-link to="/presentation" class="btn--dark">Notre programme détaillé</g-link>
 						</div>
 						<div>
-							<a href="@/assets/npa-nantes-2020-profession-foi.pdf" download="Pacman_Kiwi">Télécharger la profession de foi</a>
-							<a href="@/assets/npa-nantes-2020-bulletin-vote.pdf" download="Pacman_Kiwi">Télécharger le bulletin de vote</a>
+							<a href="@/assets/npa-nantes-2020-profession-foi.pdf" download="Profession de foi">Télécharger la profession de foi</a>
+							<a href="@/assets/npa-nantes-2020-bulletin-vote.pdf" download="Bulletin de vote">Télécharger le bulletin de vote</a>
 						</div>
 
 
