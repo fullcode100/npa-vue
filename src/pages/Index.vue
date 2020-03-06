@@ -77,15 +77,10 @@
 							<a href="@/assets/npa-nantes-2020-profession-foi.pdf" download="Profession de foi">Télécharger la profession de foi</a>
 							<a href="@/assets/npa-nantes-2020-bulletin-vote.pdf" download="Bulletin de vote">Télécharger le bulletin de vote</a>
 						</div>
-
-
-
 						
 					</div>
 					<div class="topical__img">
-						<g-image src="@/assets/npa-nantes2020-affiche-electorale-generale.jpg" alt="Affiche de campagne du NPA pour les municipales à Nantes" width="400px" />
-						<g-image src="@/assets/npa-nantes2020-affiche-electorale-migrants.jpg" alt="Affiche de campagne du NPA pour les municipales à Nantes" width="400px" />
-						<g-image src="@/assets/npa-nantes2020-affiche-electorale-migrants.jpg" alt="Affiche de campagne du NPA pour les municipales à Nantes" width="400px" />
+						<g-image src="@/assets/affiche_campagne.jpg" alt="Affiche de campagne du NPA pour les municipales à Nantes" width="400px" />
 					</div>
 				</div>
 			</div>
