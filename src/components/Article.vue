@@ -2,10 +2,12 @@
 	<main class="article">
 		<div class="article__header fit-article">
 			<div v-if="tags.length !== 0" class="article__tag">
-				• <span v-for="tag in tags" :key="tag">{{ tag }}</span>
+				<span v-for="tag in tags" :key="tag">{{ tag }}</span>
 			</div>
 			<h1 class="article__title">{{ title }}</h1>
-			<p class="article__summary">{{ summary }}</p>
+			<div class="article__summary">
+				<p>{{ summary }}</p>
+			</div>
 			<div class="article__date">
 				<font-awesome :icon="['far', 'clock']" />
 				<span>Publié le {{ formatDate(date) }}</span>

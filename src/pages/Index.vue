@@ -13,78 +13,91 @@
 		</section>
 		<section class="topical">
 			<div class="fit-content">
-				<h2 class="title--dark">Faire entendre la voix de celles et ceux qui luttent !</h2>
+				<h2 class="title--dark">Municipales à Nantes</h2>
 				<div class="topical__content">
 					<div class="topical__presentation">
-						
+						<h3>Faire entendre la voix de celles et ceux qui luttent !</h3>
 						<p>
-						Le 15 mars votez et faites voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux travailleurs »
+							Le 15 mars votez et faites voter pour la liste « Anticapitalistes et révolutionnaires !
+							Nantes aux travailleuses et aux travailleurs »
 						</p>
 						<p>
-							Liste du Nouveau Parti Anticapitaliste conduite par <span class="bold">Riwan Chami</span>, assistant d'éducation, et <span class="bold">Sarah Ferron</span>, travailleuse de la culture en recherche d'emploi.
+							Liste du Nouveau Parti Anticapitaliste conduite par <span class="bold">Riwan Chami</span>,
+							assistant d'éducation, et <span class="bold">Sarah Ferron</span>, travailleuse de la culture
+							en recherche d'emploi.
 						</p>
 						<p>
 							Liste soutenue par <span class="bold">Olivier Besancenot</span> et <span class="bold">Philippe Poutou</span>.
 						</p>
 						<p>
-							Voter, surtout aux <span class="bold">élections municipales</span>, ne mettra pas fin aux salaires en berne, au manque de logements, à la misère des hôpitaux et des écoles, à l'oppression des femmes, au racisme...
+							Voter, surtout aux <span class="bold">élections municipales</span>, ne mettra pas fin aux salaires en berne,
+							au manque de logements, à la misère des hôpitaux et des écoles, à l'oppression des femmes, au racisme...
 						</p>
 						<p>
-							Voter à ces élections <span class="bold">ne résoudra aucun des problèmes</span> dénoncés par les Gilets jaunes et par les millions de travailleuses et travailleurs qui se mobilisent contre la réforme des retraites.
+							Voter à ces élections <span class="bold">ne résoudra aucun des problèmes</span> dénoncés par les Gilets Jaunes
+							et par les millions de travailleuses et travailleurs qui se mobilisent contre la réforme des retraites.
 						</p>
 						<p>
-							<span class="bold">La véritable opposition à Macron ce sont les travailleuses et les travailleurs en lutte</span>, et démocratiquement organisés pour la défense de revendications urgentes et vitales. On n'aura que ce qu'on prendra !
+							<span class="bold">La véritable opposition à Macron ce sont les travailleuses et les travailleurs en
+							lutte</span>, et démocratiquement organisés pour la défense de revendications urgentes et vitales.
+							On n'aura que ce qu'on prendra !
 						</p>
 						<p>
-							Mais voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux travailleurs » c'est <span class="bold">dire bien fort notre rejet de leur système</span>, de Macron et de son monde !
+							Mais voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux
+							travailleurs » c'est <span class="bold">dire bien fort notre rejet de leur système</span>, de Macron
+							et de son monde !
 						</p>
 						<p>
-							Voter pour cette liste, c'est aussi <span class="bold">envoyer au conseil municipal des élues et des élus qui ne sont pas des professionnels de la politiques</span>, qui <span class="bold">défendront les intérêts des travailleuses et des travailleurs de Nantes</span>, <span class="bold">se feront l'écho des luttes sociales</span> et utiliseront tous les moyens possibles pour <span class="bold">aider à ce que ces luttes gagnent</span>.
+							Voter pour cette liste, c'est aussi <span class="bold">envoyer au conseil municipal des élues et des
+							élus qui ne sont pas des professionnels de la politiques</span>, qui <span class="bold">défendront
+							les intérêts des travailleuses et des travailleurs de Nantes</span>, <span class="bold">se feront
+							l'écho des luttes sociales</span> et utiliseront tous les moyens possibles pour <span class="bold">aider
+							à ce que ces luttes gagnent</span>.
 						</p>
 						<p>
-							Voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux travailleurs » c'est <span class="bold">défendre un programme pour les luttes sociales :</span>
+							Voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux
+							travailleurs » c'est <span class="bold">défendre un programme pour les luttes sociales :</span>
 						</p>
 						<ul class="list">
 							<li>
-							Interdiction des licenciements et des suppressions de postes
+								Interdiction des licenciements et des suppressions de postes ;
 							</li>
 							<li>
-							Plafonnement des loyers et réquisition des logements vides
+								Plafonnement des loyers et réquisition des logements vides ;
 							</li>
 							<li>
-							Contre les violences policières
+								Contre les violences policières ;
 							</li>
 							<li>
-							Pas un salaire, pas une pension et pas un minimum social en dessous de 1800 euros nets
+								Pas un salaire, pas une pension et pas un minimum social en dessous de 1 800€ nets ;
 							</li>
 							<li>
-							Augmentation des salaires de 300 euros pour toutes et tous
+								Augmentation des salaires de 300 euros pour toutes et tous ;
 							</li>
 							<li>
-							Liberté de circulation et d’installation pour toutes et tous
+								Liberté de circulation et d’installation pour toutes et tous ;
 							</li>
 							<li>
-							Contre les discriminations et les violences sexistes
+								Contre les discriminations et les violences sexistes ;
 							</li>
 							<li>
-							Prendre sur les profits pour défendre l'écologie
+								Prendre sur les profits pour défendre l'écologie.
 							</li>
 						</ul>
-
-						<a href="https://a.storyblok.com/f/74141/x/5208df6e79/npa-nantes-2020-profession-foi-small.pdf" download="Profession de foi">Télécharger la profession de foi</a> </br>
-						<a href="https://a.storyblok.com/f/74141/x/b4c1e94662/npa-nantes-2020-bulletin-vote.pdf" download="Bulletin de vote">Télécharger le bulletin de vote</a>
-
-
 						<div class="btn--center">
 							<g-link to="/presentation" class="btn--dark">Notre programme détaillé</g-link>
 						</div>
-	
-						
 					</div>
 					<div class="topical__img">
-						<g-image src="@/assets/npa-nantes2020-affiche-electorale-generale.jpg" alt="Affiche de campagne du NPA pour les municipales à Nantes" width="400px" />
-						<g-image src="@/assets/npa-nantes2020-affiche-electorale-migrants.jpg" alt="Affiche de campagne du NPA pour les municipales à Nantes" width="400px" />
-						<g-image src="@/assets/npa-nantes2020-affiche-electorale-migrants.jpg" alt="Affiche de campagne du NPA pour les municipales à Nantes" width="400px" />
+						<g-image src="@/assets/affiche-electorale-generale.jpg" alt="Affiche éléctorale du NPA : « Anticapitaliste et révolutionnaire »" width="400" />
+						<div class="btn--center">
+							<a class="link--dark" href="https://a.storyblok.com/f/74141/x/5208df6e79/npa-nantes-2020-profession-foi-small.pdf" download="Profession de foi">
+								Télécharger la profession de foi
+							</a>
+							<a class="link--dark" href="https://a.storyblok.com/f/74141/x/b4c1e94662/npa-nantes-2020-bulletin-vote.pdf" download="Bulletin de vote">
+								Télécharger le bulletin de vote
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -255,7 +268,10 @@ query {
 
 	&__presentation {
 		margin-top: $xl;
-		font-size: $font-md;
+
+		h3 {
+			font-size: $font-lg;
+		}
 
 		p, .list {
 			margin-top: $md;

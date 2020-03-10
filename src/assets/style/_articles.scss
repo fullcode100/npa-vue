@@ -2,6 +2,8 @@
 	color: $dark;
 
 	&__tag {
+		display: flex;
+		flex-wrap: wrap;
 		color: $dark;
 		font-size: $font-md;
 		margin-bottom: $sm;
@@ -66,6 +68,10 @@
 		font-size: $font-md;
 		font-weight: 500;
 		margin-bottom: $sm;
+
+		p + p {
+			margin-top: $sm;
+		}
 	}
 
 	&__date {
