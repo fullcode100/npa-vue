@@ -9,9 +9,13 @@
 		margin-bottom: $sm;
 		text-transform: uppercase;
 
-		span {
+		a {
 			padding: 0.5rem;
 			@include stroke($dark, $primary,3px, transparent);
+
+			&:hover {
+				background-color: $dark-light;
+			}
 		}
 	}
 

@@ -21,6 +21,11 @@ module.exports = {
 				version: "published",
 				typeName: "StoryblokEntry",
 				downloadImages: true,
+				additionalTypes: [
+					{
+						type: "tags", name: "StoryblokTag"
+					}
+				]
 			}
 		},
 		{

@@ -1,5 +1,5 @@
 module.exports = function (api) {
-	api.loadSource(({ addCollection }) => {})
+	api.loadSource(({ addCollection }) => {});
   
 	api.createPages(async ({ graphql, createPage }) => {
 		const { data } = await graphql(`{
@@ -22,5 +22,40 @@ module.exports = function (api) {
 		  		}
 			})
 	  	})
+	});
+
+	api.createPages(async ({ graphql, createPage }) => {
+		const { data } = await graphql(`{
+			allStoryblokTag {
+				edges {
+					node {
+						id
+						name
+						belongsTo {
+							edges {
+								node {
+									...on StoryblokEntry {
+										name
+										full_slug
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}`)
+
+		console.log(JSON.stringify(data));
+		
+		data.allStoryblokTag.edges.forEach(({ node }) => {
+			createPage({
+				path: `/tag/${node.name}`,
+				component: "./src/templates/StoryblokTag.vue",
+				context: {
+					id: node.id
+				}
+			})
+		})
 	});
 }

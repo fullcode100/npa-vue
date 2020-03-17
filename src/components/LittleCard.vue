@@ -67,7 +67,7 @@ export default {
 	justify-content: space-between;
 	max-width: 500px;
 	color: $accent;
-	margin: $lg auto 0 auto;
+	margin-top: $lg;
 	transition: 0.3s ease-in-out;
 
 	&__content {

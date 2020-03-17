@@ -75,7 +75,10 @@ html {
 	margin-top: $xxl;
 
 	&__list {
-		margin-top: $xl;
+		display: flex;
+		width: 500px;
+        margin: $xl auto 0 auto;
+        flex-direction: column;
 	}
 }
 
