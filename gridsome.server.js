@@ -1,6 +1,4 @@
 module.exports = function (api) {
-	api.loadSource(({ addCollection }) => {});
-  
 	api.createPages(async ({ graphql, createPage }) => {
 		const { data } = await graphql(`{
 			allStoryblokEntry(filter: { full_slug: {regex: "(^articles\/)"} }) {

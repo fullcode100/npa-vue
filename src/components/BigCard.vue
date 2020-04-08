@@ -154,6 +154,12 @@ export default {
 	}
 }
 
+@media screen and (max-width: $fullhd) {
+	.big-card__summary p {
+		font-size: $font-sm;
+	}
+}
+
 @media screen and (max-width: $desktop) {
 	.big-card__img img {
 		width: 350px;
@@ -200,7 +206,6 @@ export default {
 			width: 100%;
 
 			p {
-				font-size: $font-sm;
 				margin: $xs 0;
 			}
 		}

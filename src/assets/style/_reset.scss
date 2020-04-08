@@ -76,7 +76,7 @@ html {
 
 	&__list {
 		display: flex;
-		width: 500px;
+		max-width: 500px;
         margin: $xl auto 0 auto;
         flex-direction: column;
 	}
