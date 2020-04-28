@@ -6,9 +6,13 @@
 				<div class="section__list">
 					<ul>
 						<li v-for="edge in story.belongsTo.edges" :key="edge.node.id">
-							<g-link :to="edge.node.full_slug">
-								{{ edge.node.name }}
-							</g-link>
+							<LittleCard
+								:title="edge.node.content.title"
+								:url="edge.node.full_slug"
+								:date="edge.node.created_at"
+								:img="edge.node.content.thumbnail"
+								:tags="edge.node.tag_list"
+							/>
 						</li>
 					</ul>
 				</div>
@@ -18,7 +22,12 @@
 </template>
 
 <script>
+import LittleCard from "@/components/LittleCard.vue";
+
 export default {
+	components: {
+		LittleCard
+	},
 	name: "StoryblokTagTemplate",
 	computed: {
 		story() {
@@ -36,8 +45,14 @@ query ($id: ID!) {
 			edges {
 				node {
 					...on StoryblokEntry {
+						id
 						name
+						created_at(format:"YYYYMMDDHHmm")
 						full_slug
+						content
+						tag_list {
+							name
+						}
 					}
 				}
 			}

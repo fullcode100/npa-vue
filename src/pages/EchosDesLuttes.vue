@@ -9,7 +9,7 @@
 						:url="article.url"
 						:date="article.date"
 						:img="article.img"
-						:tag="article.tag"
+						:tags="article.tags"
 					/>
 					<div v-if="cardMap.length === 0" class="empty">
 						<p>Aucun article à afficher !</p>
@@ -39,7 +39,7 @@ export default {
 						date: edge.node.created_at,
 						title: edge.node.content.title,
 						img: edge.node.content.thumbnail,
-						tag: edge.node.tag_list.toString()
+						tags: edge.node.tag_list
           			}
        			})
       		]
@@ -61,7 +61,9 @@ query {
 				created_at(format:"YYYYMMDDHHmm")
 				full_slug
 				content
-				tag_list
+				tag_list {
+					name
+				}
 			}
 		}
 	}

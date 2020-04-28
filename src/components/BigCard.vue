@@ -6,7 +6,7 @@
 			</h2>
 			<div class="big-card__summary">
 				<p>{{ summary }}</p>
-				<span>{{ tag }}</span>
+				<span v-for="tag in tags" :key="tag.name">{{ tag }}</span>
 			</div>
 		</div>
 		<div class="big-card__img">
@@ -54,9 +54,11 @@ export default {
 			type: String,
 			default: "Légende de l'image",
 		},
-		tag: {
-			type: String,
-			default: "Article",
+		tags: {
+			type: Array,
+			default() {
+				return []
+			}
 		}
 	},
 	methods: {

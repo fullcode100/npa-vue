@@ -3,7 +3,7 @@
 		<div class="article__header fit-article">
 			<div v-if="tags.length !== 0" class="article__tag">
 				<span v-for="tag in tags" :key="tag">
-					<g-link :to="tagUrl(tag)">{{ tag }}</g-link>
+					<g-link :to="tagUrl(tag.name)">{{ tag.name }}</g-link>
 				</span>
 			</div>
 			<h1 class="article__title">{{ title }}</h1>
@@ -73,7 +73,9 @@ export default {
 		},
 		tags: {
 			type: Array,
-			default: []
+			default() {
+            	return []
+        	}
 		},
 		img: {
 			type: Object,

@@ -98,7 +98,9 @@ query StoryblokEntry ($id: ID) {
     	slug
 		full_slug
     	content
-		tag_list
+		tag_list {
+			name
+		}
 		created_at(format:"YYYYMMDD")
   	}
 }

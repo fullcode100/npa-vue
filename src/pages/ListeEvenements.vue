@@ -59,7 +59,6 @@ query {
 			node {
 				id
 				content
-				tag_list
 			}
 		}
 	}

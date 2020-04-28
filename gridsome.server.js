@@ -20,33 +20,19 @@ module.exports = function (api) {
 		  		}
 			})
 	  	})
-	});
 
-	api.createPages(async ({ graphql, createPage }) => {
-		const { data } = await graphql(`{
+		const { data: tagData } = await graphql(`{
 			allStoryblokTag {
 				edges {
 					node {
-						id
-						name
-						belongsTo {
-							edges {
-								node {
-									...on StoryblokEntry {
-										name
-										full_slug
-									}
-								}
-							}
+							id
+							name
 						}
 					}
 				}
-			}
-		}`)
-
-		console.log(JSON.stringify(data));
-		
-		data.allStoryblokTag.edges.forEach(({ node }) => {
+			}`)
+	
+		tagData.allStoryblokTag.edges.forEach(({ node }) => {
 			createPage({
 				path: `/tag/${node.name}`,
 				component: "./src/templates/StoryblokTag.vue",

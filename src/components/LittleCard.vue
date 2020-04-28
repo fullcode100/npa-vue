@@ -1,7 +1,7 @@
 <template>
 	<g-link class="little-card" :to="url">
 		<div class="little-card__content">
-			<span>{{ tag }}</span>
+			<span v-for="tag in tags" :key="tag.name">{{ tag.name }}</span>
 			<h3>{{ title }}</h3>
 			<div class="little-card__date">
 				<font-awesome :icon="['far', 'clock']" />
@@ -46,9 +46,11 @@ export default {
 			type: String,
 			default: "Légende de l'image",
 		},
-		tag: {
-			type: String,
-			default: "Article",
+		tags: {
+			type: Array,
+			default() {
+				return []
+			}	
 		}
 	},
 	methods: {

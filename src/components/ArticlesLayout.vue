@@ -8,7 +8,7 @@
 				:img="lastArticle.img"
 				:summary="lastArticle.summary"
 				:legend="lastArticle.legend"
-				:tag="lastArticle.tag"
+				:tags="lastArticle.tags"
 			/>
 		</div>
 		<div class="articles__little">
@@ -18,7 +18,7 @@
 				:date="article.date"
 				:img="article.img"
 				:legend="article.legend"
-				:tag="article.tag"
+				:tags="article.tags"
 			/>
 			<div v-if="cardMap.length === 0" class="empty">
 				<p>Pas d'autre articles à afficher !</p>
@@ -51,7 +51,7 @@ export default {
 						title: edge.node.content.title,
 						img: edge.node.content.thumbnail,
 						legend: edge.node.content.caption,
-						tag: edge.node.tag_list.toString()
+						tags: edge.node.tag_list
           			}
        			})
       		]
@@ -60,6 +60,7 @@ export default {
 			let edge = this.edges[0];
 			let data = {};
 			if (this.edges.length > 0) {
+				console.log(edge.node.tag_list)
 				data = {
 					url: edge.node.full_slug,
 					date: edge.node.created_at,
@@ -67,7 +68,7 @@ export default {
 					img: edge.node.content.thumbnail,
 					summary: edge.node.content.summary,
 					legend: edge.node.content.caption,
-					tag: edge.node.tag_list.toString()
+					tags: edge.node.tag_list
 				}
 			}
 
@@ -90,7 +91,9 @@ query {
 				created_at(format:"YYYYMMDDHHmm")
 				full_slug
 				content
-				tag_list
+				tag_list {
+					name
+				}
 			}
 		}
 	}
