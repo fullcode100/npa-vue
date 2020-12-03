@@ -50,40 +50,6 @@ export default {
 	}
 }
 
-// Avenir
-
-@font-face {
-    font-family: "Avenir";
-    src: url("../assets/fonts/Avenir/Avenir-Light.woff2") format("woff2");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Avenir";
-    src: url("../assets/fonts/Avenir/Avenir-Roman.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Avenir";
-    src: url("../assets/fonts/Avenir/Avenir-Medium.woff2") format("woff2");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Avenir";
-    src: url("../assets/fonts/Avenir/Avenir-Black.woff2") format("woff2");
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-}
-
 // Druk Wide
 
 @font-face {

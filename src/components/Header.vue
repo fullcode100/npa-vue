@@ -11,7 +11,7 @@
 				<ul>
 					<li class="has-dropdown">
 						<g-link class="link--inline">
-							<span class="bold">Présentation</span>
+							<span>Présentation</span>
 							<font-awesome :icon="['fas', 'chevron-down']" size="sm" />
 						</g-link>
 						<Dropdown
@@ -37,7 +37,7 @@
 					<li>
 						<g-link to="/liste-evenements" class="link--inline">Événements</g-link>
 					</li>
-					<li>
+					<li id="footer-link">
 						<g-link to="/#footer" class="link--inline">Contact</g-link>
 					</li>
 				</ul>
@@ -179,11 +179,9 @@ nav {
 	}
 }
 
-@media screen and (max-width: $tablet) {
-	.header {
-		a {
-			font-size: $font-xs;
-		}
+@media screen and (max-width: $mobile) {
+	#footer-link {
+		display: none;
 	}
 }
 </style>

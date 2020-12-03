@@ -35,10 +35,13 @@ export default {
 					case "bigCard":
 						assetsLoader = require(`!!assets-loader?width=475&height=550&fit=cover!~/${directory}/${filename}`);
 						break;
+					case "mediumCard":
+						assetsLoader = require(`!!assets-loader?fit=cover!~/${directory}/${filename}`);
+						break;
 				}
 
 				return assetsLoader;
-			}
+			}	
 		},
 	}
 }

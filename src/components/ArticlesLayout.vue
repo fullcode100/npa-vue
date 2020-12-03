@@ -11,33 +11,33 @@
 				:tags="lastArticle.tags"
 			/>
 		</div>
-		<div class="articles__little">
-			<LittleCard v-for="(article, key) in cardMap" :key="key"
+		<div class="articles__medium">
+			<MediumCard class="articles__item" v-for="(article, key) in cardMap" :key="key"
 				:title="article.title"
+				:summary="article.summary"
 				:url="article.url"
 				:date="article.date"
 				:img="article.img"
 				:legend="article.legend"
 				:tags="article.tags"
 			/>
-			<div v-if="cardMap.length === 0" class="empty">
-				<p>Pas d'autre articles à afficher !</p>
-			</div>
-			<div class="btn--center">
-				<g-link to="/liste-articles" class="link--inline">Voir les anciens articles 👉</g-link>
-			</div>
+		</div>
+		<div class="btn--center">
+			<g-link to="/liste-articles" class="btn--dark">Voir tous les articles</g-link>
 		</div>
 	</div>
 </template>
 
 <script>
 import LittleCard from "@/components/LittleCard.vue";
+import MediumCard from "@/components/MediumCard.vue";
 import BigCard from "@/components/BigCard.vue";
 import moment from "moment";
 
 export default {
 	components: {
 		LittleCard,
+		MediumCard,
 		BigCard
 	},
 	computed: {
@@ -49,6 +49,7 @@ export default {
 						url: edge.node.full_slug,
 						date: edge.node.created_at,
 						title: edge.node.content.title,
+						summary: edge.node.content.summary,
 						img: edge.node.content.thumbnail,
 						legend: edge.node.content.caption,
 						tags: edge.node.tag_list
@@ -104,97 +105,59 @@ query {
 .articles {
 	position: relative;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-top: $xl;
+	flex-direction: column;
+	margin-top: $lg;
 
 	&__big {
-		width: 70%;
-	}
-
-	&__little {
-		display: flex;
-		justify-content: flex-start;
-		flex-direction: column;
 		position: relative;
-		width: 30%;
-		margin-left: $xl;
-
+		padding-bottom: $md;
+		margin-bottom: $md;
+		
 		&::after {
 			content: "";
 			position: absolute;
-			background-color: $accent;
-			width: 2px;
-			height: 100%;
-			top: 0;
-			left: -$lg;
-		}
-
-		&::before {
-			content: "Derniers articles";
-			font-family: "Druk Wide";
-			position: absolute;
-			top: 0;
+			bottom: 0;
 			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: $dark;
 		}
 	}
 
-	&__previous {
+	&__medium {
+		width: 100%;
 		display: flex;
-		margin: 0 auto;
-		padding: $md 0 $xs 0;
+    	flex-wrap: wrap;
 	}
-}
 
-@media screen and (max-width: $desktop-L) {
-	.articles {
-		flex-direction: column;
+	&__item {
+    	width: calc(33% - 0.75rem);
+		flex: 0 0 auto;
+	}
 
-		&__big {
-			width: 100%;
-		}
-
-		&__little {
-			margin-top: $xl;
-			margin-left: 0;
-			width: 100%;
-
-			.little-card {
-				width: 50%;
-				margin-right: auto;
-				margin-left: auto;
-
-				&:first-of-type {
-					margin-top: $xl;
-				}
-			}
-
-			&::after {
-				height: 2px;
-				width: 100%;
-				left: 0;
-				top: $md;
-			}
-		}
+	&__item + &__item {
+		margin-left: $md;
 	}
 }
 
 @media screen and (max-width: $desktop) {
 	.articles {
-		&__little {
-			.little-card {
-				width: 70%;
+		&__medium {
+			flex-direction: column;
+		}
+
+		&__item {
+			width: 100%;
+			margin-bottom: $lg;
+
+			img {
+				width: 100%;
+				height: 250px;
 			}
 		}
-	}
-}
 
-@media screen and (max-width: $tablet) {
-	.articles {
-		&__little {
-			.little-card {
-				width: 100%;
-			}
+		&__item + &__item {
+			margin-left: 0;
 		}
 	}
 }

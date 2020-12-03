@@ -299,7 +299,7 @@ query {
 	}
 }
 
-@media screen and (max-width: $desktop){
+@media screen and (max-width: $desktop) {
 	.home {
 		&__title {
 			h1 {

@@ -40,7 +40,7 @@ export default {
             default: "01/01",
 		},
 		img: {
-			type: String
+			type: String,
 		},
 		title: {
             type: String,
@@ -105,6 +105,7 @@ export default {
 		width: calc(100% - 500px);
 
 		p {
+			font-weight: 700;
 			margin: $lg 0 $sm 0;
 			font-size: $font-md;
 		}
@@ -153,12 +154,6 @@ export default {
 			filter: grayscale(0);
 			transition: 0.5s ease-in-out;
 		}
-	}
-}
-
-@media screen and (max-width: $fullhd) {
-	.big-card__summary p {
-		font-size: $font-sm;
 	}
 }
 

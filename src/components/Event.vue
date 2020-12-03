@@ -89,6 +89,10 @@ export default {
 
 		span {
 			width: 50%;
+
+			&:first-child {
+				margin-right: $xxs;
+			}
 		}
 
 		svg {

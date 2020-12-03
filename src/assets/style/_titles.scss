@@ -1,19 +1,10 @@
 @mixin title($color) {
+	display: inline-block;
 	position: relative;
 	color: $color;
 	font-family: "Druk Wide";
 	font-size: $font-xl;
-	font-weight: 700; 
-
-	&::after {
-		content: "";
-		position: absolute;
-		background-color: $color;
-		width: $xxl;
-		height: $xs;
-		bottom: -$sm;
-		left: 0;
-	}
+	font-weight: 700;
 
 	@media screen and (max-width: $tablet) {
 		font-size: $font-lg;
@@ -31,9 +22,8 @@
 @mixin subtitle($color) {
 	position: relative;
 	color: $color;
-	font-family: "Druk Text Wide";
-	font-size: $font-lg;
-	letter-spacing: -1px;
+	font-family: "Druk Wide";
+	font-size: $font-lg;;
 
 	&::after {
 		content: "";

@@ -33,10 +33,15 @@ export default function (Vue, { router, head, isClient }) {
 	head.meta.push({
 		property: "og:site_name",
 		content: "NPA Nantes 2020"
-	})
+	});
 
 	head.meta.push({
 		property: "og:locale",
 		content: "fr_FR"
-	})
+	});
+
+	head.link.push({
+		rel: "stylesheet",
+		href: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap"
+	});	
 }
