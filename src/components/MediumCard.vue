@@ -78,14 +78,13 @@ export default {
 		
 		img {
 			width: 100%;
-			height: 520px;
+			height: 320px;
 			object-fit: cover;
 		}
 	}
 
 	&__content {
 		h3 {
-			font-family: "Druk Text Wide", sans-serif;
 			font-size: $font-md;
 			margin-bottom: $sm;
 		}
