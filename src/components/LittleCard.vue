@@ -70,7 +70,6 @@ export default {
 	max-width: 500px;
 	color: $accent;
 	margin-top: $lg;
-	transition: 0.3s ease-in-out;
 
 	&__content {
 		display: flex;
@@ -81,19 +80,16 @@ export default {
 			color: $accent-light;
 			padding-bottom: $xxs;
 			text-transform: uppercase;
-			transition: 0.3s ease-in-out;
 		}
 	
 		h3 {
-			font-size: $font-sm;
+			font-size: $font-md;
 			font-weight: 700;
 		}
 	}
 
 	&__img {
-		filter: grayscale(100);
 		margin: auto 0 auto $xxs;
-		transition: 0.5s ease-in-out;
 	}
 
 	&__date {
@@ -111,11 +107,6 @@ export default {
 
 	&:hover {
 		color: $dark;
-
-		.little-card__img {
-			filter: grayscale(0);
-			transition: 0.5s ease-in-out;
-		}
 
 		.little-card__content span {
 			color: $dark-light;

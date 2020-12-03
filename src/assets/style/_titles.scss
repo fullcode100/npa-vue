@@ -24,16 +24,6 @@
 	color: $color;
 	font-family: "Druk Wide";
 	font-size: $font-lg;;
-
-	&::after {
-		content: "";
-		position: absolute;
-		background-color: $color;
-		width: $xxl;
-		height: $xxs;
-		bottom: -$sm;
-		left: 0;
-	}
 }
 
 .subtitle--dark {

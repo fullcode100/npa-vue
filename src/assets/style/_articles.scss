@@ -4,6 +4,7 @@
 	&__tag {
 		display: flex;
 		flex-wrap: wrap;
+		line-height: 1.5;
 		color: $dark;
 		font-size: $font-md;
 		margin-bottom: $sm;
@@ -24,7 +25,7 @@
 		font-family: "Druk Text Wide";
 		font-weight: 800;
 		font-size: $font-lg;
-		margin-bottom: $lg;
+		margin-bottom: $md;
 	}
 
 	&__body {
@@ -192,6 +193,16 @@
 
 		&__video {
 			height: 272px;
+		}
+
+		&__content {
+			h3 {
+				font-size: $font-xl / 2;
+
+				&::before {
+					margin: 8px 15px 0 0;
+				}
+			}
 		}
 	}
 }

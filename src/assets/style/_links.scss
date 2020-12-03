@@ -33,11 +33,9 @@
 	color: $dark-lighter;
 	font-weight: 500;
 	position: relative;
-	transition: all 0.3s ease-in-out;
 
 	&:hover {
 		color: $dark;
-		transition: all 0.3s ease-in-out;
 	}
 }
 
@@ -49,10 +47,8 @@
 	color: $dark;
 	white-space: nowrap;
 	font-size: $font-sm;
-	transition: all 0.3s ease-in-out;
 
 	&:hover {
-		transition: all 0.3s ease-in-out;
 		color: $dark-light;
 	}
 
