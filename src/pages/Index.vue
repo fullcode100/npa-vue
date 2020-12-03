@@ -58,32 +58,6 @@
 							Voter pour la liste « Anticapitalistes et révolutionnaires ! Nantes aux travailleuses et aux
 							travailleurs » c'est <span class="bold">défendre un programme pour les luttes sociales :</span>
 						</p>
-						<ul class="list">
-							<li>
-								Interdiction des licenciements et des suppressions de postes ;
-							</li>
-							<li>
-								Plafonnement des loyers et réquisition des logements vides ;
-							</li>
-							<li>
-								Contre les violences policières ;
-							</li>
-							<li>
-								Pas un salaire, pas une pension et pas un minimum social en dessous de 1 800€ nets ;
-							</li>
-							<li>
-								Augmentation des salaires de 300 euros pour toutes et tous ;
-							</li>
-							<li>
-								Liberté de circulation et d’installation pour toutes et tous ;
-							</li>
-							<li>
-								Contre les discriminations et les violences sexistes ;
-							</li>
-							<li>
-								Prendre sur les profits pour défendre l'écologie.
-							</li>
-						</ul>
 						<div class="btn--center">
 							<g-link to="/presentation" class="btn--dark">Notre programme détaillé</g-link>
 						</div>

@@ -21,7 +21,7 @@
 
 	&__title {
 		position: relative;
-		font-family: "Source Sans Pro";
+		font-family: "Druk Text Wide";
 		font-weight: 800;
 		font-size: $font-lg;
 		margin-bottom: $lg;
@@ -127,13 +127,17 @@
 			margin-top: $sm;
 		}
 
+		p {
+			font-size: $font-md;
+		}
+
 		p + p {
 			margin-top: $md;
 		}
 
 		h3 {
 			margin: $lg 0 $md 0;
-			font-size: $font-md;
+			font-size: $font-lg;
 			font-family: "Druk Text Wide";
 
 			&::before {
@@ -141,8 +145,8 @@
 				display: block;
 				float: left;
 				width: 50px;
-				margin: 8px 15px 0 0;
-				border-top: $dark $xs solid;
+				margin: 12px 15px 0 0;
+				border-top: $dark $sm solid;
 			}
 		}
 
