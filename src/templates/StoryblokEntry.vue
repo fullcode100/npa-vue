@@ -29,8 +29,7 @@ export default {
 	},
 	name: "StoryblokEntryTemplate",
 	metaInfo() {
-		console.log("THUMBNAIL")
-		console.log(this.$page.storyblokEntry.content.thumbnail);
+		const imgPath = `https://img2.storyblok.com/1200x630/filters:quality(20)${this.$page.storyblokEntry.content.thumbnail.url.replace("//a.storyblok.com", "")}` || "";
 		return {
 			title: this.$page.storyblokEntry.content.title,
 			meta: [
@@ -56,7 +55,7 @@ export default {
                 },
 				{
 					property: "og:image",
-					content: "//img2.storyblok.com/1200x630/filters:quality(30)" + this.$page.storyblokEntry.content.thumbnail.url.replace("//a.storyblok.com", "") || ""
+					content: imgPath
                 },
                 {
 					name: "twitter:card",
@@ -72,7 +71,7 @@ export default {
                 },
                 {
                     name: "twitter:image",
-                    content:  "//img2.storyblok.com/1200x630/filters:quality(30)" + this.$page.storyblokEntry.content.thumbnail.url.replace("//a.storyblok.com", "") || ""
+                    content: imgPath
                 }
 			]
 		}
