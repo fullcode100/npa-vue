@@ -24,14 +24,6 @@ export default {
 </script>
 
 <style lang="scss">
-.fade-enter-active {
-	transition: opacity 0.5s ease-in-out;
-}
-
-.fade-enter {
-	opacity: 0;
-}
-
 .fit-article {
 	margin: 0 auto;
 	width: 90%;
@@ -41,41 +33,47 @@ export default {
 .fit-content {
 	margin-left: auto;
 	margin-right: auto;
-	width: 75%;
+	width: 90%;
 }
 
-@media screen and (max-width: $mobile) {
+@media screen and (min-width: 1920px) {
 	.fit-content {
-		width: 90%;
+		width: 75%;
 	}
 }
 
-// Druk Wide
+// Monument Extended
 
 @font-face {
-    font-family: "Druk Wide";
-    src: url("../assets/fonts/Druk/Druk Wide Bold Regular.woff2") format("woff2");
+    font-family: "Monument Extended";
+    src: url("../assets/fonts/Monument/MonumentExtended-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+   	font-display: swap;
+}
+
+@font-face {
+    font-family: "Monument Extended";
+    src: url("../assets/fonts/Monument/MonumentExtended-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+   	font-display: swap;
+}
+
+@font-face {
+    font-family: "Monument Extended";
+    src: url("../assets/fonts/Monument/MonumentExtended-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
    	font-display: swap;
 }
 
 @font-face {
-    font-family: "Druk Wide";
-    src: url("../assets/fonts/Druk/Druk Wide Super Regular.woff2") format("woff2");
+    font-family: "Monument Extended";
+    src: url("../assets/fonts/Monument/MonumentExtended-Black.woff") format("woff");
     font-weight: 900;
     font-style: normal;
-    font-display: swap;
-}
-
-// Druk Wide Text
-
-@font-face {
-    font-family: "Druk Text Wide";
-    src: url("../assets/fonts/Druk/Druk Text Wide Bold.woff2") format("woff2");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+   	font-display: swap;
 }
 
 // Aller 
@@ -87,5 +85,4 @@ export default {
     font-style: normal;
     font-display: swap;
 }
-
 </style>

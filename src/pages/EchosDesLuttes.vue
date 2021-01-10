@@ -4,9 +4,10 @@
 			<div class="fit-content">
 				<h1 class="subtitle--accent">Échos des luttes</h1>
 				<div class="section__list">
-					<LittleCard v-for="(article, key) in cardMap" :key="key"
+					<MediumCard v-for="(article, key) in cardMap" :key="key"
 						:title="article.title"
 						:url="article.url"
+						:summary="article.summary"
 						:date="article.date"
 						:img="article.img"
 						:tags="article.tags"
@@ -21,14 +22,14 @@
 </template>
 
 <script>
-import LittleCard from "@/components/LittleCard.vue"
+import MediumCard from "@/components/MediumCard.vue"
 
 export default {
 	metaInfo: {
 		title: "Échos des luttes"
 	},
 	components: {
-		LittleCard
+		MediumCard
 	},
 	computed: {
 		cardMap () {
@@ -37,6 +38,7 @@ export default {
           			return {
 						url: edge.node.full_slug,
 						date: edge.node.created_at,
+						summary: edge.node.content.summary,
 						title: edge.node.content.title,
 						img: edge.node.content.thumbnail,
 						tags: edge.node.tag_list

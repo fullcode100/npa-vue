@@ -45,7 +45,7 @@ html {
 	font-size: 16px;
 	font-weight: 400;
 	background-color: $primary;
-	color: $accent;
+	color: $dark;
 }
 
 ::selection {
@@ -76,9 +76,12 @@ html {
 
 	&__list {
 		display: flex;
-		max-width: 500px;
-        margin: $lg auto 0 auto;
-        flex-direction: column;
+		flex-direction: column;
+		margin-top: $lg;
+
+		> a {
+			margin-top: $md;
+		}
 	}
 }
 

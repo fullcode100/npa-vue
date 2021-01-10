@@ -2,27 +2,32 @@
 	color: $dark;
 
 	&__tag {
+		font-family: "Monument Extended", sans-serif;
 		display: flex;
 		flex-wrap: wrap;
 		line-height: 1.5;
-		color: $dark;
 		font-size: $font-md;
+		font-weight: 300;
 		margin-bottom: $sm;
 		text-transform: uppercase;
 
-		a {
-			padding: 0.5rem;
-			@include stroke($dark, $primary,3px, transparent);
-
+		> a {
+			color: $dark;
+			text-decoration: underline;
+		
 			&:hover {
-				background-color: $dark-light;
+				text-decoration: none;
 			}
+		}
+
+		> a + a {
+			margin-left: $sm;
 		}
 	}
 
 	&__title {
 		position: relative;
-		font-family: "Druk Text Wide";
+		font-family: "Monument Extended", sans-serif;
 		font-weight: 800;
 		font-size: $font-lg;
 		margin-bottom: $md;
@@ -139,7 +144,7 @@
 		h3 {
 			margin: $lg 0 $md 0;
 			font-size: $font-lg;
-			font-family: "Druk Text Wide";
+			font-family: "Monument Extended", sans-serif;
 
 			&::before {
 				content: "";

@@ -23,20 +23,18 @@
 			/>
 		</div>
 		<div class="btn--center">
-			<g-link to="/liste-articles" class="btn--dark">Voir tous les articles</g-link>
+			<g-link to="/liste-articles" class="btn--dark">Tous les articles</g-link>
 		</div>
 	</div>
 </template>
 
 <script>
-import LittleCard from "@/components/LittleCard.vue";
 import MediumCard from "@/components/MediumCard.vue";
 import BigCard from "@/components/BigCard.vue";
 import moment from "moment";
 
 export default {
 	components: {
-		LittleCard,
 		MediumCard,
 		BigCard
 	},
@@ -108,57 +106,13 @@ query {
 	flex-direction: column;
 	margin-top: $lg;
 
-	&__big {
-		position: relative;
-		padding-bottom: $md;
-		margin-bottom: $md;
-		
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 2px;
-			background-color: $dark;
-		}
-	}
-
 	&__medium {
+		margin-top: $lg;
 		width: 100%;
-		display: flex;
-    	flex-wrap: wrap;
 	}
 
 	&__item {
-    	width: calc(33% - 0.75rem);
-		flex: 0 0 auto;
-	}
-
-	&__item + &__item {
-		margin-left: $md;
-	}
-}
-
-@media screen and (max-width: $desktop) {
-	.articles {
-		&__medium {
-			flex-direction: column;
-		}
-
-		&__item {
-			width: 100%;
-			margin-bottom: $lg;
-
-			img {
-				width: 100%;
-				height: 250px;
-			}
-		}
-
-		&__item + &__item {
-			margin-left: 0;
-		}
+		margin-top: $md;
 	}
 }
 </style>

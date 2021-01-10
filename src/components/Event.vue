@@ -61,23 +61,11 @@ export default {
 .event {
 	display: flex;
 	flex-direction: column;
-	position: relative;
 	max-width: 600px;
 	color: $dark;
-	margin: auto;
 	margin-top: $lg;
 	padding-bottom: $md;
 	transition: 0.3s ease-in-out;
-
-	&::after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 2px;
-		background-color: $dark;
-	}
 
 	&__info {
 		margin-top: $md;
@@ -101,9 +89,10 @@ export default {
 	}
 
 	&__title {
-		font-family: "Druk Text Wide";
+		font-family: "Monument Extended", sans-serif;
 		font-weight: 700;
 		font-size: $font-md;
+		color: $accent;
 	}
 
 	&__link {

@@ -1,23 +1,22 @@
 <template>
 	<g-link class="big-card" :to="url">
-		<div class="big-card__content">
-			<h2>
-				<span>{{ title }}</span>
-			</h2>
-			<div class="big-card__summary">
-				<p>{{ summary }}</p>
-				<span v-for="tag in tags" :key="tag.name">{{ tag }}</span>
+		<div class="big-card__fit">
+			<div class="big-card__content">
+				<span class="big-card__date">{{ formatDate(date) }}</span>
+				<h2>
+					<span>{{ title }}</span>
+				</h2>
+				<div class="big-card__summary">
+					<p>{{ summary }}</p>
+					<span v-for="tag in tags" :key="tag.name">{{ tag.name }}</span>
+				</div>
 			</div>
 		</div>
 		<div class="big-card__img">
 			<StoryblokImage
-				:img="img"
+				:img="img.path"
 				:caption="legend"
-				card="bigCard"
 			/>
-		</div>
-		<div class="big-card__date">
-			<span>{{ formatDate(date) }}</span>
 		</div>
 	</g-link>
 </template>
@@ -40,7 +39,7 @@ export default {
             default: "01/01",
 		},
 		img: {
-			type: String,
+			type: Object,
 		},
 		title: {
             type: String,
@@ -73,139 +72,80 @@ export default {
 
 <style lang="scss">
 .big-card {
-	display: flex;
-	position: relative;
-	min-height: 250px;
-	color: $accent;
-	transition: 0.3s ease-in-out;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: $lg;
+	color: $dark;
+
+	&:hover {
+		h2 {
+			text-decoration: underline;
+		}
+	}
+	
+	&__fit {
+		position: relative;
+		display: flex;
+		
+		&::after {
+			position: absolute;
+			content: "";
+			background-color: $dark;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+		}
+
+		&::before {
+			position: absolute;
+			content: "";
+			background-color: $dark;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+		}
+	}
 
 	&__content {
-		position: absolute;
-		z-index: 1;
-		top: 0;
-		left: 0;
-
-		h2 {
-			max-width: 65%;
-			font-family: "Druk Text Wide";
-			font-weight: 700;
-			font-size: $font-lg;
-
-			span {
-				display: inline;
-				padding: 0 $xxs $xxs 0;
-				-webkit-box-decoration-break: clone;
-				box-decoration-break: clone;
-				background-color: $primary;
-			}
-		}
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+		padding: $md 0;
 	}
 
-	&__summary {
-		width: calc(100% - 500px);
-
-		p {
-			font-weight: 700;
-			margin: $lg 0 $sm 0;
-			font-size: $font-md;
-		}
-
-		span {
-			text-transform: uppercase;
-			font-weight: 800;
-		}
-	}
-
-	&__img {
-		margin-top: $md*2;
-		margin-left: auto;
-		filter: grayscale(100);
-		transition: 0.5s ease-in-out;
-
-		img {
-			width: 475px;
-			height: 500px;
-			object-fit: cover;
-		}
+	h2 {
+		color: $accent;
+		margin-top: $xs;
+		font-family: "Monument Extended", sans-serif;
+		font-size: $font-lg;
+		font-weight: 700;
 	}
 
 	&__date {
-		position: absolute;
-		top: $sm;
-		right: 0;
-
-		> span {
-			@include stroke($accent, $primary, 3px, transparent);
-			padding: $xxs;
-			font-size: $font-md;
-			transition: 0.3s ease-in-out;
-		}
+		font-family: "Monument Extended", sans-serif;
+		font-size: $font-md;
+		font-weight: 300;
 	}
 
-	&:hover {
-		color: $dark;
+	&__summary {
+		margin-top: $sm;
+		font-size: $font-md;
+	}
 
-		.big-card__date span {
-			background-color: $dark;
-			transition: 0.3s ease-in-out;
-		}
-
-		.big-card__img {
-			filter: grayscale(0);
-			transition: 0.5s ease-in-out;
+	&__img {
+		img {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
 		}
 	}
 }
 
 @media screen and (max-width: $desktop) {
-	.big-card__img img {
-		width: 350px;
-	}
-
-	.big-card__summary {
-		width: calc(100% - 350px);
-	}
-
-	.big-card__content h2 {
-		font-size: $font-md;
-	}
-}
-
-@media screen and (max-width: $tablet) {
 	.big-card {
-		&__content {
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-
-			h2 {
-				max-width: 65%;
-			}
-		}
-
-		&__date span {
-			font-size: $font-sm;
-		}
-
-		&__img {
-			width: 100%;
-
-			img {
-				width: 100%;
-				object-fit: cover;
-			}
-		}
-
-		&__summary {
-			margin-top: 0;
-			background-color: $primary;
-			width: 100%;
-
-			p {
-				margin: $xs 0;
-			}
-		}
+		grid-template-columns: repeat(1, auto);
 	}
 }
 </style>

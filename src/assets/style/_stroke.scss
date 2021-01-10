@@ -1,5 +1,5 @@
 @mixin stroke($background-color, $color, $stroke-width, $stroke-color) {
-	font-family: "Druk Wide";
+	font-family: "Monument Extended", sans-serif;
 	letter-spacing: 4px;
 	-webkit-text-stroke-width: $stroke-width;
 	-webkit-text-stroke-color: $stroke-color;

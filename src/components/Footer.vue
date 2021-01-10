@@ -157,7 +157,7 @@ footer {
 
 		h4 {	
 			font-size: $font-md;
-			font-family: "Druk Text Wide";
+			font-family: "Monument Extended", sans-serif;
 		}
 
 		li + li {

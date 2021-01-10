@@ -80,7 +80,7 @@ export default {
 			return this.$page.storyblokEntry;
 		},
 		imageURL() {
-			const path = this.$page.storyblokEntry.content.thumbnail;
+			const path = this.$page.storyblokEntry.content.thumbnail.path;
 			const directory = "storyblok_images";
 			let index = path.lastIndexOf("/") + 1;
 			let filename = path.substring(index);

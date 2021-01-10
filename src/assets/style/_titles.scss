@@ -2,7 +2,7 @@
 	display: inline-block;
 	position: relative;
 	color: $color;
-	font-family: "Druk Wide";
+	font-family: "Monument Extended";
 	font-size: $font-xl;
 	font-weight: 700;
 
@@ -22,7 +22,7 @@
 @mixin subtitle($color) {
 	position: relative;
 	color: $color;
-	font-family: "Druk Wide";
+	font-family: "Monument Extended";
 	font-size: $font-lg;;
 }
 
