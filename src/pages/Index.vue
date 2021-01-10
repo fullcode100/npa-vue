@@ -64,7 +64,7 @@
 						</div>
 					</div>
 					<div class="btn--center">
-						<g-link to="/presentation" class="btn--dark">Notre programme détaillé</g-link>
+						<g-link to="/presentation" class="btn--dark">Notre programme</g-link>
 					</div>
 					<div class="topical__img">
 						<g-image src="@/assets/affiche-electorale-generale.jpg" alt="Affiche éléctorale du NPA : « Anticapitaliste et révolutionnaire »" width="450" />

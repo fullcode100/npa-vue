@@ -2,7 +2,7 @@
 	<main class="article">
 		<div class="article__header fit-article">
 			<div v-if="tags.length !== 0" class="article__tag">
-				<g-link v-for="tag in tags" :key="tag" :to="tagUrl(tag.name)">{{ tag.name }}</g-link>
+				<g-link v-for="tag in tags" :key="tag.id" :to="tagUrl(tag.name)">{{ tag.name }}</g-link>
 			</div>
 			<h1 class="article__title">{{ title }}</h1>
 			<div class="article__summary">
@@ -93,7 +93,7 @@ export default {
 		},
 		sources: {
 			type: Object,
-			default: ""
+			default: () => {}
 		},
 		slug: {
 			type: String
